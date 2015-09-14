@@ -1,0 +1,45 @@
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:825:"<span><h1>Detalles Reclamo<br><br></h1>
+<b>{exito}</b><br>
+<a class="btn btn-primary pull-left" target="_blank" href="/index.php?id={id}&acc=26&fecha={fechaDeReclamo}&descargar=0" >Ver PDF</a>
+<a class="btn btn-primary pull-right" target="_blank" href="/index.php?id={id}&acc=26&fecha={fechaDeReclamo}&descargar=1" >Descargar PDF</a>
+</span>
+<br><br>
+<div class="well">
+<b>Nº de Reclamo</b>={id}
+<br><b>Fecha de Reclamo</b>={fechaDeReclamo}
+</div>
+<table class="table table-striped" style="font-size: 11px">
+<thead>
+<tr>
+<th>Nº Falla</th>
+<th>Marca</th>
+<th>Modelo</th>
+<th>Chasis</th>
+<th style="width: 286px; ">Descripci&oacute;n</th>
+<th>Fecha Falla</th>
+<th>Empresa</th>
+<th>Fecha Reparado</th>
+<th>Dep&oacute;sito</th>
+<th>Reparado</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div id="res_ajax"></div>";s:10:"resultados";s:218:"<tr>
+<td>{numeroFalla}</td>
+<td>{marca}</td>
+<td>{modelo}</td>
+<td>{chasis}</td>
+<td>{descripcion}</td>
+<td>{fecha}</td>
+<td>{b_empresa}</td>
+<td>{fechaReparado}</td>
+<td>{sucursal}</td>
+<td>
+{__blq-edit__}
+</td>
+</tr>";s:8:"blq-edit";s:121:"<a class="btn btn-primary" onclick="editarReclamo('{id_falla}','17','{reparado}');" >
+<i class="icon">{reparado}</i>
+</a>";}s:9:"variables";a:3:{s:10:"__global__";a:4:{s:5:"exito";b:1;s:2:"id";b:1;s:14:"fechaDeReclamo";b:1;s:14:"__resultados__";b:1;}s:10:"resultados";a:10:{s:11:"numeroFalla";b:1;s:5:"marca";b:1;s:6:"modelo";b:1;s:6:"chasis";b:1;s:11:"descripcion";b:1;s:5:"fecha";b:1;s:9:"b_empresa";b:1;s:13:"fechaReparado";b:1;s:8:"sucursal";b:1;s:12:"__blq-edit__";b:1;}s:8:"blq-edit";a:2:{s:8:"id_falla";b:1;s:8:"reparado";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:1:{s:8:"blq-edit";b:1;}s:8:"blq-edit";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}}}

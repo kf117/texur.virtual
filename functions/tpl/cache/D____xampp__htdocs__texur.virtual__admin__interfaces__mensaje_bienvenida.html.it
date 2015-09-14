@@ -1,0 +1,6 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:236:"<div class="row">
+<div class="jumbotron col-lg-12">
+<h1>Hola , Bienvenido {nom_us}!</h1>
+<p>Estamos listos para comenzar a trabajar, ahora solo tienes que hacer click en alguna de las opciones para ejecutar tus tareas.</p>
+</div>
+</div>";}s:9:"variables";a:1:{s:10:"__global__";a:1:{s:6:"nom_us";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

@@ -1,0 +1,128 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11">  
+        <h1>Editar Datos</h1>
+        <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+    </div>
+</div>
+              
+                  
+<form class=" " action="{accion}" method="POST">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+    <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>     
+                  <!--  DATOS DEL CLIENTE -->
+              
+                    <div class="row">
+                          <div class="col-lg-offset-1 col-lg-11">
+                                       <h3>Datos</h3>
+                          </div>
+                    </div>
+                  <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                    <label>Apellido <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="apellido" id="apellido" value="{apellido}">
+                                  </div>
+                              </div> 
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                    <label>Nombre <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+                                  </div>
+                              </div> 
+                    </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" type="text"  name="email" id="email" value="{email}">
+                                  </div>
+                              </div>
+                              
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                      <label>Tel&eacute;fono</label>
+                                    <input class="form-control" type="text"   name="telefono" id="telefono" value="{telefono}">
+                                  </div>
+                              </div> 
+                    </div>
+                        <div class="row">   
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                    <label>Domicilio</label>
+                                    <input class="form-control" type="text"   name="domicilio" id="domicilio" value="{domicilio}">
+                                  </div>
+                              </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                            <div class="row">
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                    <label>Nickname <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="nickname" id="nickname" value="{nickname}" readonly>
+                                  </div>
+                              </div> 
+                            </div> 
+                            <div class="row"> 
+                                <div class="col-lg-offset-1 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Password <span class="campo-oblg">*</span></label>
+                                        <input class="form-control" type="password" name="passwordact" id="passwordact" value="{passwordact}">
+                                    </div>
+                                </div>
+                            </div>     
+                            <div class="row">   
+                              <div class="col-lg-offset-1 col-lg-3">
+                                  <div class="form-group">
+                                    <label>Nueva Password</label>
+                                    <input class="form-control" type="password" name="password" id="password" value="{password}">
+                                  </div>
+                              </div> 
+                              
+                                <div class="col-lg-offset-1 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Repita nueva Password</label>
+                                        <input class="form-control" type="password" name="repassword" id="repassword" value="{repassword}">
+                                    </div>
+                                </div>
+                            </div>
+                  
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                        <div class="row" >
+                            
+                            <div class="col-lg-offset-1 col-lg-3">
+                                <input type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>        
+                        </div>
+                  <!-- FIN DATOS DEL CLIENTE -->
+                </form>
+                 
+            
+        

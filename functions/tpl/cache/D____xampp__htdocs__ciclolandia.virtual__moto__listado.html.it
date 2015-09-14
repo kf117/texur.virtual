@@ -1,0 +1,129 @@
+a:4:{s:6:"blocks";a:11:{s:10:"__global__";s:3868:"<div class="row span10" >
+{__errorr_msg__}
+<form id="listMotos" class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<!-- BUSCADOR DE MOTO -->
+<!--  DATOS DE LA MOTO -->
+<div class="row " style="padding-left:40px;">
+<h3>Buscador de motos</h3>
+</div>
+<div class="row" style="padding-left:40px;margin-top:20px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Marca</label>
+<div style="float:left;margin-right:10px;" id="select_marca">
+<select style="width:163px;" name="marca" id="marca" onchange="seleccionar_modelo(this);">
+<option id="primera_marca" value="0">Seleccione una Marca</option>
+{__marcas__}
+</select>
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Modelo</label>
+<div style="float:left;margin-right:10px;" id="select_modelos">
+<select style="width:163px;" name="modelo" id="modelo" >
+<option id="primer_modelo" value="0">Seleccione un Modelo</option>
+{__modelos__}
+</select>
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Proveedor</label>
+<div style="float:left;margin-right:10px;" id="select_proveedor">
+<select style="width:180px;" name="proveedor" id="proveedor" >
+<option id="primera_marca" value="" >Seleccione un Proveedor</option>
+{__proveedores__}
+</select>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Color</label>
+<div style="float:left;margin-right:10px;" id="select_color">
+<select style="width:100px;" name="color" id="color" >
+<option id="primer_color" value="">Seleccione un color</option>
+{__colores__}
+</select>
+</div>
+</div>
+</div>
+<div class="row " style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro de chasis</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="nro_chasis" id="nro_chasis" value="{nro_chasis_frm}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro de motor</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:120px;" name="nro_motor" id="nro_motor"  value="{nro_motor_frm}">
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Ubicaci&oacute;n</label>
+<div style="float:left;margin-right:10px;" id="select_proveedor">
+<select style="width:96px;" name="sucursal" id="sucursal" >
+<option id="primera_marca" value="" >Seleccione una Ubicaci&oacute;n</option>
+{__sucursales__}
+</select>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:17px;padding-top:4px;">Estado de la moto</label>
+<div style="float:left;margin-right:10px;" id="select_clasificacion">
+<select style="width:100px;" name="estado" id="estado" >
+<option id="primer_modelo" value="">Seleccione un estado</option>
+{__estados__}
+</select>
+</div>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+</div>
+</div>
+<!-- FIN DE DATOS LA MOTO -->
+<div align="center" class="mt10">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqMoto();" class="btn btn-inverse">Limpiar Busqueda</button>
+<a href="../moto/imprimir/generarImprimir.php" class="btn btn-primary" target="_blank"><i class="icon-white icon-print"></i> Imprimir</a>
+</div>
+</form>
+</div>
+<div class="row span10" ><h4>Cantidad de motos encontradas:{cantidad_total}</h4></div>
+<div class="row span10" >{paginado}</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th></th>
+<th>Ingreso</th>
+<th>Falla</th>
+<th>Nro de Moto</th>
+<th>Marca</th>
+<th>Modelo</th>
+<th>Ubicaci&oacute;n</th>
+<th>Proveedor</th>
+<th>Color</th>
+<th>Nro Chasis</th>
+<th>Nro Motor</th>
+<th>Estado</th>
+<th>Precio Financiado</th>
+<th>Precio Contado</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div class="row span10" >{paginado}</div>";s:10:"errorr_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:6:"marcas";s:65:"<option value="{marca_id}" {select_marca}>{marca_nombre}</option>";s:7:"modelos";s:69:"<option  value="{modelo_id}" {select_modelo}>{modelo_nombre}</option>";s:11:"proveedores";s:63:"<option value="{prov_id}" {select_prov}>{prov_empresa}</option>";s:7:"colores";s:66:"<option value="{color_id}" {select_color} >{color_nombre}</option>";s:10:"sucursales";s:59:"<option value="{suc_id}" {select_suc}>{suc_nombre}</option>";s:7:"estados";s:69:"<option value="{est_moto_id}" {select_est}>{est_moto_estado}</option>";s:10:"resultados";s:430:"<tr>
+<td align="center" valign="center"><div class="{venta}" data-toggle="tooltip" title="{texto_tooltip}"></div></td>
+<td>{fecha_ingreso}</td>
+<td>{falla}</td>
+<td>{nro_moto}</td>
+<td>{marca}</td>
+<td>{modelo}</td>
+<td>{ubicacion}</td>
+<td>{proveedor}</td>
+<td>{color}</td>
+<td>{nro_chasis}</td>
+<td>{nro_motor}</td>
+<td>{estado}</td>
+<td>{precio_lista}</td>
+<td>{precio_venta}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:106:"<a class="btn btn-primary" href="/index.php?id={id_editar}&acc=8"><i class="icon-edit icon-white"></i></a>";s:8:"blq-elim";s:153:"<a class="btn btn-danger" href="/moto/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i>
+</a>";}s:9:"variables";a:11:{s:10:"__global__";a:14:{s:14:"__errorr_msg__";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:10:"__marcas__";b:1;s:11:"__modelos__";b:1;s:15:"__proveedores__";b:1;s:11:"__colores__";b:1;s:14:"nro_chasis_frm";b:1;s:13:"nro_motor_frm";b:1;s:14:"__sucursales__";b:1;s:11:"__estados__";b:1;s:14:"cantidad_total";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;}s:10:"errorr_msg";a:1:{s:13:"mensaje_error";b:1;}s:6:"marcas";a:3:{s:8:"marca_id";b:1;s:12:"select_marca";b:1;s:12:"marca_nombre";b:1;}s:7:"modelos";a:3:{s:9:"modelo_id";b:1;s:13:"select_modelo";b:1;s:13:"modelo_nombre";b:1;}s:11:"proveedores";a:3:{s:7:"prov_id";b:1;s:11:"select_prov";b:1;s:12:"prov_empresa";b:1;}s:7:"colores";a:3:{s:8:"color_id";b:1;s:12:"select_color";b:1;s:12:"color_nombre";b:1;}s:10:"sucursales";a:3:{s:6:"suc_id";b:1;s:10:"select_suc";b:1;s:10:"suc_nombre";b:1;}s:7:"estados";a:3:{s:11:"est_moto_id";b:1;s:10:"select_est";b:1;s:15:"est_moto_estado";b:1;}s:10:"resultados";a:17:{s:5:"venta";b:1;s:13:"texto_tooltip";b:1;s:13:"fecha_ingreso";b:1;s:5:"falla";b:1;s:8:"nro_moto";b:1;s:5:"marca";b:1;s:6:"modelo";b:1;s:9:"ubicacion";b:1;s:9:"proveedor";b:1;s:5:"color";b:1;s:10:"nro_chasis";b:1;s:9:"nro_motor";b:1;s:6:"estado";b:1;s:12:"precio_lista";b:1;s:12:"precio_venta";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:9:"id_editar";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:11:{s:10:"__global__";a:8:{s:10:"errorr_msg";b:1;s:6:"marcas";b:1;s:7:"modelos";b:1;s:11:"proveedores";b:1;s:7:"colores";b:1;s:10:"sucursales";b:1;s:7:"estados";b:1;s:10:"resultados";b:1;}s:10:"errorr_msg";a:0:{}s:6:"marcas";a:0:{}s:7:"modelos";a:0:{}s:11:"proveedores";a:0:{}s:7:"colores";a:0:{}s:10:"sucursales";a:0:{}s:7:"estados";a:0:{}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:11:{s:10:"__global__";a:0:{}s:10:"errorr_msg";a:0:{}s:6:"marcas";a:0:{}s:7:"modelos";a:0:{}s:11:"proveedores";a:0:{}s:7:"colores";a:0:{}s:10:"sucursales";a:0:{}s:7:"estados";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}}

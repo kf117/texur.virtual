@@ -1,0 +1,43 @@
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:1130:"<div class="row mb10"> <a href="/index.php?acc={acc}" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nuevo</a></div>
+<div class="row" style="padding-left:30px;">
+<div style="float:left;margin-right:1px;">
+<form action="{accion}" method="POST" class="form-inline">
+<label>Marca &nbsp;</label>
+<select style="width:200px;" name="marca" id="marca" onchange="seleccionar_marca(this);">
+<option>Seleccione una Marca</option>
+{__blq_marca__}
+</select>
+<label>&nbsp;&nbsp;Modelo &nbsp;</label>
+<input name="agregarModelo" id="agregarModelo" type="text" value="{agregarModelo}" />
+<input type="submit" value="Guardar"class="btn btn-primary">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="page" id="page" value="{page}">
+{__error_msg__}
+{__exito_msg__}
+</form>
+</div>
+</div>
+<div class="row span10" >{paginado}</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Marca de motos</th>
+<th>Modelo de motos</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div class="row span10" >{paginado}</div>";s:9:"blq_marca";s:68:"<option value="{marca_id}" {selected_marca} >{marca_nombre}</option>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:10:"resultados";s:342:"<tr>
+<td>{marca}</td>
+<td>{modelo}</td>
+<td><a class="btn btn-primary" href="/index.php?id={idlist}&acc={acclist}&page={pagelist}"><i class="icon-edit icon-white"></i></a>
+<a class="btn btn-danger" href="/modelo/eliminarModelo.php?id={idelim}&acc={accelim}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a></td>
+</tr>";}s:9:"variables";a:5:{s:10:"__global__";a:10:{s:3:"acc";b:1;s:6:"accion";b:1;s:13:"__blq_marca__";b:1;s:13:"agregarModelo";b:1;s:2:"id";b:1;s:4:"page";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;}s:9:"blq_marca";a:3:{s:8:"marca_id";b:1;s:14:"selected_marca";b:1;s:12:"marca_nombre";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:7:{s:5:"marca";b:1;s:6:"modelo";b:1;s:6:"idlist";b:1;s:7:"acclist";b:1;s:8:"pagelist";b:1;s:6:"idelim";b:1;s:7:"accelim";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:4:{s:9:"blq_marca";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;}s:9:"blq_marca";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:9:"blq_marca";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}}}

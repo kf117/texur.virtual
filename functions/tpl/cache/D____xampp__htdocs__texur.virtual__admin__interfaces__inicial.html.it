@@ -1,0 +1,112 @@
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:4276:"<!DOCTYPE html>
+<html>
+<head>
+<meta charset="iso-8859-1">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Luciano Vitetti">
+<!-- <script src="..global/bootstrap/js/bootstrap-dropdown.js"></script>-->
+{__bloque_javascript__}
+<!-- Le styles -->
+<link href="global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<!--<script src="global/bootstrap/js/collapse.js"></script>-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--<link rel="stylesheet" type="text/css" media="all" href="global/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="global/calendar/jsDatePick.min.1.3.js"></script>-->
+<!-- Le fav and touch icons -->
+<!--<link rel="shortcut icon" type="image/x-icon" href="img/fav.ico" />-->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="global/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="global/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="global/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="global/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+<!-- Custom CSS -->
+<link href="global/bootstrap/css/sb-admin.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="global/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="global/css/general.css" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<!--<img width="40" src="img/logo_mini.png">-->
+</div>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" style="color:white;" href="index.php">TEXUR - CMS</a>
+</div>
+<!-- Top Menu Items -->
+<ul class="nav navbar-right top-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language"></i> Idioma ( <img width="30" src="global/img/{idioma_used_img}" /> {idioma_used} ) <b class="caret"></b></a>
+<ul class="dropdown-menu">
+{__idiomas_sets__}
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {usuario} <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<a href="index.php?acc=7"><i class="fa fa-fw fa-gear"></i> Editar Datos</a>
+</li>
+<li class="divider"></li>
+<li>
+<a href="login/logout.php"><i class="fa fa-fw fa-power-off"></i> Logout</a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav side-nav">
+{__acciones__}
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+<div id="page-wrapper">
+<div class="container-fluid" style="height:100%">
+{contenido}
+</div>
+<!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+<script src="global/bootstrap/js/jquery.js"></script>
+<script src="global/js/jquery-extra.js"></script>
+<script src="global/bootstrap/js/bootstrap.js"></script>
+<script src="global/js/gestor.js"></script>
+<script src="global/js/fckeditor/fckeditor.js"></script>
+<script type="text/javascript" src="global/date/datetimepicker_css.js"></script>
+</body>
+</html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:12:"idiomas_sets";s:112:"<li>
+<a href="cambiar_idioma.php?id={idioma_id}"><img src="global/img/{idioma_img}" /> {idioma_nombre}</a>
+</li>";s:8:"acciones";s:377:"<li>
+<a {tiene_hijo} data-target="#acc_{id_acc}" href="{url_accion}" class="{accion_activa}" style="display:{ver_acciones};"><i class="fa fa-fw {accion_icono} "></i>&nbsp;{accion_nombre}
+<i style="display:{ver_acciones_h};" class="fa fa-fw fa-caret-down"></i>
+</a>
+<ul style="display:{ver_acciones_h};" id="acc_{id_acc}" class="collapse {collapse}">
+{__accionesh__}
+</ul>
+</li>";s:9:"accionesh";s:161:"<li>
+<a href="{url_accionh}" class=" " style="display:{ver_acciones_h};{accionh_activa}"><i class="fa fa-fw {accionh_icono}"></i>&nbsp;{accionh_nombre}</a>
+</li>";}s:9:"variables";a:5:{s:10:"__global__";a:7:{s:21:"__bloque_javascript__";b:1;s:15:"idioma_used_img";b:1;s:11:"idioma_used";b:1;s:16:"__idiomas_sets__";b:1;s:7:"usuario";b:1;s:12:"__acciones__";b:1;s:9:"contenido";b:1;}s:17:"bloque_javascript";a:1:{s:10:"javascript";b:1;}s:12:"idiomas_sets";a:3:{s:9:"idioma_id";b:1;s:10:"idioma_img";b:1;s:13:"idioma_nombre";b:1;}s:8:"acciones";a:10:{s:10:"tiene_hijo";b:1;s:6:"id_acc";b:1;s:10:"url_accion";b:1;s:13:"accion_activa";b:1;s:12:"ver_acciones";b:1;s:12:"accion_icono";b:1;s:13:"accion_nombre";b:1;s:14:"ver_acciones_h";b:1;s:8:"collapse";b:1;s:13:"__accionesh__";b:1;}s:9:"accionesh";a:5:{s:11:"url_accionh";b:1;s:14:"ver_acciones_h";b:1;s:14:"accionh_activa";b:1;s:13:"accionh_icono";b:1;s:14:"accionh_nombre";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:3:{s:17:"bloque_javascript";b:1;s:12:"idiomas_sets";b:1;s:8:"acciones";b:1;}s:17:"bloque_javascript";a:0:{}s:12:"idiomas_sets";a:0:{}s:8:"acciones";a:1:{s:9:"accionesh";b:1;}s:9:"accionesh";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:17:"bloque_javascript";a:0:{}s:12:"idiomas_sets";a:0:{}s:8:"acciones";a:0:{}s:9:"accionesh";a:0:{}}}

@@ -1,0 +1,145 @@
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:3849:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 ">
+<h1>Adicionar Edição</h1>
+</div>
+</div>
+<form  action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Dados Edição</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Número da edição </label>
+<input class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class=" col-lg-3  col-md-3">
+<div class="form-group">
+<label>Data de lançamento </label>
+<div class="row">
+<div class="col-lg-8  col-md-8">
+<input class="form-control" type="Text" id="demo1" maxlength="25" size="25"/>
+</div>
+<div class="col-lg-2  col-md-2">
+<img src="global/date/cal.gif" onclick="javascript:NewCssCal('demo1','','','','','','plus18')" style="cursor:pointer"/>
+</div>
+<div class="col-lg-1  col-md-1">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Número de impressões </label>
+<input class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>Capa </label>
+<input  type="file"  name="nombre" id="nombre"  >
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>Segunda Capa </label>
+<input  type="file"  name="nombre" id="nombre"  >
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>Quarta Capa </label>
+<input  type="file"  name="nombre" id="nombre"  >
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>PDF </label>
+<input  type="file"  name="nombre" id="nombre"  >
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Seções</h3>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Seção </label>
+<select class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+<option>Selecione uma seção</option>
+</select>
+</div>
+</div>
+<div class=" col-lg-3  col-md-3">
+<div class="form-group">
+<label>Responsável </label>
+<select class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+<option>Selecione um responsável</option>
+</select>
+</div>
+</div>
+<div class=" col-lg-2  col-md-2">
+<div class="form-group">
+<label>Número de páginas </label>
+<input class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class=" col-lg-2  col-md-2">
+<div class="form-group">
+<label>&nbsp;</label>
+<input class="btn btn-success form-control" value="Adicionar">
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+<input type="submit" class="btn btn-primary" value="Salvar" />
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+</form>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+{mensaje_exito}
+</div>";}s:9:"variables";a:3:{s:10:"__global__";a:5:{s:6:"accion";b:1;s:3:"acc";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:2:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}}

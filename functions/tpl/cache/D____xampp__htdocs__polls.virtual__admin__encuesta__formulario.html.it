@@ -1,0 +1,163 @@
+a:4:{s:6:"blocks";a:7:{s:10:"__global__";s:4467:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 ">
+<h1>New Poll</h1>
+<p class="help-block">Required fields <span class="campo-oblg">*</span></p>
+</div>
+</div>
+<form class=" " action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Poll Data</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<div class="form-group">
+<label>Question/Title</label>
+<input class="form-control" type="text" name="title" id="title" value="{title}" >
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Starts on</label>
+<div class="row">
+<div class="col-lg-8  col-md-8">
+<input class="form-control" readonly type="Text" id="fecha_start" name="fecha_start" value="{fecha_start}" maxlength="25" size="25">
+</div>
+<div class="col-lg-2  col-md-2">
+<img src="global/date/cal.gif" onclick="javascript:NewCssCal('fecha_start','','','','','','plus18')" style="cursor:pointer">
+</div>
+<div class="col-lg-1  col-md-1">
+<button type="button" class="close" onclick="$('#fecha_start').val('');" data-dismiss="alert" aria-label="Close"><i class=" fa fa-fw fa-close"></i></button>
+</div>
+</div>
+</div>
+</div>
+<div class=" col-lg-3  col-md-3">
+<div class="form-group">
+<label>&nbsp;</label>
+<div class="row">
+<div class="col-lg-6  col-md-6">
+<select name="start_hour" id="start_hour" class="form-control">
+{__hours_start__}
+</select>
+</div>
+<div class="col-lg-6  col-md-6">
+<select name="start_min" id="start_min" class="form-control">
+{__mins_start__}
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Ends on</label>
+<div class="row">
+<div class="col-lg-8  col-md-8">
+<input class="form-control" type="Text" id="fecha_end" name="fecha_end" value="{fecha_end}" readonly maxlength="25" size="25">
+</div>
+<div class="col-lg-2  col-md-2">
+<img src="global/date/cal.gif" onclick="javascript:NewCssCal('fecha_end','','','','','','plus18')" style="cursor:pointer">
+</div>
+<div class="col-lg-1  col-md-1">
+<button type="button" class="close" onclick="$('#fecha_end').val('');" data-dismiss="alert" aria-label="Close"><i class=" fa fa-fw fa-close"></i></button>
+</div>
+</div>
+</div>
+</div>
+<div class=" col-lg-3  col-md-3">
+<div class="form-group">
+<label>&nbsp;</label>
+<div class="row">
+<div class="col-lg-6  col-md-6">
+<select name="end_hour" id="end_hour" class="form-control">
+{__hours_end__}
+</select>
+</div>
+<div class="col-lg-6  col-md-6">
+<select name="end_min" id="end_min" class="form-control">
+{__mins_end__}
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row" style="display:none;">
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="publicado" id="publicado" {publicado}> Published
+</label>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Poll Options</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1  col-md-5">
+<div class="form-group">
+<label>Title</label>
+<input class="form-control" type="text" name="op_title" id="op_title" >
+</div>
+</div>
+<div class=" col-lg-2  col-md-2">
+<div class="form-group">
+<label>Votes</label>
+<input class="form-control number" type="text" name="op_votes" id="op_votes" >
+</div>
+</div>
+<div class=" col-lg-2  col-md-2">
+<div class="form-group">
+<label>&nbsp;</label>
+<button type="button"  class="btn btn-primary form-control"><i class="fa fa-fw fa-plus"></i> Add</button>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+<input type="submit" class="btn btn-primary" value="Save" />
+</div>
+</div>
+</form>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_exito}
+</div>";s:11:"hours_start";s:72:"<option value="{hour_start}" {selected_hour_start}>{hour_start}</option>";s:10:"mins_start";s:69:"<option value="{min_start}" {selected_min_start}>{min_start}</option>";s:9:"hours_end";s:66:"<option value="{hour_end}" {selected_hour_end}>{hour_end}</option>";s:8:"mins_end";s:63:"<option value="{min_end}" {selected_min_end}>{min_end}</option>";}s:9:"variables";a:7:{s:10:"__global__";a:12:{s:6:"accion";b:1;s:3:"acc";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:5:"title";b:1;s:11:"fecha_start";b:1;s:15:"__hours_start__";b:1;s:14:"__mins_start__";b:1;s:9:"fecha_end";b:1;s:13:"__hours_end__";b:1;s:12:"__mins_end__";b:1;s:9:"publicado";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:11:"hours_start";a:2:{s:10:"hour_start";b:1;s:19:"selected_hour_start";b:1;}s:10:"mins_start";a:2:{s:9:"min_start";b:1;s:18:"selected_min_start";b:1;}s:9:"hours_end";a:2:{s:8:"hour_end";b:1;s:17:"selected_hour_end";b:1;}s:8:"mins_end";a:2:{s:7:"min_end";b:1;s:16:"selected_min_end";b:1;}}s:8:"children";a:7:{s:10:"__global__";a:6:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:11:"hours_start";b:1;s:10:"mins_start";b:1;s:9:"hours_end";b:1;s:8:"mins_end";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:11:"hours_start";a:0:{}s:10:"mins_start";a:0:{}s:9:"hours_end";a:0:{}s:8:"mins_end";a:0:{}}s:9:"functions";a:7:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:11:"hours_start";a:0:{}s:10:"mins_start";a:0:{}s:9:"hours_end";a:0:{}s:8:"mins_end";a:0:{}}}

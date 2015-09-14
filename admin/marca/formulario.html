@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">  
+        <h1>Nueva Marca</h1>
+        <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+    </div>
+</div>
+              
+                  
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+    <input type="hidden"  name="id" id="id" value="{id}">
+    <input type="hidden"  name="elim_img" id="elim_img" value="0">
+    <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>     
+                  <!--  DATOS DEL CLIENTE -->
+              
+                    <div class="row">
+                          <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                       <h3>Datos</h3>
+                          </div>
+                    </div>
+                  <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                  <div class="form-group">
+                                    <label>Nombre <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="nombre" id="nombre" value="{nombre}">
+                                  </div>
+                              </div> 
+                              <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                  <div class="form-group">
+                                    <label>Foto <span class="campo-oblg">*</span></label>
+                                    <input  type="file"  name="imagen" id="imagen"  >
+                                    <p class="help-block">Solo jpg, jpge, pjpge, jpeg, png.</p>
+                                  </div>
+                              </div> 
+                    </div>
+                    <!-- BEGIN image_preview -->
+                    <div class="row">
+                              <div class="col-lg-offset-5 col-lg-3 col-md-offset-5 col-md-3">
+                                  <div class="form-group">
+                                      <img class="img-thumbnail" id="imagen_preview" width="90" src="{imagen}"> <br><br>
+                                      <a class="btn btn-danger" href="javascript:void(0)" onclick="eliminarImagen('imagen_preview');"><i class="fa fa-trash"></i>&nbsp;Eliminar Imagen</a>
+                                  </div>
+                              </div> 
+                    </div>
+
+                    <script>
+                      function eliminarImagen(id){
+                          $("#"+id).hide();
+                          $("#elim_img").val(1);
+                      }
+                    </script>
+                    <!-- END image_preview -->
+                        
+
+                  
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                        <div class="row" >
+                            
+                            <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>        
+                        </div>
+                  <!-- FIN DATOS DEL CLIENTE -->
+                </form>
+                 
+            
+        
+

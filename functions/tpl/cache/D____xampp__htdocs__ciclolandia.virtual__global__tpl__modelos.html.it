@@ -1,0 +1,4 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:184:"<select style="width:150px;" name="modelo" id="modelo" onchange="autoCargaPrecioMoto();" >
+<option id="primer_modelo" value="">Seleccione un Modelo</option>
+{__blq_modelos__}
+</select>";s:11:"blq_modelos";s:54:"<option  value="{modelo_id}" >{modelo_nombre}</option>";}s:9:"variables";a:2:{s:10:"__global__";a:1:{s:15:"__blq_modelos__";b:1;}s:11:"blq_modelos";a:2:{s:9:"modelo_id";b:1;s:13:"modelo_nombre";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:11:"blq_modelos";b:1;}s:11:"blq_modelos";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:11:"blq_modelos";a:0:{}}}

@@ -1,0 +1,16 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:432:"<h1 align="center">Acceso a Herramienta de Gesti&oacute;n</h1>
+<div class="login">
+{__mensaje__}
+<form action="{action}" method="POST">
+<label>Usuario:</label><br>
+<input type="text" name="usuario" id="usuario" size="40"/>
+<br>
+<br>
+<label>Password:</label><br>
+<input type="password" name="clave" id="clave" size="40"/>
+<div class="clear"></div><br>
+<div align="center">
+<input  type="submit" value="Entrar"/>
+</div>
+</form>
+</div>";s:7:"mensaje";s:51:"<div class="error-login mb10">{mensaje_error}</div>";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:11:"__mensaje__";b:1;s:6:"action";b:1;}s:7:"mensaje";a:1:{s:13:"mensaje_error";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:7:"mensaje";b:1;}s:7:"mensaje";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:7:"mensaje";a:0:{}}}

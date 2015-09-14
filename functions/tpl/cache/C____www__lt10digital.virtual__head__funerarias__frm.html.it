@@ -1,0 +1,134 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:5507:"<span class='titulo'>Funerarias</span><br>
+<div class='celeste' id='acciondesc'>Administración de Funerarias</div>
+<form action="../funerarias/rn.php" method="post" enctype="multipart/form-data" name="formulario" onSubmit="return evaluar_form()">
+<table bgcolor="#f6fafa" cellpadding="0" cellspacing="0" width="512">
+<tr>
+<td bgcolor="#999999" width="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td>
+<table cellpadding="0" cellspacing="0" width="510">
+<tr>
+<td colspan="7" bgcolor="#999999" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr align="left">
+<td height="20" width="17"><div align="left"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></div></td>
+<td width="101" ><div align="left"><a href="gestor.php?{agregar_nuevo}" class="celeste">Agregar Nueva Funeraria</a></div></td>
+<td width="18"><div align="left"><img src="../global/img/ic_nuevo.gif" alt="" border="0" height="15" width="17"></div></td>
+<td valign="top" width="188"><div align="left"><img src="../global/img/px_gris.gif" alt="" border="0" height="8" width="1"></div></td>
+<td width="127">&nbsp;</td>
+<td width="57" >&nbsp;</td>
+</tr>
+</table>
+<input name="op" type="hidden" value="{op}">
+<input name="id" id="id" type="hidden" value="{id}">
+<input name="id_item" type="hidden" value="{id_item}">
+<div align="center" class="alfabeto"><strong>{mensaje}</strong></div><br>
+<table border="0" cellpadding="0" cellspacing="0" width="508">
+<tr>
+<td rowspan="2" bgcolor="#417383" width="10"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td width="150" rowspan="2" bgcolor="#417383" class="blanco"><font color="#FFFFFF">Datos de la Funeraria</font></td>
+<td rowspan="2" bgcolor="#417383" valign="top" width="5"><img src="../global/img/rem_blanco.gif" alt="" border="0" height="5" width="5"></td>
+<td height="12" width="415"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table>
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1"><br>
+<table border="0" cellpadding="0" cellspacing="0" width="510">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="23%"><div align="right">Usuarios:</div></td>
+<td width="77%">
+<select name="usuario" id="usuario" class="form_350" >
+<option value="O">- Seleccione un usuario - </option>
+{__usuarios__}
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Nombre:</td>
+<td><input name="nombre" type="text" id="nombre" value='{nombre}' maxlength="136" class="form_350"> *</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">link:</td>
+<td>http://<input type="text" name="link" id="link" class="form_350" maxlength="255" value="{link}" /></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Publicar</td>
+<td> <input name="publicar" type="checkbox" id="publicar" value="1" {publicar}>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><div align="left">
+<table width="508" border="0" cellpadding="0" cellspacing="0" dwcopytype="CopyTableRow">
+<tr>
+<td rowspan="2" bgcolor="#417383" width="8"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td class="blanco" width="130" rowspan="2" bgcolor="#417383"><font color="#FFFFFF">BANNER </font></td>
+<td rowspan="2" bgcolor="#417383" valign="top" width="5"><img src="../global/img/rem_blanco.gif" alt="" border="0" height="5" width="5"></td>
+<td height="12" width="*"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table>
+</div></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><div align="center">
+<div id="div_empty" style="visibility: {img_empty_foto}"> No hay ninguna imagen asociada </div>
+<div id='div_img' style="visibility: {img_visible_foto}">
+<div align="center">
+<img src='{pathFoto}' height='{alto}' width='{ancho}' alt='' name='img1' border='1' id='img'>
+<div><a href="#img_anchor" onClick="unSetImagen('div_img','div_empty','img','imagen','img_del','img_mod')">Eliminar imagen</a></div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td align="right">Banner Asociado: </td>
+<td><input name="foto" type="file" id="foto" size="50" class="form_350">
+<br><div align="center">La Banner debe ser extensión jpeg, jpg ó gif</div>
+<input name="img_del" type="hidden" id="img_del" value="0">
+<input name="img_mod" type="hidden" id="img_mod" value="0">
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<br> <img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<div align="center"></div></td>
+<td bgcolor="#999999" width="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="512" bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#999999" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td align="center" height="18">
+<input type="image" src="../global/img/bot_guardar.gif" width="64" height="18"></td>
+</tr>
+</table>
+</form>";s:8:"usuarios";s:61:"<option value="{usr_id}" {select_usr}> {usr_nombre} </option>";}s:9:"variables";a:2:{s:10:"__global__";a:14:{s:13:"agregar_nuevo";b:1;s:2:"op";b:1;s:2:"id";b:1;s:7:"id_item";b:1;s:7:"mensaje";b:1;s:12:"__usuarios__";b:1;s:6:"nombre";b:1;s:4:"link";b:1;s:8:"publicar";b:1;s:14:"img_empty_foto";b:1;s:16:"img_visible_foto";b:1;s:8:"pathFoto";b:1;s:4:"alto";b:1;s:5:"ancho";b:1;}s:8:"usuarios";a:3:{s:6:"usr_id";b:1;s:10:"select_usr";b:1;s:10:"usr_nombre";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:8:"usuarios";b:1;}s:8:"usuarios";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:8:"usuarios";a:0:{}}}

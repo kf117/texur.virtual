@@ -1,0 +1,125 @@
+a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:2198:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+<h1>Lista Edições</h1>
+</div>
+</div>
+<form class=" " action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+<h3>Dados de pesquisa</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3">
+<div class="form-group">
+<label>Número da edição </label>
+<input class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class=" col-lg-3">
+<div class="form-group">
+<label>De Mês </label>
+<select class="form-control">
+<option>Selecionar um mês</option>
+</select>
+</div>
+</div>
+<div class=" col-lg-3">
+<div class="form-group">
+<label>De Ano </label>
+<select class="form-control">
+<option>Escolher um ano</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-4 col-lg-3">
+<div class="form-group">
+<label>Até o Mês </label>
+<select class="form-control">
+<option>Selecionar um mês</option>
+</select>
+</div>
+</div>
+<div class=" col-lg-3">
+<div class="form-group">
+<label>Até o Ano </label>
+<select class="form-control">
+<option>Escolher um ano</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-1">
+<input type="submit" class="btn btn-primary" value="Pesquisar" />
+</div>
+<div class="col-lg-3">
+<button class="btn btn-success">Nova pesquisa</button>
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+</form>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Número da edição</th>
+<th>Data</th>
+<th>Número de impressões</th>
+<th>Capa</th>
+<th>PDF</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr  >
+<td colspan="6" class="alert alert-warning">Não houve resultados para a consulta</td>
+</tr>
+{__resultados__}
+</tbody>
+</table>
+</div>
+</div>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+{mensaje_exito}
+</div>";s:10:"resultados";s:181:"<tr>
+<td>{nickname}</td>
+<td>{apellido}</td>
+<td>{nombre}</td>
+<td>{telefono}</td>
+<td>{domicilio}</td>
+<td>{tipo_de_usuario_lis}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:107:"<a class="btn btn-primary" href="/index.php?id={id_editar}&acc=22"><i class="icon-edit icon-white"></i></a>";s:8:"blq-elim";s:155:"<a class="btn btn-danger" href="/usuario/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:6:{s:10:"__global__";a:6:{s:6:"accion";b:1;s:3:"acc";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:14:"__resultados__";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:8:{s:8:"nickname";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:19:"tipo_de_usuario_lis";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:9:"id_editar";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:6:{s:10:"__global__";a:3:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:6:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}}

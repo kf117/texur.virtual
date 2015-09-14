@@ -1,0 +1,60 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:2601:"<div style="width:100%;margin:0;padding:0;background-color:#f5f5f5;font-family:Helvetica,Arial,sans-serif" marginheight="0" marginwidth="0">
+<div style="display:block;min-height:5px;background-color:rgb(243,131,19)"></div>
+<center>
+<table border="0" cellpadding="0" cellspacing="0"  width="100%">
+<tbody><tr>
+<td style="border-collapse:collapse;color:#525252" align="center" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="85%">
+<tbody><tr>
+<td style="border-collapse:collapse;color:#525252" align="center" height="20" valign="top"></td>
+</tr>
+<tr>
+<td style="border-collapse:collapse;color:#525252" align="center" valign="top">
+<table border="0" width="100%">
+<tbody><tr>
+<td style="border-collapse:collapse;color:#525252" height="34"></td> </tr>
+<tr>
+<td colspan="3" style="border-collapse:collapse;color:rgb(82,82,82);font-family:Helvetica,Arial,sans-serif;font-size:25px;font-weight:bold;line-height:120%;text-align:center" align="center">Colegio Heraldos del Evangelio</td>
+</tr>
+<tr>
+<td colspan="3" style="border-collapse:collapse;color:rgb(82,82,82);font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:bold;line-height:120%;text-align:center" align="center">Sugerencia</td>
+</tr>
+<tr>
+<td style="border-collapse:collapse;color:#525252" height="34"></td> </tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr><td><table style="padding-right:7.5%;padding-left:7.5%;border-spacing:0px" width="100%">
+<tbody><tr valign="middle">
+<td style="border-collapse:collapse;color:#525252;padding:10px;background-color:rgb(255,255,255);border-color:rgb(221,221,221);border-width:1px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:solid;font-size:12px;padding:40px!important;vertical-align:middle" align="left" valign="middle" width="100%">
+<table border="0" cellpadding="5px" cellspacing="0">
+<tbody>
+<tr>
+<td colspan="2" style="border-collapse:collapse;color:#525252;padding:0px!important" align="left" valign="top">
+<div style="font-size:17px;color:rgb(83,83,83);text-align:left;font-weight:bold">Sugerencia enviada por {profesor}</div>
+<br>
+</td></tr>
+<tr>
+<td colspan="2" style="border-collapse:collapse;color:#525252">{sugerencia}</td>
+</tr>
+</tbody></table>
+<p></p>
+</td>
+</tr>
+</tbody></table>
+</td></tr>
+<tr>
+<td style="border-collapse:collapse;color:#525252" align="center" height="33" valign="top"></td>
+</tr>
+<tr>
+<td style="border-collapse:collapse;color:#525252">
+</td>
+</tr>
+<tr>
+<td style="border-collapse:collapse;color:#525252" align="center" height="30" valign="top"></td>
+</tr>
+</tbody></table>
+</center></div>";}s:9:"variables";a:1:{s:10:"__global__";a:2:{s:8:"profesor";b:1;s:10:"sugerencia";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

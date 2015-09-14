@@ -1,0 +1,84 @@
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:2751:"<!DOCTYPE html>
+<html lang="pr">
+<head>
+<meta charset="iso-8859-1">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Luciano Vitetti">
+<script src="global/bootstrap/js/jquery.js"></script>
+<script src="global/bootstrap/js/bootstrap.js"></script>
+<script src="global/js/gestor.js"></script>
+<script src="global/js/fckeditor/fckeditor.js"></script>
+<!-- <script src="..global/bootstrap/js/bootstrap-dropdown.js"></script>-->
+{__bloque_javascript__}
+<!-- Le styles -->
+<link href="global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="global/css/general.css" rel="stylesheet" type="text/css">
+<link href="global/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- Le fav and touch icons -->
+<!--<link rel="shortcut icon" type="image/x-icon" href="img/fav.ico" />-->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="global/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="global/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="global/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="global/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+<style>
+html {
+height:100%;
+width:100%;
+}
+body{
+background:#8ba987 url(global/img/photo.jpg) no-repeat center center;
+background-size:cover;
+}
+/* body {
+background: url(img/logo.jpg) no-repeat center center fixed;
+}*/
+.form-login{
+margin-top:  15%;
+background-color:rgba(0, 0, 0, 0.5);
+}
+.clase_titulo_login{
+color:white;font-weight:bold;font-size: 15px;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-2 form-login">
+<form class=" pt15 pb15 "  method="POST" action="login/login.php" >
+<div class="form-group">
+<label class="clase_titulo_login">Usuario</label>
+<input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario...">
+</div>
+<div class="form-group">
+<label class="clase_titulo_login">Password</label>
+<input type="password" name="clave" id="clave" class="form-control" placeholder="Password...">
+</div>
+{__msg_err__}
+<div class="row">
+<div class="col-lg-12">
+<input class="col-lg-12 btn btn-primary" type="submit" value="Login"/>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:7:"msg_err";s:276:"<div class="row">
+<div class="col-lg-12">
+<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+<p>{mensaje_error}</p>
+</div>
+</div>
+</div>";}s:9:"variables";a:3:{s:10:"__global__";a:2:{s:21:"__bloque_javascript__";b:1;s:11:"__msg_err__";b:1;}s:17:"bloque_javascript";a:1:{s:10:"javascript";b:1;}s:7:"msg_err";a:1:{s:13:"mensaje_error";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:2:{s:17:"bloque_javascript";b:1;s:7:"msg_err";b:1;}s:17:"bloque_javascript";a:0:{}s:7:"msg_err";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:17:"bloque_javascript";a:0:{}s:7:"msg_err";a:0:{}}}

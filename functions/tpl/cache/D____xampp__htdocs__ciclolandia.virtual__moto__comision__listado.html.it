@@ -1,0 +1,32 @@
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:312:"<span><h1>Listado de Comisiones Asignadas</h1> </span>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nro</th>
+<th>Nro de Chasis</th>
+<th>Nro de Motor</th>
+<th>Marca</th>
+<th>Modelo</th>
+<th>Color</th>
+<th>Ubicación</th>
+<th>Comision</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:210:"<tr>
+<td>{nro_moto}</td>
+<td>{nro_chasis}</td>
+<td>{nro_motor}</td>
+<td>{marca}</td>
+<td>{modelo}</td>
+<td>{color}</td>
+<td>{ubicacion}</td>
+<td><strong>{comision}%</strong></td>
+<td>
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-elim";s:161:"<a class="btn btn-danger" href="/moto/comision/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:3:{s:10:"__global__";a:1:{s:14:"__resultados__";b:1;}s:10:"resultados";a:9:{s:8:"nro_moto";b:1;s:10:"nro_chasis";b:1;s:9:"nro_motor";b:1;s:5:"marca";b:1;s:6:"modelo";b:1;s:5:"color";b:1;s:9:"ubicacion";b:1;s:8:"comision";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:1:{s:8:"blq-elim";b:1;}s:8:"blq-elim";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-elim";a:0:{}}}

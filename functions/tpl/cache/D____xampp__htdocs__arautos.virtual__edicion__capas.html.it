@@ -1,0 +1,87 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:2187:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11 ">
+<h1>Lista Capas</h1>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Dados de pesquisa</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3">
+<div class="form-group">
+<label>
+Tipo Capa
+</label>
+<select class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+<option>Selecione um tipo</option>
+</select>
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-3">
+<div class="form-group">
+<label>
+De Ano
+</label>
+<select class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+<option>Escolher um ano</option>
+</select>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="form-group">
+<label>
+Até o Ano
+</label>
+<select class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+<option>Escolher um ano</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-1">
+<input type="submit" class="btn btn-primary" value="Pesquisar" />
+</div>
+<div class="col-lg-3">
+<button class="btn btn-success">Nova pesquisa</button>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<img src="/img/capa1.jpg" class="img-thumbnail">
+<Label>RAE141</Label>
+<Label>10/04/2015</Label>
+</div>
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<img src="/img/capa2.jpg" class="img-thumbnail">
+<Label>RAE142</Label>
+<Label>12/05/2015</Label>
+</div>
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<img src="/img/capa3.jpg" class="img-thumbnail">
+<Label>RAE143</Label>
+<Label>19/06/2015</Label>
+</div>
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<img src="/img/capa4.jpg" class="img-thumbnail">
+<Label>RAE144</Label>
+<Label>20/07/2015</Label>
+</div>
+</div>";}s:9:"variables";a:1:{s:10:"__global__";a:1:{s:6:"nombre";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

@@ -1,0 +1,40 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:715:"<div class="row" style="padding-left:30px;">
+<div style="float:left;margin-right:1px;">
+<form action="/cilindrada/agregarCilindrada.php" method="POST" class="form-inline">
+<label>Cilindrada &nbsp;</label>
+<input type="text"  style="width:154px;" name="agregarCilindrada" id="agregarCilindrada" value="{agregarCilindrada}">
+<input type="submit" value="Guardar" class="btn btn-primary">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+{__error_msg__}
+{__exito_msg__}
+</form>
+</div>
+</div>
+<div class="row span10" >{paginado}</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Cilindrada de motos</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div class="row span10" >{paginado}</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:10:"resultados";s:664:"<tr>
+<td>
+<div id="cilindrada_nombre_{idlist}" class="cilindrada_nombre">{cilindrada}</div>
+<div style="display:none" id="cilindrada_form_{idlist}" class="form-inline cilindrada_form">
+<input type="text" name="cilindrada_{idlist}" id="cilindrada_{idlist}" value="{cilindrada}" />
+<button onclick="editarCilindrada('{idlist}');">Guardar</button>
+</div>
+</td>
+<td>
+<button class="btn btn-primary" onclick="poderEditarCilindrada('{idlist}');"><i class="icon-edit icon-white"></i></button>
+<a class="btn btn-danger" href="/cilindrada/eliminarCilindrada.php?id={idelim}&acc={accelim}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a></td>
+</tr>";}s:9:"variables";a:4:{s:10:"__global__";a:6:{s:17:"agregarCilindrada";b:1;s:3:"acc";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:4:{s:6:"idlist";b:1;s:10:"cilindrada";b:1;s:6:"idelim";b:1;s:7:"accelim";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:3:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}}}

@@ -1,0 +1,29 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:1214:"<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Editar Precio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="/global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<link href="/global/css/general.css" rel="stylesheet" type="text/css">
+<link href="/global/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+<div class="row p10"><h4>{marca} - {modelo}</h4></div>
+<form action="editarPrecio.php" method="POST">
+<input type="hidden" name="id" id="id" value="{id}"/>
+<input type="hidden" name="anio" id="anio" value="{anio}"/>
+<label>Precio Contado</label>
+<input type="text" name="contado" id="contado" value="{contado}"/>
+<input type="hidden" name="contado_aux" id="contado_aux" value="{contado_aux}"/>
+<label>Precio Financiado</label>
+<input type="text" name="financiado" id="financiado" value="{financiado}"/>
+<input type="hidden" name="financiado_aux" id="financiado_aux" value="{financiado_aux}"/>
+<input type="submit" value="Editar" class="btn btn-primary"/>
+</form>
+</body>
+</html>";}s:9:"variables";a:1:{s:10:"__global__";a:8:{s:5:"marca";b:1;s:6:"modelo";b:1;s:2:"id";b:1;s:4:"anio";b:1;s:7:"contado";b:1;s:11:"contado_aux";b:1;s:10:"financiado";b:1;s:14:"financiado_aux";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

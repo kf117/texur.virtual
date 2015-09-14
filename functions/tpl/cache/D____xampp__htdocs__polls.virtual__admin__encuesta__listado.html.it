@@ -1,0 +1,127 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:3208:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+<h1>Lista Artigos</h1>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+<h3>Dados de pesquisa</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3">
+<div class="form-group">
+<label>Pesquisa por palavra</label>
+<input class="form-control" type="text"  name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class=" col-lg-3  col-md-3">
+<div class="form-group">
+<label>Datado de</label>
+<div class="row">
+<div class="col-lg-8  col-md-8">
+<input class="form-control" type="Text" id="demo1" maxlength="25" size="25">
+</div>
+<div class="col-lg-2  col-md-2">
+<img src="global/date/cal.gif" onclick="javascript:NewCssCal('demo1','','','','','','plus18')" style="cursor:pointer">
+</div>
+<div class="col-lg-1  col-md-1">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class=" col-lg-3 col-md-3">
+<div class="form-group">
+<label>Até</label>
+<div class="row">
+<div class="col-lg-8  col-md-8">
+<input class="form-control" type="Text" id="demo2" maxlength="25" size="25">
+</div>
+<div class="col-lg-2  col-md-2">
+<img src="global/date/cal.gif" onclick="javascript:NewCssCal('demo2','','','','','','plus18')" style="cursor:pointer">
+</div>
+<div class="col-lg-1  col-md-1">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<div class="form-group">
+<label>Edição</label>
+<select class="form-control" style="width:250px" type="text" name="ednombre" id="ednombre"  value>
+<option>Selecione uma Edição</option>
+</select>
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<div class="form-group">
+<label>Seção</label>
+<select class="form-control" style="width:250px" type="text" name="secnombre" id="secnombre"  value>
+<option>Selecione uma Seção</option>
+</select>
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<div class="form-group">
+<label>Autor</label>
+<select class="form-control" style="width:250px" type="text" name="ednombre" id="ednombre"  value>
+<option>Selecione um Autor</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-1">
+<input type="submit" class="btn btn-primary" value="Pesquisar" />
+</div>
+<div class="col-lg-3">
+<button class="btn btn-success">Nova pesquisa</button>
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Titulo</th>
+<th>Resumo</th>
+<th>Data</th>
+<th>Autor</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr  >
+<td colspan="6" class="alert alert-warning">Não houve resultados para a consulta</td>
+</tr>
+{__resultados__}
+</tbody>
+</table>
+</div>
+</div>";s:10:"resultados";s:51:"<tr>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:107:"<a class="btn btn-primary" href="/index.php?id={id_editar}&acc=22"><i class="icon-edit icon-white"></i></a>";s:8:"blq-elim";s:155:"<a class="btn btn-danger" href="/usuario/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:4:{s:10:"__global__";a:2:{s:6:"nombre";b:1;s:14:"__resultados__";b:1;}s:10:"resultados";a:2:{s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:9:"id_editar";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}}

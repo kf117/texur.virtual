@@ -1,0 +1,14 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:485:"<div class="row">
+<div class="row span12  ">
+<h1>Administrador de Juegos</h1>
+<p class=" well " style="padding:7px;">
+<!--<a class="btn  btn-primary btn-small" href="../front/front.php?id_opcion={opcion}&ac=add">
+<i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nuevo
+</a>-->
+<a class="btn  btn-inverse btn-small" href="../front/front.php?id_opcion={opcion}">
+<i class="icon-th-list icon-white"></i>&nbsp;Busqueda
+</a>
+</p>
+</div>
+<div class="row span12">{contenido}</div>
+</div>";}s:9:"variables";a:1:{s:10:"__global__";a:2:{s:6:"opcion";b:1;s:9:"contenido";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

@@ -1,0 +1,21 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:739:"<div class="row ">
+<div class="span offset2 well"  >
+<form method="POST" action="{action}" >
+<label>Usuario</label>
+<input type="text" class=" mb10" name="usuario" id="usuario" placeholder="usuario...">
+<label >Contrase&ntilde;a</label>
+<input type="password" name="clave" id="clave" class=" mb10" placeholder="contrase&ntilde;a...">
+{__msg_err__}
+<label class="mt10"><input class="btn btn-primary" type="submit" value="Login"></label>
+</form>
+</div>
+<div class="span5"  >
+<div class="span3">
+<h3>Gestor de contenidos.</h3>
+<small>Herramienta para carga, modificaci&oacute;n , visualizaci&oacute;n de la informaci&oacute;n que se presentara en el sitio.</small>
+</div>
+<img class="pull-right"  src="/cm/global/img/logo.jpg"/>
+</div>
+</div>";s:7:"msg_err";s:111:"<label class="mt10" style="display:block;">
+<span class="label label-important">{mensaje_error}</span>
+</label>";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:6:"action";b:1;s:11:"__msg_err__";b:1;}s:7:"msg_err";a:1:{s:13:"mensaje_error";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:7:"msg_err";b:1;}s:7:"msg_err";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:7:"msg_err";a:0:{}}}

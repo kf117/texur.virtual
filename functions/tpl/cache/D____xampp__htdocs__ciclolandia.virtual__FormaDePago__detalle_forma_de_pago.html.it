@@ -1,0 +1,26 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:339:"<span><h1>Detalles Forma De Pago<br><br></h1>
+<div class="well">
+<b>Nombre</b>={nombre}
+<br><b>Tipo</b>={tipo}
+<br><b>Forma</b>={forma}
+</div>
+<table class="table table-striped" style="font-size: 11px">
+<thead>
+<tr>
+<b>
+<th></th>
+<th>Desde</th>
+<th>Hasta</th>
+<th>Recargo</th>
+</b>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:89:"<tr>
+<td><b>Cuota Nº</b></td>
+<td>{desde}</td>
+<td>{hasta}</td>
+<td>{recargo}%</td>
+</tr>";}s:9:"variables";a:2:{s:10:"__global__";a:4:{s:6:"nombre";b:1;s:4:"tipo";b:1;s:5:"forma";b:1;s:14:"__resultados__";b:1;}s:10:"resultados";a:3:{s:5:"desde";b:1;s:5:"hasta";b:1;s:7:"recargo";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:10:"resultados";a:0:{}}}

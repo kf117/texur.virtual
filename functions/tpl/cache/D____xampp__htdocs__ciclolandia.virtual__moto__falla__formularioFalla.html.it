@@ -1,0 +1,65 @@
+a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:1424:"<div class="row mb10"> <a href="/moto/falla/falla.php?moto_id={moto_id}" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nueva</a></div>
+<div class="row" style="padding-left:30px;">
+<div style="float:left;margin-right:1px;">
+<form action="{accion}" method="POST" class="">
+<label>Descripción</label>
+<input name="descripcion" id="descripcion" value="{descripcion}" class="span12" />
+<div class="form-inline mb10">
+<label >Reclamar</label>
+<input   name="reclamar" id="reclamar" type="checkbox" {reclamar}    />
+&nbsp;  &nbsp;  &nbsp;
+<label >Reparado</label>
+<input   name="reparado" id="reparado" type="checkbox" {reparado}    />
+&nbsp;  &nbsp;  &nbsp;
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"fecha_reparado",
+dateFormat:"%d-%m-%Y"
+});
+};</script>
+<label >Fecha Reparado</label>
+<input   name="fecha_reparado" id="fecha_reparado" type="text" value="{fecha_reparado}" class="span2"   />
+</div>
+<div class="clearfix">
+<input type="submit" value="Guardar" class="btn btn-primary ">
+</div>
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="moto_id" id="moto_id" value="{moto_id}">
+<input type="hidden"  name="page" id="page" value="{page}">
+{__error_msg__}
+{__exito_msg__}
+</form>
+</div>
+</div>
+<div class="row span10" >{paginado}</div>
+{__blq-res__}
+{__blq-nores__}
+<div class="row span10" >{paginado}</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:7:"blq-res";s:209:"<table class="table table-striped">
+<thead>
+<tr>
+<th>Nro Falla</th>
+<th>Descripción</th>
+<th>Reclamar</th>
+<th>Reparado</th>
+<th>Fecha de Reparado</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:463:"<tr>
+<td>{nro_falla}</td>
+<td>{descripcion_lis}</td>
+<td>{reclamar_lis}</td>
+<td>{reparado_lis}</td>
+<td>{fecha_reparado_lis}</td>
+<td><a class="btn btn-primary" href="/moto/falla/falla.php?id={idlist}&page={pagelist}&moto_id={moto_id_lis}"><i class="icon-edit icon-white"></i></a>
+<a class="btn btn-danger" href="/moto/falla/eliminarFalla.php?id={idelim}&moto_id={moto_id_lis}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a></td>
+</tr>";s:9:"blq-nores";s:64:"<div class="row alert alert-heading span10" >{alerta_info}</div>";}s:9:"variables";a:6:{s:10:"__global__";a:13:{s:7:"moto_id";b:1;s:6:"accion";b:1;s:11:"descripcion";b:1;s:8:"reclamar";b:1;s:8:"reparado";b:1;s:14:"fecha_reparado";b:1;s:2:"id";b:1;s:4:"page";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:11:"__blq-res__";b:1;s:13:"__blq-nores__";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:7:"blq-res";a:1:{s:14:"__resultados__";b:1;}s:10:"resultados";a:9:{s:9:"nro_falla";b:1;s:15:"descripcion_lis";b:1;s:12:"reclamar_lis";b:1;s:12:"reparado_lis";b:1;s:18:"fecha_reparado_lis";b:1;s:6:"idlist";b:1;s:8:"pagelist";b:1;s:11:"moto_id_lis";b:1;s:6:"idelim";b:1;}s:9:"blq-nores";a:1:{s:11:"alerta_info";b:1;}}s:8:"children";a:6:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:7:"blq-res";b:1;s:9:"blq-nores";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"blq-res";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:0:{}s:9:"blq-nores";a:0:{}}s:9:"functions";a:6:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"blq-res";a:0:{}s:10:"resultados";a:0:{}s:9:"blq-nores";a:0:{}}}

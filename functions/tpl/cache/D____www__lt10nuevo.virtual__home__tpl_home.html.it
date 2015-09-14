@@ -1,0 +1,167 @@
+a:4:{s:6:"blocks";a:8:{s:10:"__global__";s:6421:"<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>{metatitulo}</title>
+<meta http-equiv="Refresh" content="500; URL=">
+<meta http-equiv="Expires" content="Mon, 6 May 1980 09:00:00 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="Description" content="{metadescripcion}">
+<meta name="Keywords" content="{metakeywords}">
+<meta name="google-site-verification" content="JlHQtwQOfeOI_DDl1lRj0agTi6boJw54y3mE7EnsDNU" />
+<link href="/global/css/screen.css" rel="stylesheet" type="text/css" media="screen">
+<link type="text/css" rel="stylesheet" href="/global/floatbox/floatbox.css">
+<link rel="shortcut icon" href="/global/img/favicon.ico">
+{__css__}
+<link rel="alternate" type="application/rss+xml" title="RSS-santotomealdia.com.ar" href="http://santotomealdia.com.ar/data/rss/home.xml">
+<!--[if IE 6]>
+<script src="/global/js/pngfix.js"></script>
+<script>
+DD_belatedPNG.fix('#fbOverlay, img');
+</script>
+<![endif]-->
+{__script__}
+<script type="text/javascript" src="/global/floatbox/floatbox.js">
+</script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/global/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+</head>
+<body onLoad="{onLoadEncuesta};">
+<div class="container mt15" style="padding-top:35px;">
+{__iconos_menu__}
+<div class="contenido clearfix pb30">
+<div id='header' class="clearfix pb5 header">
+<!--<div class="ico-logo"><img src="/global/img/ms2010.png" width="111" height="126" alt="Mundial de F&uacute;tbol Sud&aacute;frica 2010 - kazumi" class="block"/></div>-->
+<div class="logo"><a href="/index.html" title="santotomealdia.com.ar"><img src="{logo}" alt="santotomealdia.com.ar" width="300"></a></div>
+<div class="fecha-clima t11 grisclaro">
+<div class="mb3">{dia_semana}, {fecha} | {hora} hs.</div>
+<div class="pb3 clima">
+<div class="left mr5"><img src="/global/img/clima/{iconoTiempo}" class="reset" height="19"></div>
+<div class="left pt3">T:{temp} &deg;C&nbsp;&nbsp;H:{humedad}%</div>
+<div class="clear"></div>
+</div>
+<div class="newsletter-top"><a href="/home/newsletter.php" title="Recibir Newsletters" rel="iframe" rev="width:400 height:400 scrolling:no" class="azulcito bold">Recibir Newsletters »</a></div>
+</div>
+<div class="banner-top">
+<script type='text/javascript'><!--//<![CDATA[
+var m3_u = (location.protocol=='https:'?'https://ads.santotomealdia.com.ar/www/delivery/ajs.php':'http://ads.santotomealdia.com.ar/www/delivery/ajs.php');
+var m3_r = Math.floor(Math.random()*99999999999);
+if (!document.MAX_used) document.MAX_used = ',';
+document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+document.write ("?zoneid=1");
+document.write ('&amp;cb=' + m3_r);
+if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+document.write ("&amp;loc=" + escape(window.location));
+if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+if (document.context) document.write ("&context=" + escape(document.context));
+if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+document.write ("'><\/scr"+"ipt>");
+//]]>-->
+</script>
+<noscript>
+<a href='http://ads.santotomealdia.com.ar/www/delivery/ck.php?n=ad7efd62&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads.santotomealdia.com.ar/www/delivery/avw.php?zoneid=1&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ad7efd62' border='0' alt='' /></a>
+</noscript>
+<noscript>
+<a href=
+'http://politica.milliwatt.com.ar/ads/www/delivery/ck.php?n=a409d821&amp;cb=INSERT_RANDOM_NUMBER_HERE'
+target='_blank'><img src=
+'http://politica.milliwatt.com.ar/ads/www/delivery/avw.php?zoneid=1&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a409d821'
+border='0' alt=''></a>
+</noscript>
+</div>
+<div class="clear"></div>
+</div>
+<div class="main-nav clearfix">
+<div class="main-menu">
+<ul>
+<li><a href="/index.html" title="Inicio">Inicio</a></li>
+{__hijos__}
+</ul>
+</div>
+<div class="busqueda clearfix">
+<form action="/busqueda.html" method="post" id="buscar" onsubmit="return validarBuscarHome();" name="buscar" class="inline ">
+<div style="padding-top:7px;">
+<div class="left mr3">
+<input name="busqueda" type="text" class="input_160 " id="busqueda"
+onclick="ocultarErrorHome();" value="">
+</div>
+<div class="left mr2">
+<input name="tipo" type="radio" value="1" checked="checked" class="radio none reset-padding">
+<label>santotomealdia</label>
+</div>
+<div class="left mr3">
+<input name="tipo" type="radio" value="2" class="radio none reset-padding">
+<label>Google</label>
+</div>
+<div class="left">
+<input name="sa" type="image" class="reset none" value="buscar" src="/global/img/boton-buscar.png">
+</div>
+</div>
+<div class="clear"></div>
+<div id="msjBuscar" class="error hide"></div>
+</form>
+</div>
+<div class="clear"></div>
+</div>
+<!--MARQUESINA-->
+{__zona7__}
+<!--FIN MARQUESINA-->
+{contenido} </div>
+<div id='footer' class="footer clearfix">
+<div class="menu-footer left">
+<ul>
+<li><a href="/index.html" title="inicio">Inicio</a></li>
+{__padres2__}
+</ul>
+</div>
+<div class="right links-footer mt5">
+<p class="linksFT-2 t11 mb5 "><a href="#" onclick=
+"this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.santotomealdia.com.ar');" class="menu">santotomealdia página de inicio</a> | <a href=
+"/rss.html" class="menu">RSS</a> | <a href="mailto:contacto@santotomealdia.com.ar" class="menu">Contacto</a></p>
+<div class="grisclaro mb5">2009 © santotomealdia.com.ar</div>
+<a href="http://www.ezink.com.ar" target="_blank" title="diseño y desarrollo: ezink | web applications"><img src="/global/img/logo_ezink.png" alt="ezink | web applications" width="89" height="19"> </a> </div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10959761-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>";s:3:"css";s:68:"<link rel="stylesheet" type="text/css" media="{media}" href="{css}">";s:6:"script";s:71:"<script src="/global/js/{javascript}" type="text/javascript">
+</script>";s:11:"iconos_menu";s:1272:"<div class="top clearfix">
+<div class="menu-ico  ">
+<ul>
+<li><a href="/index.html" id="inicio" title="Inicio"><img src="/global/img/1x1.gif" width="18" height="18" alt="Inicio" /></a></li>
+<!--<li ><a href="/index.html" id="share" title="Compartir"><img src="/global/img/1x1.gif" width="18" height="18" alt="Compartir" /></a></li>-->
+<li><a href="/rss.html" id="rss" title="RSS"><img src="/global/img/1x1.gif" width="18" height="18" alt="RSS" /></a></li>
+<li><a href="/lectores.html" id="contacto" title="Contactarse"><img src="/global/img/1x1.gif" width="21" height="18" alt="Contactarse" /></a></li>
+<li>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style"> <a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=santotomealdia" title="Compartir" id="share" class="addthis_button"><img src="/global/img/1x1.gif" width="18" height="18" border="0" alt="Compartir" /></a> </div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=santotomealdia"></script>
+<!-- AddThis Button END -->
+</li>
+</ul>
+</div>
+<div class="menu-top">
+<ul>
+<!--
+<li><a href="/index.html" title="Sauce Viejo">Sauce Viejo<span></span></a></li>
+<li class="sepmenu"></li> -->
+{__padres__}
+</ul>
+</div>
+<div class="clear"></div>
+</div>";s:6:"padres";s:143:"<li><a href="/listado/val/{padre_id}/{nombre_padre_link}.html" title="{nombre_padre_link}" {seccion_seleccionada_padre}>{nombre_padre}</a></li>";s:5:"hijos";s:146:"<li><a href="/listado/val/{id_seccion}/{nombre_seccion_link}.html" title=
+"{nombre_seccion_link}" {seccion_seleccionada}>{nombre_seccion}</a></li>";s:5:"zona7";s:14:"{plantilla_z7}";s:7:"padres2";s:132:"<li id="{padre_id2}"><a href=
+"/listado/val/{padre_id2}/{nombre_padre_link2}.html" title=
+"{nombre_padre2}">{nombre_padre2}</a></li>";}s:9:"variables";a:8:{s:10:"__global__";a:18:{s:10:"metatitulo";b:1;s:15:"metadescripcion";b:1;s:12:"metakeywords";b:1;s:7:"__css__";b:1;s:10:"__script__";b:1;s:14:"onLoadEncuesta";b:1;s:15:"__iconos_menu__";b:1;s:4:"logo";b:1;s:10:"dia_semana";b:1;s:5:"fecha";b:1;s:4:"hora";b:1;s:11:"iconoTiempo";b:1;s:4:"temp";b:1;s:7:"humedad";b:1;s:9:"__hijos__";b:1;s:9:"__zona7__";b:1;s:9:"contenido";b:1;s:11:"__padres2__";b:1;}s:3:"css";a:2:{s:5:"media";b:1;s:3:"css";b:1;}s:6:"script";a:1:{s:10:"javascript";b:1;}s:11:"iconos_menu";a:1:{s:10:"__padres__";b:1;}s:6:"padres";a:4:{s:8:"padre_id";b:1;s:17:"nombre_padre_link";b:1;s:26:"seccion_seleccionada_padre";b:1;s:12:"nombre_padre";b:1;}s:5:"hijos";a:4:{s:10:"id_seccion";b:1;s:19:"nombre_seccion_link";b:1;s:20:"seccion_seleccionada";b:1;s:14:"nombre_seccion";b:1;}s:5:"zona7";a:1:{s:12:"plantilla_z7";b:1;}s:7:"padres2";a:3:{s:9:"padre_id2";b:1;s:18:"nombre_padre_link2";b:1;s:13:"nombre_padre2";b:1;}}s:8:"children";a:8:{s:10:"__global__";a:6:{s:3:"css";b:1;s:6:"script";b:1;s:11:"iconos_menu";b:1;s:5:"hijos";b:1;s:5:"zona7";b:1;s:7:"padres2";b:1;}s:3:"css";a:0:{}s:6:"script";a:0:{}s:11:"iconos_menu";a:1:{s:6:"padres";b:1;}s:6:"padres";a:0:{}s:5:"hijos";a:0:{}s:5:"zona7";a:0:{}s:7:"padres2";a:0:{}}s:9:"functions";a:8:{s:10:"__global__";a:0:{}s:3:"css";a:0:{}s:6:"script";a:0:{}s:11:"iconos_menu";a:0:{}s:6:"padres";a:0:{}s:5:"hijos";a:0:{}s:5:"zona7";a:0:{}s:7:"padres2";a:0:{}}}

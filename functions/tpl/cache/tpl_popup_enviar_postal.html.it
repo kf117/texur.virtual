@@ -1,0 +1,69 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:1216:"<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>LT10Digital - Enviar Postal</title>
+<link rel="STYLESHEET" type="text/css" href="../global/css/styles.css">
+<script src="../global/js/popup.js"></script>
+<script src="../global/js/recomendar.js"></script>
+</head>
+<body bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0" onLoad="recomendacionEnviada();">
+<div id="popUp">
+<div id="cerrar"> <a href="javascript:cerrarVentana()" class="texto">
+<div id="palabra">Cerrar</div>
+<div id="icono"><img src="../global/img/cerrar.gif" alt="" width="13" height="13" border="0"></div>
+</a> </div>
+<div class="logo"><img src="../global/img/logo_principal_chico.gif" alt="" width="114" height="35" border="0"></div>
+<div class="marco400">
+<div id="top"><img src="../global/img/postales-envio.png" alt="" width="400" height="39" border="0"></div>
+<div class="mensaje" id="mensajeRecomendar" style="display:none;"></div>
+{__formulario__}
+<!-- ///// FOOTER -->
+<div id="footer">
+<div id="pie" align="center">
+<div class="copyright">www.LT10Digital.com.ar - Copyright 2006<br>
+Todos los derechos reservados</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>";s:10:"formulario";s:1445:"<form action="enviarPostal.php?postal={postal}" id="formulario" method="post" enctype="multipart/form-data" onSubmit="return validarRecomendar();">
+<input type="hidden" id="recomendar" value="{recomendar}" />
+<div class="mb10"><img src="/postales/{postal}" alt="Postales de Santa Fe" width="300" height="200" /></div>
+<div class="textos"><b>Para:</b></div>
+<div class="etiqueta">nombre:</div>
+<div class="input">
+<input type="text" name="suNombre" id="suNombre" class="input_250">
+</div>
+<br clear="all">
+<div class="etiqueta">E-mail:</div>
+<div class="input">
+<input type="text" name="paraEmail" id="paraEmail" class="input_250">
+<h5>*</h5>
+</div>
+<br clear="all">
+<div class="textos"><b>De:</b></div>
+<div class="etiqueta">Su nombre:</div>
+<div class="input">
+<input type="text" name="suNombre" id="suNombre" class="input_250">
+</div>
+<br clear="all">
+<div class="etiqueta">Su e-mail:</div>
+<div class="input">
+<input type="text" name="suEmail" id="suEmail" class="input_250">
+</div>
+<br clear="all">
+<div class="etiqueta">Mensaje:</div>
+<div class="input">
+<textarea type="text" name="comentario" id="comentario" class="input_250x3"></textarea>
+</div>
+<br clear="all">
+<div id="detalle" class="volanta">* Campos Obligatorios</div>
+<div id="boton">
+<div id="palabra">Enviar</div>
+<div id="icono">
+<input type="image" name="enviar" src="../global/img/enviar.gif" style="cursor:pointer; padding-top: 1px;">
+</div>
+</div>
+</form>
+<br clear="all">";}s:9:"variables";a:2:{s:10:"__global__";a:1:{s:14:"__formulario__";b:1;}s:10:"formulario";a:2:{s:6:"postal";b:1;s:10:"recomendar";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:10:"formulario";b:1;}s:10:"formulario";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:10:"formulario";a:0:{}}}

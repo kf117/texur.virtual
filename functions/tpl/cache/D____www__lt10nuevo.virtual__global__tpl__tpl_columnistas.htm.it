@@ -1,0 +1,36 @@
+a:4:{s:6:"blocks";a:9:{s:10:"__global__";s:330:"<div class="columnistas lineacorte mb10">
+<h1 class="tit-col t16 bold menu georgia mb10">columnistas</h1>
+{__plantilla__}
+{__video__}
+{__noticias_relacionadas__}
+{__audio_home__}
+<p class="align-right mb10"><a href="/listado_columnistas.html" title="M&aacute;s columnistas" class="t11 bold">M&aacute;s columnistas »</a></p>
+</div>";s:9:"plantilla";s:307:"<div class="content-edit lineapunto clearfix pb10 mb10">
+{__link_imagen__}
+<p class="t11 mb5 bold "><a href="/noticia_col/val/{id_col}/ver_mas.html" title="{columnista}" class="menu">Por {columnista}</a></p>
+<h2 class="t14 reset normal"><a href="{url}" title="{titulo}" class="menu">{titulo}</a></h2>
+</div>";s:11:"link_imagen";s:87:"<a href="/noticia_col/val/{id_col}/ver_mas.html" title="{columnista}" >{__imagen__}</a>";s:6:"imagen";s:79:"<img src="{img_izq}" alt="{columnista}" width="65" class="bordeimg left mr15"/>";s:5:"video";s:478:"<!--<div id="player1{id_video}" class="imagen-edit"> <a href="http://www.macromedia.com/go/getflashplayer">Requiere Flash Player, descargar ahora</a></div>
+<script type="text/javascript">
+var s1{id_video} = new SWFObject("/global/video/flvplayer.swf","single","240","210","7");
+s1{id_video}.addParam("allowfullscreen","true");
+s1{id_video}.addVariable("file","{pathvideo}");
+s1{id_video}.addVariable("image","{src_imagen}");
+s1{id_video}.write("player1{id_video}");
+</script>-->";s:21:"noticias_relacionadas";s:113:"<!--<div class="relacionados arial">
+<ul>-->
+{__not_rel__}
+<!--		</ul>
+</div>
+<div class="clear2">&nbsp;</div>-->";s:7:"not_rel";s:109:"<!--								<li><a href="/noticias/val/{id_not_rel}/{titulo_not_rel_link}.html">{titulo_not_rel}</a></li>
+-->";s:10:"audio_home";s:81:"<!--				<div class="audiohome arial">
+-->
+{__audios_relacionados__}
+<!--</div>-->";s:19:"audios_relacionados";s:229:"<!--						<ul>
+-->
+<!--BEGIN audios -->
+<!--								<li><a href="/noticias/val/{id_not_rel}/{titulo_not_rel_link}.html"><strong>Audio:</strong> {nombre_audio}</a></li>
+-->
+<!-- END audios -->
+<!--						</ul>
+<div>&nbsp;</div>
+-->";}s:9:"variables";a:9:{s:10:"__global__";a:4:{s:13:"__plantilla__";b:1;s:9:"__video__";b:1;s:25:"__noticias_relacionadas__";b:1;s:14:"__audio_home__";b:1;}s:9:"plantilla";a:5:{s:15:"__link_imagen__";b:1;s:6:"id_col";b:1;s:10:"columnista";b:1;s:3:"url";b:1;s:6:"titulo";b:1;}s:11:"link_imagen";a:3:{s:6:"id_col";b:1;s:10:"columnista";b:1;s:10:"__imagen__";b:1;}s:6:"imagen";a:2:{s:7:"img_izq";b:1;s:10:"columnista";b:1;}s:5:"video";a:3:{s:8:"id_video";b:1;s:9:"pathvideo";b:1;s:10:"src_imagen";b:1;}s:21:"noticias_relacionadas";a:1:{s:11:"__not_rel__";b:1;}s:7:"not_rel";a:3:{s:10:"id_not_rel";b:1;s:19:"titulo_not_rel_link";b:1;s:14:"titulo_not_rel";b:1;}s:10:"audio_home";a:1:{s:23:"__audios_relacionados__";b:1;}s:19:"audios_relacionados";a:3:{s:10:"id_not_rel";b:1;s:19:"titulo_not_rel_link";b:1;s:12:"nombre_audio";b:1;}}s:8:"children";a:9:{s:10:"__global__";a:4:{s:9:"plantilla";b:1;s:5:"video";b:1;s:21:"noticias_relacionadas";b:1;s:10:"audio_home";b:1;}s:9:"plantilla";a:1:{s:11:"link_imagen";b:1;}s:11:"link_imagen";a:1:{s:6:"imagen";b:1;}s:6:"imagen";a:0:{}s:5:"video";a:0:{}s:21:"noticias_relacionadas";a:1:{s:7:"not_rel";b:1;}s:7:"not_rel";a:0:{}s:10:"audio_home";a:1:{s:19:"audios_relacionados";b:1;}s:19:"audios_relacionados";a:0:{}}s:9:"functions";a:9:{s:10:"__global__";a:0:{}s:9:"plantilla";a:0:{}s:11:"link_imagen";a:0:{}s:6:"imagen";a:0:{}s:5:"video";a:0:{}s:21:"noticias_relacionadas";a:0:{}s:7:"not_rel";a:0:{}s:10:"audio_home";a:0:{}s:19:"audios_relacionados";a:0:{}}}

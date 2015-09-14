@@ -1,0 +1,99 @@
+<form id="listClientes" action="{accion}" method="POST">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+
+ <!-- BUSCADOR DE MOTO -->             
+
+<!--  DATOS DE LA MOTO -->
+                 
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11">
+        <h1>Listas de Usuários</h1>
+    </div>
+    <div class="col-lg-offset-1 col-lg-11">
+        <h3>Dados de pesquisa</h3>
+    </div>
+</div>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-3">
+            <div class="form-group">
+                <label>Sobrenome</label>
+                <input class="form-control" type="text" name="apellido" id="apellido" value="{apellido}">
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="form-group">
+                <label>Nome</label>
+                <input class="form-control" type="text" name="nombre" id="nombre"  value="{nombre}">
+            </div>
+        </div>
+</div>
+
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-1">
+            <input type="submit" class="btn btn-primary" value="Pesquisar" />
+        </div>   
+        <div class="col-lg-3">
+            <button class="btn btn-success">Nova pesquisa</button>
+        </div>  
+</div>
+ 
+<div class="row">{paginado}
+<div class="col-lg-offset-1 col-lg-11">
+<table class="table table-striped">
+    
+              <thead>
+                <tr>
+                  
+                  <th>Nick</th>
+                  <th>Sobrenome</th>
+                  <th>Nome</th>
+                  <th>Telefone</th>
+                  <th>Endereço</th>
+                  <th>Email</th>
+                  
+                  <th>&nbsp;</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- BEGIN resultados --> 
+                <tr>
+                  
+                  <td>{nickname}</td>
+                  <td>{apellido}</td>
+                  <td>{nombre}</td>
+                  <td>{telefono}</td>
+                  <td>{domicilio}</td>
+                  <td>{email}</td>
+                  
+                  
+                  <td>
+                      
+                      <!-- BEGIN blq-edit -->    
+                  <a class="btn btn-primary" href="/index.php?id={id_editar}&acc=22"><i class="fa fa-pencil-square-o"></i></a>
+                  <!-- END blq-edit -->
+                  <!-- BEGIN blq-elim -->
+                 <a class="btn btn-danger" href="/usuario/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+                     <i class="fa fa-trash-o"></i></a>
+                  <!-- END blq-elim -->
+                  </td>
+                </tr>
+                <!-- END resultados -->
+                
+              </tbody>
+</table>
+    </div>
+{paginado}</div>

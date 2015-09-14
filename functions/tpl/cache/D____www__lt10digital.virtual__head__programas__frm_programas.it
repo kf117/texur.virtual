@@ -1,0 +1,197 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:8162:"<div class='titulo' id='acciondesc'>Programas</div>
+<div class='celeste' id='acciondesc'>Administración de Programas</div>
+<br>
+<form action="../rn/programas.rn.php" method="post" enctype="multipart/form-data" name="noticias" onsubmit="return evaluar_form()">
+<table bgcolor="#f6fafa" cellpadding="0" cellspacing="0" width="512">
+<tr>
+<td bgcolor="#999999" width="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td> <table cellpadding="0" cellspacing="0" width="510">
+<tr>
+<td colspan="7" bgcolor="#999999" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr align="left">
+<td height="20" width="8"><div align="left"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></div></td>
+<td width="93" ><div align="left"><a href="gestor.php?{agregar_noticia}" class="celeste">Agregar Nuevo Programa</a></div></td>
+<td width="18"><div align="left"><img src="../global/img/ic_nuevo.gif" alt="" border="0" height="15" width="17"></div></td>
+<td valign="top" width="30"><div align="left"><img src="../global/img/px_gris.gif" alt="" border="0" height="8" width="1"></div></td>
+<td width="58">&nbsp;</td>
+<td width="25" >&nbsp;</td>
+<td width="276">&nbsp;</td>
+</tr>
+</table>
+<input name="op" type="hidden" value={op}>
+<input name="id" type="hidden" value={id}>
+<input name="id_item" type="hidden" value="{id_item}">
+<div align="center">
+<input name="l_asig_c" type="hidden" id="l_asig_c">
+<br>
+<span align="center" class="alfabeto">{mensaje}</span><br>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" width="508">
+<tr>
+<td rowspan="2" bgcolor="#417383" width="8"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td class="blanco" width="130" rowspan="2" bgcolor="#417383"><font color="#FFFFFF">Datos
+del Programa</font></td>
+<td rowspan="2" bgcolor="#417383" valign="top" width="5"><img src="../global/img/rem_blanco.gif" alt="" border="0" height="5" width="5"></td>
+<td height="12" width="*"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table>
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1"><br>
+<table border="0" cellpadding="0" cellspacing="0" width="510">
+<tr>
+<td align="right">Nombre:</td>
+<td><input name="nombre" type="text" class="form_350" id="nombre" value='{nombre}' maxlength="250"> *
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Descripcion:</td>
+<td><textarea name="descripcion" rows="6" id="descripcion" class="form_350">{descripcion}</textarea></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right"><div>Email:</div></td>
+<td><input name="email" type="text" class="form_350" id="email" value='{email}' maxlength="250" ></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right"><div>http://</div></td>
+<td><input name="url" type="text" class="form_350" id="url" value='{url}' maxlength="250"></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right"><div>Publicar:</div></td>
+<td><input name="publicar" type="checkbox" id="publicar2" value="checkbox" {pub_checked}></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td height="23" colspan="2"><table border="0" cellpadding="0" cellspacing="0" width="508">
+<!-- <a name="img_anchor" id="img_anchor"></a> -->
+<tr>
+<td rowspan="2" bgcolor="#417383" width="8"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td class="blanco" width="130" rowspan="2" bgcolor="#417383"><font color="#FFFFFF">Imagenes
+Asociadas</font></td>
+<td rowspan="2" bgcolor="#417383" valign="top" width="5"><img src="../global/img/rem_blanco.gif" alt="" border="0" height="5" width="5"></td>
+<td height="12" width="*"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td colspan="2">
+<b><br><div align="center">Las imagenes cargadas deben ser extensión jpg, jpeg, png ó gif</div></b>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"> <div align="center">
+<div id="div_empty1" style="visibility: {img_empty1}">No hay ninguna imagen asociada</div>
+<div id='div_img1' style="visibility: {img_visible1}">
+<div align="center"><img src="{src_imagen1}" alt="" name="img1" border="1" id='img1' {width1}><br>
+<div><a href="#img_anchor" onClick="unSetImagen('div_img1','div_empty1','img1','imagen1','img_del1','img_mod1')">Eliminar imagen</a></div>
+</div>
+</div>
+<div align="center"></div>
+<div align="center">
+<input  align="middle" name="imagen1" type="file" id="imagen1" size="50" class="form_350" >
+<input name="img_del1" type="hidden" id="img_del1" value="0">
+<input name="img_mod1" type="hidden" id="img_mod1" value="0">
+</div>
+</div></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"> <div align="center">
+<div id="div_empty2" style="visibility: {img_empty2}">No hay ninguna imagen asociada</div>
+<div id='div_img2' style="visibility: {img_visible2}">
+<div align="center"><img src="{src_imagen2}" alt="" name="img2" border="1" id='img2' {width2}><br>
+<div><a href="#img_anchor" onClick="unSetImagen('div_img2','div_empty2','img2','imagen2','img_del2','img_mod2')">Eliminar imagen</a></div>
+</div>
+</div>
+<div align="center"></div>
+<div align="center">
+<input  align="middle" name="imagen2" type="file" id="imagen2" size="50" class="form_350" >
+<input name="img_del2" type="hidden" id="img_del2" value="0">
+<input name="img_mod2" type="hidden" id="img_mod2" value="0">
+</div>
+</div></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><div align="center">
+<div id="div_empty3" style="visibility: {img_empty3}">No hay ninguna imagen asociada</div>
+<div id='div_img3' style="visibility: {img_visible3}">
+<div align="center"><img src="{src_imagen3}" alt="" name="img3" border="1" id='img3' {width3}><br>
+<div><a href="#img_anchor" onClick="unSetImagen('div_img3','div_empty3','img3','imagen3','img_del3','img_mod3')">Eliminar imagen</a></div>
+</div>
+</div>
+<div align="center"></div>
+<div align="center">
+<input  align="middle" name="imagen3" type="file" id="imagen3" size="50" class="form_350" >
+<input name="img_del3" type="hidden" id="img_del3" value="0">
+<input name="img_mod3" type="hidden" id="img_mod3" value="0">
+</div>
+</div></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><div align="center">
+<div id="div_empty4" style="visibility: {img_empty4}">No hay ninguna imagen asociada</div>
+<div id='div_img4' style="visibility: {img_visible4}">
+<div align="center"><img src="{src_imagen4}" alt="" name="img4" border="1" id='img4' {width4}><br>
+<div><a href="#img_anchor" onClick="unSetImagen('div_img4','div_empty4','img4','imagen4','img_del4','img_mod4')">Eliminar imagen</a></div>
+</div>
+</div>
+<div align="center"></div>
+<div align="center">
+<input  align="middle" name="imagen4" type="file" id="imagen4" size="50" class="form_350" >
+<input name="img_del4" type="hidden" id="img_del4" value="0">
+<input name="img_mod4" type="hidden" id="img_mod4" value="0">
+</div>
+</div></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<br> <img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<div align="center"></div></td>
+<td bgcolor="#999999" width="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="512" bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#999999" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td align="center" height="18">
+<input type="image" src="../global/img/bot_guardar.gif" width="64" height="18"></td>
+</tr>
+</table>
+</form>
+<img src="../global/img/1x1.gif" alt="" border="0" height="20" width="1">";}s:9:"variables";a:1:{s:10:"__global__";a:26:{s:15:"agregar_noticia";b:1;s:2:"op";b:1;s:2:"id";b:1;s:7:"id_item";b:1;s:7:"mensaje";b:1;s:6:"nombre";b:1;s:11:"descripcion";b:1;s:5:"email";b:1;s:3:"url";b:1;s:11:"pub_checked";b:1;s:10:"img_empty1";b:1;s:12:"img_visible1";b:1;s:11:"src_imagen1";b:1;s:6:"width1";b:1;s:10:"img_empty2";b:1;s:12:"img_visible2";b:1;s:11:"src_imagen2";b:1;s:6:"width2";b:1;s:10:"img_empty3";b:1;s:12:"img_visible3";b:1;s:11:"src_imagen3";b:1;s:6:"width3";b:1;s:10:"img_empty4";b:1;s:12:"img_visible4";b:1;s:11:"src_imagen4";b:1;s:6:"width4";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

@@ -1,0 +1,61 @@
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:1505:"<div class="row span10" >
+<form id="listClientes" class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<!-- BUSCADOR DE MOTO -->
+<!--  DATOS DE LA MOTO -->
+<div class="row " style="padding-left:40px;">
+<h3>Buscador de Usuarios</h3>
+</div>
+<div class="row " style="padding-left:40px;padding-top:20px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Nickname</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="nick" id="nick" value="{nick}">
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Tipo de usuario</label>
+<div style="float:left;margin-right:10px;" >
+<select style="width:196px;" name="tipo_usuario" id="tipo_usuario" >
+<option  value="0" >Seleccione tipo de usuario</option>
+{__perfiles__}
+</select>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+</div>
+</div>
+<!-- FIN DE DATOS LA MOTO -->
+<div align="center" class="mt10">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqUsuario();" class="btn btn-inverse">Limpiar Busqueda</button>
+</div>
+</div>
+<div class="row span10" >{paginado}</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nickname</th>
+<th>Apellido</th>
+<th>Nombre</th>
+<th>Teléfono</th>
+<th>Domicilio</th>
+<th>Tipo de Usuario</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div class="row span10" >{paginado}</div>";s:8:"perfiles";s:65:"<option value="{perfil_id}" {select_perfil}>{perfil_n_s}</option>";s:10:"resultados";s:181:"<tr>
+<td>{nickname}</td>
+<td>{apellido}</td>
+<td>{nombre}</td>
+<td>{telefono}</td>
+<td>{domicilio}</td>
+<td>{tipo_de_usuario_lis}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:107:"<a class="btn btn-primary" href="/index.php?id={id_editar}&acc=22"><i class="icon-edit icon-white"></i></a>";s:8:"blq-elim";s:155:"<a class="btn btn-danger" href="/usuario/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:5:{s:10:"__global__";a:6:{s:6:"accion";b:1;s:3:"acc";b:1;s:4:"nick";b:1;s:12:"__perfiles__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;}s:8:"perfiles";a:3:{s:9:"perfil_id";b:1;s:13:"select_perfil";b:1;s:10:"perfil_n_s";b:1;}s:10:"resultados";a:8:{s:8:"nickname";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:19:"tipo_de_usuario_lis";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:9:"id_editar";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:2:{s:8:"perfiles";b:1;s:10:"resultados";b:1;}s:8:"perfiles";a:0:{}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:8:"perfiles";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}}

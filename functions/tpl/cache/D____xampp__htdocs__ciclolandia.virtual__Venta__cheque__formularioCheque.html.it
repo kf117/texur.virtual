@@ -1,0 +1,92 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:2298:"<div class="row mb10"><h1>Cheques</h1></div>
+<div class="row span10" >
+<form id="listCheques" class=" well" action="" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<!-- BUSCADOR DE MOTO -->
+<!--  DATOS DE LA MOTO -->
+<div class="row " style="padding-left:40px;">
+<h3>Buscador de Cheques</h3>
+</div>
+<div class="row " style="padding-left:40px;padding-top:20px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">DNI del Cliente</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="dni" id="dni" value="{dni}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro Chasis Moto</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:210px;" name="chasis" id="chasis" value="{chasis}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro Cheque</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:210px;" name="nro_cheque" id="nro_cheque" value="{nro_cheque}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Monto</label>
+<div style="float:left;margin-right:18px;">
+<input type="text" style="width:150px;" name="monto" id="monto" value="{monto}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Desde  &nbsp;&nbsp;</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" name="desde" id="desde" value="{desde}" class="mr30" />
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Hasta &nbsp;&nbsp;</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" name="hasta" id="hasta" value="{hasta}" class="mr30" />
+</div>
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"desde",
+dateFormat:"%d-%m-%Y"
+});
+new JsDatePick({
+useMode:2,
+target:"hasta",
+dateFormat:"%d-%m-%Y"
+});
+};
+</script>
+</div>
+<!-- FIN DE DATOS LA MOTO -->
+<div align="center" class="mt10">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqCheques();" class="btn btn-inverse">Limpiar Busqueda</button>
+</div>
+</form>
+</div>
+<div class="row span10" >{paginado}</div>
+{__blq-res__}
+<div class="row span10" >{paginado}</div>
+{__blq-nores__}";s:7:"blq-res";s:236:"<table class="table table-striped">
+<thead>
+<tr>
+<th>Monto</th>
+<th>Nombre y Apellido</th>
+<th>Nro Documento</th>
+<th>Nro Chasis</th>
+<th>Nro Cheque</th>
+<th>Fecha</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:588:"<tr>
+<td>{monto_lis}</td>
+<td>{apellido_lis}</td>
+<td>{nro_doc_lis}</td>
+<td>{nro_chasis_lis}</td>
+<td>
+<div id="cheque_nombre_{idlist}" class="cheque_nombre">{nro_cheque_lis}</div>
+<div style="display:none" id="cheque_form_{idlist}" class="form-inline cheque_form">
+<input type="text" name="cheque_{idlist}" id="cheque_{idlist}" value="{nro_cheque_lis}" />
+<button onclick="editarCheque('{idlist}');">Guardar</button>
+</div>
+</td>
+<td>{fecha_lis}</td>
+<td><button class="btn btn-primary" onclick="poderEditarCheque('{idlist}');" ><i class="icon-edit icon-white"></i></button>
+</td>
+</tr>";s:9:"blq-nores";s:64:"<div class="row alert alert-heading span10" >{alerta_info}</div>";}s:9:"variables";a:4:{s:10:"__global__";a:10:{s:3:"acc";b:1;s:3:"dni";b:1;s:6:"chasis";b:1;s:10:"nro_cheque";b:1;s:5:"monto";b:1;s:5:"desde";b:1;s:5:"hasta";b:1;s:8:"paginado";b:1;s:11:"__blq-res__";b:1;s:13:"__blq-nores__";b:1;}s:7:"blq-res";a:1:{s:14:"__resultados__";b:1;}s:10:"resultados";a:7:{s:9:"monto_lis";b:1;s:12:"apellido_lis";b:1;s:11:"nro_doc_lis";b:1;s:14:"nro_chasis_lis";b:1;s:6:"idlist";b:1;s:14:"nro_cheque_lis";b:1;s:9:"fecha_lis";b:1;}s:9:"blq-nores";a:1:{s:11:"alerta_info";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:2:{s:7:"blq-res";b:1;s:9:"blq-nores";b:1;}s:7:"blq-res";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:0:{}s:9:"blq-nores";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:7:"blq-res";a:0:{}s:10:"resultados";a:0:{}s:9:"blq-nores";a:0:{}}}

@@ -1,0 +1,26 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:867:"<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reubicar Moto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="/global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<link href="/global/css/general.css" rel="stylesheet" type="text/css">
+<link href="/global/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+<form action="eliminar.php" method="POST">
+<input type="hidden" name="id" id="id" value="{id}"/>
+<label>Nuevo Vendedor</label>
+<select  name="vendedor" id="vendedor" >
+<option value="0">Seleccione el nuevo Vendedor</option>
+{__sucs__}
+</select>
+<input type="submit" value="Guardar" class="btn btn-primary"/>
+</form>
+</body>
+</html>";s:4:"sucs";s:46:"<option value="{suc_id}">{suc_nombre}</option>";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:2:"id";b:1;s:8:"__sucs__";b:1;}s:4:"sucs";a:2:{s:6:"suc_id";b:1;s:10:"suc_nombre";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:4:"sucs";b:1;}s:4:"sucs";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:4:"sucs";a:0:{}}}

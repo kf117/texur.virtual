@@ -1,0 +1,275 @@
+a:4:{s:6:"blocks";a:8:{s:10:"__global__";s:5659:"<script src="/highcharts/js/highcharts.js"></script>
+<script src="/highcharts/js/modules/exporting.js"></script>
+<script type="text/javascript">
+$(function () {
+$('#container_1').highcharts({
+chart: {
+type: 'line'
+},
+title: {
+text: 'Ventas Realizadas en el periodo: {periodo}'
+},
+subtitle: {
+text: 'Ciclolandia'
+},
+//startOnTick :false,
+xAxis: {
+categories: [
+{__categorias_venta__}
+]
+},
+yAxis: {
+allowDecimals:false,
+min:0,
+title: {
+text: 'Ventas'
+}
+},
+tooltip: {
+enabled: false,
+formatter: function() {
+return '<b>'+ this.series.name +'</b><br/>'+
+this.x +': '+ this.y +'°C';
+}
+},
+plotOptions: {
+line: {
+dataLabels: {
+enabled: true
+},
+enableMouseTracking: true
+}
+},
+series: [{
+name: 'Ventas',
+data: [
+{__valores_venta__}
+]
+}]
+});
+});
+</script>
+<script type="text/javascript">
+$(function () {
+$('#container_2').highcharts({
+chart: {
+type: 'column'
+},
+title: {
+text: 'Detalle de modelos vendidos en el periodo: {periodo}'
+},
+subtitle: {
+text: 'Ciclolandia'
+},
+xAxis: {
+categories: [
+'Ventas de acuerdo a modelos'
+]
+},
+yAxis: {
+min: 0,
+allowDecimals:false,
+title: {
+text: 'Motos (ventas)'
+}
+},
+tooltip: {
+headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+'<td style="padding:0"><b>{point.y:.0f} vendidas</b></td></tr>',
+footerFormat: '</table>',
+shared: true,
+useHTML: true
+},
+plotOptions: {
+column: {
+pointPadding: 0.2,
+borderWidth: 0
+}
+},
+series: [
+{__valores_modelos__}
+]
+});
+});
+</script>
+<script type="text/javascript">//VENDEDORES
+$(function () {
+$('#container_3').highcharts({
+chart: {
+plotBackgroundColor: null,
+plotBorderWidth: null,
+plotShadow: false
+},
+title: {
+text: 'Motos vendidas por cada vendedor en el periodo {periodo}'
+},
+tooltip: {
+pointFormat: '{series.name}: <b>{point.percentage:.2f} %</b>',
+percentageDecimals: 2
+},
+plotOptions: {
+pie: {
+allowPointSelect: true,
+cursor: 'pointer',
+dataLabels: {
+enabled: true,
+color: '#000000',
+connectorColor: '#000000',
+formatter: function() {
+return '<b>'+ this.point.name +'</b>: '+ Math.ceil(this.percentage/100*{total_ventas}) +' Ventas';
+//this.percentage=(this.percentage/100*{total_ventas}).toFixed(2);
+}
+}
+}
+},
+series: [{
+type: 'pie',
+name: 'Ventas',
+data: [
+{__valores_vendedor__}
+]
+}]
+});
+});
+/*{
+name: 'Chrome',
+y: 12.8,
+sliced: true,
+selected: true
+},*/
+</script>
+<form method="POST" class="form-inline well " >
+<h4>Período de análisis estadístico</h4><br>
+{__msg__}
+<label>Desde  &nbsp;&nbsp;</label>
+<input type="text" name="desde" id="desde" value="{desde}" class="mr30" />
+<label>Hasta &nbsp;&nbsp;</label>
+<input type="text" name="hasta" id="hasta" value="{hasta}" class="mr30" />
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"desde",
+dateFormat:"%d-%m-%Y"
+});
+new JsDatePick({
+useMode:2,
+target:"hasta",
+dateFormat:"%d-%m-%Y"
+});
+};
+</script>
+<div style="display:none;">
+<label>Detalle &nbsp;&nbsp;</label>
+<select  name="detalle" id="detalle" class="mr20 span2" >
+<option value="m" {selected_m} >Meses</option>
+<option value="d" {selected_d} >Días</option>
+</select>
+</div>
+<input type="submit" value="Analizar" class="btn btn-primary" /><br>
+<p class="mt10"><strong>Nota:</strong> De no cargar ninguna fecha las estadisticas se evaluaran en base al año actual.</p>
+</form>
+<ul class="nav nav-tabs">
+<li class="graph_tab active" id="graph_1" style="cursor:pointer;">
+<a onclick="mostrarTabGraph('1');">Ventas</a>
+</li>
+<li class="graph_tab" id="graph_2" style="cursor:pointer;">
+<a onclick="mostrarTabGraph('2');">Modelos</a>
+</li>
+<li class="graph_tab" id="graph_3" style="cursor:pointer;">
+<a onclick="mostrarTabGraph('3');">Vendedores</a>
+</li>
+<li class="graph_tab" id="graph_4" style="cursor:pointer;">
+<a onclick="mostrarTabGraph('4');">Pagos</a>
+</li>
+</ul>
+{__tot__}
+<div class="graph_cont span10 row" id="container_1" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<div class="graph_cont span10 row" id="container_2" style="min-width: 400px; height: 400px; margin: 0 auto;display: none;"></div>
+<div class="graph_cont span10 row" id="container_3" style="min-width: 400px; height: 400px; margin: 0 auto;display: none;"></div>
+<div class="graph_cont span10 row" id="container_4" style="min-width: 400px; height: 400px; margin: 0 auto;display: none;">
+<br>
+<p>Monto de los pagos ingresados en el periodo seleccionado.(distinguidos por forma de pago,incluye plan de ahorro)</p>
+<br>
+<table class="table table-striped span5 pull-left">
+<thead>
+<tr>
+<th>Forma de Pago</th>
+<th>Monto de ingresos</th>
+<th>Cantidad de pagos</th>
+</tr>
+</thead>
+<tbody>
+{__pagos_lis__}
+</tbody>
+</table>
+<div class=" pull-left">
+<br>
+<p>Calculo de ingresos y deuda respecto a las ventas efectuadas en el periodo seleccionado.</p>
+<br>
+<h4>Ventas</h4>
+<table class="table table-striped span3 ">
+<thead>
+<tr>
+<th>Ingreso</th>
+<th>Deuda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ {vent_ingreso}</td>
+<td>$ {vent_deuda}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=" pull-left" style="width: 500px;">
+<br>
+<p>Calculo de ingresos de planes de ahorro en el periodo seleccionado.</p>
+<br>
+<h4>Planes de ahorro</h4>
+<table class="table table-striped span3 ">
+<thead>
+<tr>
+<th>Ingreso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ {vent_ingreso_pa}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=" pull-left">
+<br>
+<p>Monto de los pagos ingresados por service y reparaciones y la deuda en el periodo seleccionado.</p>
+<br>
+<h4>Services</h4>
+<table class="table table-striped span3 ">
+<thead>
+<tr>
+<th>Ingreso</th>
+<th>Deuda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ {serv_ingreso}</td>
+<td>$ {serv_deuda}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>";s:16:"categorias_venta";s:29:"{coma_cat_venta}'{cat_venta}'";s:13:"valores_venta";s:27:"{coma_val_venta}{val_venta}";s:15:"valores_modelos";s:56:"{coma_mod}
+{
+name: '{nombre_mod}',
+data: [{valor_mod}]
+}";s:16:"valores_vendedor";s:45:"{coma_vend} ['{nombre_vend}',   {valor_vend}]";s:3:"msg";s:48:"<div class="alert alert-error">
+{mensaje}
+</div>";s:3:"tot";s:42:"<h4>Total de Ventas: {total_ventas_2}</h4>";s:9:"pagos_lis";s:77:"<tr>
+<td>{pag_nombre}</td>
+<td>$ {pag_monto}</td>
+<td>{pag_cuenta}</td>
+</tr>";}s:9:"variables";a:8:{s:10:"__global__";a:18:{s:7:"periodo";b:1;s:20:"__categorias_venta__";b:1;s:17:"__valores_venta__";b:1;s:19:"__valores_modelos__";b:1;s:12:"total_ventas";b:1;s:20:"__valores_vendedor__";b:1;s:7:"__msg__";b:1;s:5:"desde";b:1;s:5:"hasta";b:1;s:10:"selected_m";b:1;s:10:"selected_d";b:1;s:7:"__tot__";b:1;s:13:"__pagos_lis__";b:1;s:12:"vent_ingreso";b:1;s:10:"vent_deuda";b:1;s:15:"vent_ingreso_pa";b:1;s:12:"serv_ingreso";b:1;s:10:"serv_deuda";b:1;}s:16:"categorias_venta";a:2:{s:14:"coma_cat_venta";b:1;s:9:"cat_venta";b:1;}s:13:"valores_venta";a:2:{s:14:"coma_val_venta";b:1;s:9:"val_venta";b:1;}s:15:"valores_modelos";a:3:{s:8:"coma_mod";b:1;s:10:"nombre_mod";b:1;s:9:"valor_mod";b:1;}s:16:"valores_vendedor";a:3:{s:9:"coma_vend";b:1;s:11:"nombre_vend";b:1;s:10:"valor_vend";b:1;}s:3:"msg";a:1:{s:7:"mensaje";b:1;}s:3:"tot";a:1:{s:14:"total_ventas_2";b:1;}s:9:"pagos_lis";a:3:{s:10:"pag_nombre";b:1;s:9:"pag_monto";b:1;s:10:"pag_cuenta";b:1;}}s:8:"children";a:8:{s:10:"__global__";a:7:{s:16:"categorias_venta";b:1;s:13:"valores_venta";b:1;s:15:"valores_modelos";b:1;s:16:"valores_vendedor";b:1;s:3:"msg";b:1;s:3:"tot";b:1;s:9:"pagos_lis";b:1;}s:16:"categorias_venta";a:0:{}s:13:"valores_venta";a:0:{}s:15:"valores_modelos";a:0:{}s:16:"valores_vendedor";a:0:{}s:3:"msg";a:0:{}s:3:"tot";a:0:{}s:9:"pagos_lis";a:0:{}}s:9:"functions";a:8:{s:10:"__global__";a:0:{}s:16:"categorias_venta";a:0:{}s:13:"valores_venta";a:0:{}s:15:"valores_modelos";a:0:{}s:16:"valores_vendedor";a:0:{}s:3:"msg";a:0:{}s:3:"tot";a:0:{}s:9:"pagos_lis";a:0:{}}}

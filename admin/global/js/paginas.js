@@ -1,0 +1,4 @@
+function caca(){
+	
+	alert("caca")
+}

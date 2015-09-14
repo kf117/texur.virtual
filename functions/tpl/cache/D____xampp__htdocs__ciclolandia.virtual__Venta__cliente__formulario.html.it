@@ -1,0 +1,198 @@
+a:4:{s:6:"blocks";a:9:{s:10:"__global__";s:8822:"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="iso-8859-1">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="hiper juegos">
+<script src="/global/js/jquery.js"></script>
+<script src="/global/js/jquery-extra.js"></script>
+<script src="/global/bootstrap/js/bootstrap.js"></script>
+<script src="/global/js/gestor.js"></script>
+<script src="/global/js/fckeditor/fckeditor.js"></script>
+<!-- <script src="../global/bootstrap/js/bootstrap-dropdown.js"></script>-->
+{__bloque_javascript__}
+<!-- Le styles -->
+<link href="/global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<link href="/global/css/general.css" rel="stylesheet" type="text/css">
+<script src="/global/bootstrap/js/collapse.js"></script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="/global/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="/global/calendar/jsDatePick.min.1.3.js"></script>
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/global/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/global/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/global/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/global/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+<div class="row span12" style="margin-top:30px;">
+<form class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="id" id="id" value="{id}">
+{__error_msg__}
+{__exito_msg__}
+<!--  DATOS DEL CLIENTE -->
+<div class="table-bordered " style="z-index:99999;">
+<div class="row " style="padding-left:40px;margin-top:20px;">
+<h3>Datos del Cliente</h3>
+</div>
+<div class="row" style="padding-left:40px;">
+<hr>
+<div class="row form-inline" style="padding-left:40px;margin-top:2px;padding-bottom:6px;">
+<input type="radio" name="tipo_cliente" onclick="mostrarCliTipo('info_casual');" value="casual" {checked_casual} > Cliente Casual &nbsp;&nbsp;&nbsp;
+<input  type="radio" name="tipo_cliente" onclick="mostrarCliTipo('info_revendedor');" value="revendedor" {checked_revendedor} > Cliente Revendedor
+</div>
+<hr>
+</div>
+<div class="row " style="padding-left:40px;margin-top:2px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Apellido/s<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="apellido" id="apellido" value="{apellido}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Nombre/s<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class="row " style="padding-left:40px;margin-top:2px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Tipo de documento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;" id="tipo_documento">
+<select style="width:158px;" name="tipo_documento" id="tipo_documento" >
+<option value="0">Seleccione un tipo de documento</option>
+{__tipo_docs__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">N&uacute;mero de documento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="nro_doc" id="nro_doc"  value="{nro_doc}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">CUIL</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:150px;" name="cuil" id="cuil" value="{cuil}">
+</div>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Tel&eacute;fono<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:96px;" name="telefono" id="telefono" value="{telefono}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Domicilio<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:200px;" name="domicilio" id="domicilio" value="{domicilio}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Provincia</label>
+<div style="float:left;margin-right:20px;">
+<select style="width:200px;" name="provincia" id="provincia" onchange="seleccionar_ciudad(this);">
+<option value="0">Seleccione una Provincia</option>
+{__blq_provincias__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Ciudad</label>
+<div style="float:left;margin-right:20px;" id="select_ciudades">
+<select style="width:200px;" name="ciudad" id="ciudad" >
+<option id="primera_ciudad" value="0">Seleccione una Provincia</option>
+{__blq_ciudades__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">CP</label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:50px;" name="cp" id="cp" value="{cp}">
+</div>
+</div>
+<div class="row info_casual info_extra"  style="padding-left:40px;display:{ver_cas};">
+<hr>
+<label style="float:left;margin-right:10px;padding-top:4px;">Lugar de nacimiento</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:150px;" name="lugar_nac" id="lugar_nac" value="{lugar_nac}">
+</div>
+</div>
+<script type="text/javascript">
+/*window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"fecha_nac",
+dateFormat:"%d-%m-%Y"
+});
+};*/
+</script>
+<label style="float:left;margin-right:10px;padding-top:4px;">Fecha de nacimiento (dd-mm-aaaa)</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:80px;" name="fecha_nac" id="fecha_nac" value="{fecha_nac}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Estado Civil</label>
+<div style="float:left;margin-right:10px;" >
+<select style="width:150px;" name="estado_civil" id="estado_civil" >
+<option value="0">Seleccione Estado Civil</option>
+{__estados_civiles__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Profesión<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="profesion" id="profesion"  value="{profesion}">
+</div>
+</div>
+<div class="row info_casual info_extra" style="padding-left:40px;display: {ver_cas};">
+<hr>
+<label style="float:left;margin-right:10px;padding-top:4px;">Conyugue</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:180px;" name="conyugue" id="conyugue" value="{conyugue}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Tipo de documento </label>
+<div style="float:left;margin-right:20px;">
+<select style="width:100px;" name="tipo_documento_cony" id="tipo_documento_cony" >
+<option value="0">Seleccione un tipo de documento</option>
+{__tipo_dni_c__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">N&uacute;mero de documento</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:130px;" name="nro_doc_c" id="nro_doc_c"  value="{nro_doc_c}">
+</div>
+</div>
+<div class="row info_revendedor info_extra"  style="padding-left:40px;display:{ver_rev};">
+<hr>
+<label style="float:left;margin-right:10px;padding-top:4px;">CUIT</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:150px;" name="cuit" id="cuit" value="{cuit}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Negocio<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="negocio" id="negocio"  value="{negocio}">
+</div>
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+<div class="row mt20 ml20">
+<span class="alert alert-info">Campos obligatorios<span class="campo-oblg">*</span></span>
+<input type="submit" class="btn btn-primary" value="Guardar" /> </div>
+</form>
+<!-- TODO -> CP; ESTADO CIVIL; CONYUGUE; -->
+</div>
+</body>
+</html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:9:"tipo_docs";s:68:"<option value="{id_tipo_doc}" {tipodoc_selected}>{tipo_doc}</option>";s:14:"blq_provincias";s:80:"<option value="{provincia_id}" {selected_provincia} >{provincia_nombre}</option>";s:12:"blq_ciudades";s:71:"<option value="{ciudad_id}" {selected_ciudad} >{ciudad_nombre}</option>";s:15:"estados_civiles";s:72:"<option value="{est_civil_id}" {est_civil_selected}>{est_civil}</option>";s:10:"tipo_dni_c";s:74:"<option value="{tipo_dni_id_c}" {tipodoc_c_selected}>{tipo_dni_c}</option>";}s:9:"variables";a:9:{s:10:"__global__";a:29:{s:21:"__bloque_javascript__";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:14:"checked_casual";b:1;s:18:"checked_revendedor";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:13:"__tipo_docs__";b:1;s:7:"nro_doc";b:1;s:4:"cuil";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:18:"__blq_provincias__";b:1;s:16:"__blq_ciudades__";b:1;s:2:"cp";b:1;s:7:"ver_cas";b:1;s:9:"lugar_nac";b:1;s:9:"fecha_nac";b:1;s:19:"__estados_civiles__";b:1;s:9:"profesion";b:1;s:8:"conyugue";b:1;s:14:"__tipo_dni_c__";b:1;s:9:"nro_doc_c";b:1;s:7:"ver_rev";b:1;s:4:"cuit";b:1;s:7:"negocio";b:1;}s:17:"bloque_javascript";a:1:{s:10:"javascript";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:9:"tipo_docs";a:3:{s:11:"id_tipo_doc";b:1;s:16:"tipodoc_selected";b:1;s:8:"tipo_doc";b:1;}s:14:"blq_provincias";a:3:{s:12:"provincia_id";b:1;s:18:"selected_provincia";b:1;s:16:"provincia_nombre";b:1;}s:12:"blq_ciudades";a:3:{s:9:"ciudad_id";b:1;s:15:"selected_ciudad";b:1;s:13:"ciudad_nombre";b:1;}s:15:"estados_civiles";a:3:{s:12:"est_civil_id";b:1;s:18:"est_civil_selected";b:1;s:9:"est_civil";b:1;}s:10:"tipo_dni_c";a:3:{s:13:"tipo_dni_id_c";b:1;s:18:"tipodoc_c_selected";b:1;s:10:"tipo_dni_c";b:1;}}s:8:"children";a:9:{s:10:"__global__";a:8:{s:17:"bloque_javascript";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:9:"tipo_docs";b:1;s:14:"blq_provincias";b:1;s:12:"blq_ciudades";b:1;s:15:"estados_civiles";b:1;s:10:"tipo_dni_c";b:1;}s:17:"bloque_javascript";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:9:"tipo_docs";a:0:{}s:14:"blq_provincias";a:0:{}s:12:"blq_ciudades";a:0:{}s:15:"estados_civiles";a:0:{}s:10:"tipo_dni_c";a:0:{}}s:9:"functions";a:9:{s:10:"__global__";a:0:{}s:17:"bloque_javascript";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:9:"tipo_docs";a:0:{}s:14:"blq_provincias";a:0:{}s:12:"blq_ciudades";a:0:{}s:15:"estados_civiles";a:0:{}s:10:"tipo_dni_c";a:0:{}}}

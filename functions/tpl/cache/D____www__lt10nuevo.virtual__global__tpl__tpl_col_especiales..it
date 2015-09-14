@@ -1,0 +1,64 @@
+a:4:{s:6:"blocks";a:16:{s:10:"__global__";s:52:"<div class="especiales-home">
+{__plantilla__}
+</div>";s:9:"plantilla";s:790:"<div class="content-esp lineacorte mb10">
+{__seccion__}
+<h1 class="t16 bold mb5"><a href="{url}" title="{titulo_alt}" class="azul">{titulo}</a></h1>
+{__imagen_cen__}
+{__imagen_izq__}
+<!--
+<div id="player1{id_video}" class="imagen-test">
+<a href="http://www.macromedia.com/go/getflashplayer">Requiere Flash Player, descargar ahora</a>
+</div>
+<script type="text/javascript">
+var s1{id_video} = new SWFObject("/global/video/flvplayer.swf","single","240","210","7");
+s1{id_video}.addParam("allowfullscreen","true");
+s1{id_video}.addVariable("file","{pathvideo}");
+s1{id_video}.addVariable("image","{src_imagen}");
+s1{id_video}.write("player1{id_video}");
+</script>
+-->
+{__videos__}
+{__copete_especiales__}
+{__noticias_relacionadas__}
+{__audio_home__}
+{__comentario_especiales__}
+</div>
+{banner}";s:7:"seccion";s:136:"<p class="t11 bold pb2 lineapunto mb5"><a href="/listado/val/{seccion}/{titulo_seccion_link}.html" class="menu">{titulo_seccion}</a></p>";s:10:"imagen_cen";s:132:"<div class="mb5"> <a href="{url}" title="{titulo_alt}"><img src="{img_cen}" alt="{titulo_alt}" width="250" class="mb10"/></a> </div>";s:10:"imagen_izq";s:144:"<div class="img-portada-small2  left mr5"> <a href="{url}" title="{titulo}"><img src="{img_izq}" alt="" width="80" class="bordeimg"/></a> </div>";s:6:"videos";s:90:"<!--<div class="audio-video-contenido">-->
+{__filevideo__}
+{__video_embed__}
+<!--</div>-->";s:9:"filevideo";s:781:"<!--<div align="center" id="player1{id_video}">
+<a href="http://www.macromedia.com/go/getflashplayer">Requiere Flash Player, descargar ahora</a>
+</div>
+<script type="text/javascript">
+var s1{id_video} = new SWFObject("/global/swf/vplay.swf","single","240","180","7");
+s1{id_video}.addParam("FlashVars","v={pathvideo}&i={src_imagen}");
+s1{id_video}.addParam("allowfullscreen","true");
+s1{id_video}.addParam("quality", "high");
+s1{id_video}.write("player1{id_video}");
+</script>
+<div class="clear">
+</div>-->
+<!--<p><a href="/script/popup_video.php?pos={pathvideo}&img={src_imagen}" rel="iframe.1" rev="width:735 height:550 scrolling:no caption:`{titulo_video}`" title="ampliar video"  class="ampliar-pic-colder right reset">Ampliar video</a></p>-->
+<!--<div class="clear">
+</div>-->";s:11:"video_embed";s:20:"<!--{video_embed}-->";s:17:"copete_especiales";s:39:"<p class="mb10">{__fecha__}{copete}</p>";s:5:"fecha";s:64:"<span class="naranja bold t11">{fecha}{hora}</span>&nbsp;|&nbsp;";s:21:"noticias_relacionadas";s:58:"<div class="not-rel mb10">
+<ul>
+{__not_rel__}
+</ul>
+</div>";s:7:"not_rel";s:132:"<li><a href="/noticias/val/{id_not_rel}/{titulo_not_rel_link}.html"  class="menu" title="{titulo_not_rel}">{titulo_not_rel}</a></li>";s:10:"audio_home";s:72:"<div class="audio-box arial t11  mb10">
+{__audios_relacionados__}
+</div>";s:19:"audios_relacionados";s:12:"{__audios__}";s:6:"audios";s:581:"<div class="pt10 pr10">
+<p class="mb5 pl10 top">{nombre_audio}</p>
+<div id="audio{id_audio}" > </div>
+<script type="text/javascript">
+<!--
+var audio{id_audio} = new SWFObject("/global/swf/splay.swf", "audio{id_audio}", "225", "45", "7");
+audio{id_audio}.addParam("FlashVars", "s={file_audio}");
+audio{id_audio}.addVariable("showdigits", "true");
+audio{id_audio}.addVariable("autostart", "false");
+audio{id_audio}.addParam("quality", "high");
+audio{id_audio}.addParam("wmode", "transparent");
+audio{id_audio}.write("audio{id_audio}");
+-->
+</script>
+<div class="clear"> </div>
+</div>";s:21:"comentario_especiales";s:158:"<p class="comment align-right t11 bold mb10"><a href="{url}#comentarios" class="grisclaro"><span class="azul">{cant_coment}</span>&nbsp;{texto_coment}</a></p>";}s:9:"variables";a:16:{s:10:"__global__";a:1:{s:13:"__plantilla__";b:1;}s:9:"plantilla";a:15:{s:11:"__seccion__";b:1;s:3:"url";b:1;s:10:"titulo_alt";b:1;s:6:"titulo";b:1;s:14:"__imagen_cen__";b:1;s:14:"__imagen_izq__";b:1;s:8:"id_video";b:1;s:9:"pathvideo";b:1;s:10:"src_imagen";b:1;s:10:"__videos__";b:1;s:21:"__copete_especiales__";b:1;s:25:"__noticias_relacionadas__";b:1;s:14:"__audio_home__";b:1;s:25:"__comentario_especiales__";b:1;s:6:"banner";b:1;}s:7:"seccion";a:3:{s:7:"seccion";b:1;s:19:"titulo_seccion_link";b:1;s:14:"titulo_seccion";b:1;}s:10:"imagen_cen";a:3:{s:3:"url";b:1;s:10:"titulo_alt";b:1;s:7:"img_cen";b:1;}s:10:"imagen_izq";a:3:{s:3:"url";b:1;s:6:"titulo";b:1;s:7:"img_izq";b:1;}s:6:"videos";a:2:{s:13:"__filevideo__";b:1;s:15:"__video_embed__";b:1;}s:9:"filevideo";a:4:{s:8:"id_video";b:1;s:9:"pathvideo";b:1;s:10:"src_imagen";b:1;s:12:"titulo_video";b:1;}s:11:"video_embed";a:1:{s:11:"video_embed";b:1;}s:17:"copete_especiales";a:2:{s:9:"__fecha__";b:1;s:6:"copete";b:1;}s:5:"fecha";a:2:{s:5:"fecha";b:1;s:4:"hora";b:1;}s:21:"noticias_relacionadas";a:1:{s:11:"__not_rel__";b:1;}s:7:"not_rel";a:3:{s:10:"id_not_rel";b:1;s:19:"titulo_not_rel_link";b:1;s:14:"titulo_not_rel";b:1;}s:10:"audio_home";a:1:{s:23:"__audios_relacionados__";b:1;}s:19:"audios_relacionados";a:1:{s:10:"__audios__";b:1;}s:6:"audios";a:3:{s:12:"nombre_audio";b:1;s:8:"id_audio";b:1;s:10:"file_audio";b:1;}s:21:"comentario_especiales";a:3:{s:3:"url";b:1;s:11:"cant_coment";b:1;s:12:"texto_coment";b:1;}}s:8:"children";a:16:{s:10:"__global__";a:1:{s:9:"plantilla";b:1;}s:9:"plantilla";a:8:{s:7:"seccion";b:1;s:10:"imagen_cen";b:1;s:10:"imagen_izq";b:1;s:6:"videos";b:1;s:17:"copete_especiales";b:1;s:21:"noticias_relacionadas";b:1;s:10:"audio_home";b:1;s:21:"comentario_especiales";b:1;}s:7:"seccion";a:0:{}s:10:"imagen_cen";a:0:{}s:10:"imagen_izq";a:0:{}s:6:"videos";a:2:{s:9:"filevideo";b:1;s:11:"video_embed";b:1;}s:9:"filevideo";a:0:{}s:11:"video_embed";a:0:{}s:17:"copete_especiales";a:1:{s:5:"fecha";b:1;}s:5:"fecha";a:0:{}s:21:"noticias_relacionadas";a:1:{s:7:"not_rel";b:1;}s:7:"not_rel";a:0:{}s:10:"audio_home";a:1:{s:19:"audios_relacionados";b:1;}s:19:"audios_relacionados";a:1:{s:6:"audios";b:1;}s:6:"audios";a:0:{}s:21:"comentario_especiales";a:0:{}}s:9:"functions";a:16:{s:10:"__global__";a:0:{}s:9:"plantilla";a:0:{}s:7:"seccion";a:0:{}s:10:"imagen_cen";a:0:{}s:10:"imagen_izq";a:0:{}s:6:"videos";a:0:{}s:9:"filevideo";a:0:{}s:11:"video_embed";a:0:{}s:17:"copete_especiales";a:0:{}s:5:"fecha";a:0:{}s:21:"noticias_relacionadas";a:0:{}s:7:"not_rel";a:0:{}s:10:"audio_home";a:0:{}s:19:"audios_relacionados";a:0:{}s:6:"audios";a:0:{}s:21:"comentario_especiales";a:0:{}}}

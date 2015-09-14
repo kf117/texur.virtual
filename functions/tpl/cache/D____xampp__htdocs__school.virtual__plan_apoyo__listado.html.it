@@ -1,0 +1,103 @@
+a:4:{s:6:"blocks";a:8:{s:10:"__global__";s:2030:"<div class="row span10 mb10" >
+<h1>Lista de planes de apoyo</h1>
+</div>
+<div class="clearfix"></div>
+<div class="row span10">
+<form id="listPartes" method="POST" action="/index.php?acc=66" class="well ">
+<input name="acc" id="acc" type="hidden" />
+<div class="row">
+<div class="form-group span3">
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"desde",
+dateFormat:"%d-%m-%Y"
+});
+new JsDatePick({
+useMode:2,
+target:"hasta",
+dateFormat:"%d-%m-%Y"
+});
+};
+</script>
+<div style="width: 115px;float:left;">
+<label>Desde</label>
+<input name="desde" style="width:75px;" id="desde" class="form-control " type="text" value="{desde}" />
+</div>
+<div style="width: 130px;float:left;">
+<label>Hasta</label>
+<input name="hasta" style="width:75px;" id="hasta" class="form-control "  type="text" value="{hasta}" />
+</div>
+</div>
+<div class="form-group span3">
+<label>Curso</label>
+<select class="form-control" name="curso" id="curso" >
+<option value="0">Seleccione un Curso</option>
+{__sel_cursos__}
+</select>
+</div>
+<div class="form-group span3">
+<label>Materia</label>
+<select class="form-control" name="materia" id="materia" >
+<option value="0">Seleccione una Materia</option>
+{__sel_materias__}
+</select>
+</div>
+</div>
+<div class="row">
+<div class="form-group span3">
+<label>Alumno</label>
+<select class="form-control" name="alumno" id="alumno" >
+<option value="0">Seleccione una Opción</option>
+{__sel_alumnos__}
+</select>
+</div>
+</div>
+<script>
+function limpiarBsqPlan(){
+$("#curso").val("0");
+$("#materia").val("0");
+$("#alumno").val("0");
+$("#desde").val("");
+$("#hasta").val("");
+$('#listPartes').submit();
+}
+</script>
+<div align="center" class="mt10">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqPlan();" class="btn btn-inverse">Limpiar Busqueda</button>
+</div>
+</form>
+</div>
+<div class="clearfix"></div>
+{__error_msg__}
+{__exito_msg__}
+<div class="row span10" >{paginado}</div>
+{__resultados-table__}
+<div class="row span10" >{paginado}</div>";s:10:"sel_cursos";s:58:"<option value="{cu_id}" {cu_selected}>{cu_nombre}</option>";s:12:"sel_materias";s:58:"<option value="{ma_id}" {ma_selected}>{ma_nombre}</option>";s:11:"sel_alumnos";s:58:"<option value="{al_id}" {al_selected}>{al_nombre}</option>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:16:"resultados-table";s:684:"<table class="table table-striped">
+<thead>
+<tr>
+<th><a href="/index.php?acc=66&fecha_o={orden_fecha}" class="btn btn-inverse ">Fecha&nbsp;<i class="icon-white {icon_fecha}"></i></a></th>
+<th><a href="/index.php?acc=66&curso_o={orden_curso}" class="btn btn-inverse ">Curso&nbsp;<i class="icon-white {icon_curso}"></i></a></th>
+<th><a href="/index.php?acc=66&materia_o={orden_materia}" class="btn btn-inverse ">Materia&nbsp;<i class="icon-white {icon_materia}"></i></a></th>
+<th><a href="/index.php?acc=66&alumno_o={orden_alumno}" class="btn btn-inverse ">Alumno&nbsp;<i class="icon-white {icon_alumno}"></i></a></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:394:"<tr>
+<td >{fecha_lis}</td>
+<td >{curso_lis}</td>
+<td >{asignatura_lis}</td>
+<td>{alumno_lis}</td>
+<td><a class="btn btn-primary" href="/index.php?id={idlist}&acc=65&page={pagelist}"><i class="icon-edit icon-white"></i></a>
+<a class="btn btn-danger" href="/index.php?del={idelim}&acc={accelim}&page={pagelist}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a></td>
+</tr>";}s:9:"variables";a:8:{s:10:"__global__";a:9:{s:5:"desde";b:1;s:5:"hasta";b:1;s:14:"__sel_cursos__";b:1;s:16:"__sel_materias__";b:1;s:15:"__sel_alumnos__";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:20:"__resultados-table__";b:1;}s:10:"sel_cursos";a:3:{s:5:"cu_id";b:1;s:11:"cu_selected";b:1;s:9:"cu_nombre";b:1;}s:12:"sel_materias";a:3:{s:5:"ma_id";b:1;s:11:"ma_selected";b:1;s:9:"ma_nombre";b:1;}s:11:"sel_alumnos";a:3:{s:5:"al_id";b:1;s:11:"al_selected";b:1;s:9:"al_nombre";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:16:"resultados-table";a:9:{s:11:"orden_fecha";b:1;s:10:"icon_fecha";b:1;s:11:"orden_curso";b:1;s:10:"icon_curso";b:1;s:13:"orden_materia";b:1;s:12:"icon_materia";b:1;s:12:"orden_alumno";b:1;s:11:"icon_alumno";b:1;s:14:"__resultados__";b:1;}s:10:"resultados";a:8:{s:9:"fecha_lis";b:1;s:9:"curso_lis";b:1;s:14:"asignatura_lis";b:1;s:10:"alumno_lis";b:1;s:6:"idlist";b:1;s:8:"pagelist";b:1;s:6:"idelim";b:1;s:7:"accelim";b:1;}}s:8:"children";a:8:{s:10:"__global__";a:6:{s:10:"sel_cursos";b:1;s:12:"sel_materias";b:1;s:11:"sel_alumnos";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:16:"resultados-table";b:1;}s:10:"sel_cursos";a:0:{}s:12:"sel_materias";a:0:{}s:11:"sel_alumnos";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:16:"resultados-table";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:0:{}}s:9:"functions";a:8:{s:10:"__global__";a:0:{}s:10:"sel_cursos";a:0:{}s:12:"sel_materias";a:0:{}s:11:"sel_alumnos";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:16:"resultados-table";a:0:{}s:10:"resultados";a:0:{}}}

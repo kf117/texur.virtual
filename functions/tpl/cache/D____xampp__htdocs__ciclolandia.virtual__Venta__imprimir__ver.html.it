@@ -1,0 +1,86 @@
+a:4:{s:6:"blocks";a:12:{s:10:"__global__";s:3300:"<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="iso-8859-1">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="hiper juegos">
+<script src="/global/js/jquery.js"></script>
+<script src="/global/js/jquery-extra.js"></script>
+<script src="/global/bootstrap/js/bootstrap.js"></script>
+<script src="/global/js/gestor.js"></script>
+<script src="/global/js/fckeditor/fckeditor.js"></script>
+<!-- <script src="../global/bootstrap/js/bootstrap-dropdown.js"></script>-->
+{__bloque_javascript__}
+<!-- Le styles -->
+<link href="/global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<link href="/global/css/general.css" rel="stylesheet" type="text/css">
+<link href="/global/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<script src="/global/bootstrap/js/collapse.js"></script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="/global/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="/global/calendar/jsDatePick.min.1.3.js"></script>
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/global/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/global/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/global/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/global/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+<style>
+label{margin-bottom: 15px;font-size: 14pt;}
+h1{margin-bottom: 20px;}
+</style>
+</head>
+<body>
+<div><h1>Plantilla de venta</h1>
+<label><strong>Fecha:</strong>&nbsp;&nbsp; {fecha_venta} &nbsp;&nbsp;&nbsp; <strong>Formulario 01:</strong>&nbsp;&nbsp;{01}&nbsp; </label>
+<label><strong>Formulario 12:</strong>&nbsp;&nbsp;{12}&nbsp;&nbsp;&nbsp; <strong>Importe:</strong>&nbsp;&nbsp;${importe}</label>
+<label><strong>Nro de Venta  </strong> &nbsp;{venta_nro} &nbsp;&nbsp; <strong>Factura:  </strong>&nbsp;&nbsp; {venta_nro_factura}</label>
+<label><strong>Debe:  </strong> &nbsp;{debe_monto_venta}</label>
+<label><strong>Debe patente:  </strong> &nbsp;${debe_patente}</label>
+{__desc_blq__}
+<label><strong>Marca/Modelo:</strong>&nbsp; {marca}-{modelo} &nbsp;&nbsp; <strong>Color:</strong>&nbsp;&nbsp;{color_nombre}</label>
+<label><strong>Nro Motor:</strong>&nbsp; {moto_motor} &nbsp; <strong>Nro Chasis:</strong>{moto_chasis}</label>
+<h1>Cliente/s</h1>
+{__clientes__}
+<h1>Fecha de Entrega</h1>
+<label><strong>Fecha: </strong>&nbsp; {fecha_entrega} <strong>Hora: </strong>&nbsp; {hora_entrega}</label>
+<br>
+{__blq-pagos__}
+<br>
+{__blq-tjs__}
+<input type="button" name="imprimir" id="imprimir" value="Imprimir" class="btn btn-primary" onclick="document.getElementById('imprimir').style.visibility='hidden';window.print();">
+</div>
+</body>
+</html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:8:"desc_blq";s:116:"<label><strong>Descripción de venta: </strong> {venta_descripcion} (monto adicional {venta_monto_adicional})</label>";s:8:"clientes";s:574:"<label><strong>Nombre y Apellido:</strong>&nbsp;{cli_nombre}</label>
+<label><strong>Documento ({tipo_dni}) :</strong>&nbsp; {cli_dni}&nbsp;&nbsp; <strong>CUIL :&nbsp;</strong>&nbsp; {cli_cuil}</label>
+<label><strong>Domicilio :</strong>&nbsp; {cli_domicilio}</label>
+<label><strong>Tel&eacute;fono :</strong>&nbsp; {cli_telefono}</label>
+<label><strong>C&oacute;digo Postal:</strong>&nbsp; {cli_cp}</label>
+<label><strong>Ciudad:</strong>&nbsp; {ciud_nombre} - {prov_nombre}</label>
+<label><strong>Email:</strong>&nbsp; {cli_email}</label>
+{__casual__}
+{__revendedor__}
+<hr>";s:6:"casual";s:303:"<label><strong>Fecha de Nacimiento :</strong>&nbsp; {fecha_nacimiento}</label>
+<label><strong>Lugar de Nacimiento</strong>&nbsp; {casual_nac}</label>
+<label><strong>Estado Civil:</strong>&nbsp; {est_civil}</label>
+<label><strong>Profesi&oacute;n:</strong>&nbsp; {casual_profesion}</label>
+{__conyugue__}";s:8:"conyugue";s:139:"<label><strong>Conyugue:</strong>&nbsp; {cony_nombre}</label>
+<label><strong>Documento ({tipo_dni_cony}):</strong>&nbsp; {cony_dni}</label>";s:10:"revendedor";s:131:"<label><strong>Negocio :</strong>&nbsp; {revendedor_negocio}</label>
+<label><strong>CUIT :</strong>&nbsp; {revendedor_cuit}</label>";s:9:"blq-pagos";s:30:"<h1>Pagos</h1>
+{__pagos__}<br>";s:5:"pagos";s:267:"<label><strong>Forma de Pago: </strong>&nbsp; {forma_nombre}&nbsp;&nbsp;&nbsp; <strong>Monto: </strong>&nbsp; ${pago_monto}<strong style="display: none">Cuotas: {cuotas}</strong>&nbsp;  <strong style="display: none">Recargo: {recargo}</strong>
+{__mont_rec__}
+</label>";s:8:"mont_rec";s:50:"<strong>Monto recargo: </strong>&nbsp; {monto_rec}";s:7:"blq-tjs";s:30:"<h1>Tarjeta Rosa</h1>
+{__tj__}";s:2:"tj";s:427:"<label><strong>Apellido y Nombre: </strong>&nbsp; {tj_nombre} <strong>Documento ({tj_tipo_dni}) :</strong>&nbsp; {tj_cli_dni}&nbsp;</label>
+<label><strong>CUIL :</strong>&nbsp; {tj_cuil}&nbsp;&nbsp;&nbsp; <strong>Domicilio </strong>&nbsp; {tj_domicilio}</label>
+<label><strong>Localidad: </strong>&nbsp; {tj_localidad} <strong>CP: </strong>&nbsp; {tj_cp} <strong>Fecha de Nacimiento: </strong>&nbsp; {tj_fecha_nac}</label>
+<hr>";}s:9:"variables";a:12:{s:10:"__global__";a:20:{s:21:"__bloque_javascript__";b:1;s:11:"fecha_venta";b:1;s:2:"01";b:1;i:12;b:1;s:7:"importe";b:1;s:9:"venta_nro";b:1;s:17:"venta_nro_factura";b:1;s:16:"debe_monto_venta";b:1;s:12:"debe_patente";b:1;s:12:"__desc_blq__";b:1;s:5:"marca";b:1;s:6:"modelo";b:1;s:12:"color_nombre";b:1;s:10:"moto_motor";b:1;s:11:"moto_chasis";b:1;s:12:"__clientes__";b:1;s:13:"fecha_entrega";b:1;s:12:"hora_entrega";b:1;s:13:"__blq-pagos__";b:1;s:11:"__blq-tjs__";b:1;}s:17:"bloque_javascript";a:1:{s:10:"javascript";b:1;}s:8:"desc_blq";a:2:{s:17:"venta_descripcion";b:1;s:21:"venta_monto_adicional";b:1;}s:8:"clientes";a:12:{s:10:"cli_nombre";b:1;s:8:"tipo_dni";b:1;s:7:"cli_dni";b:1;s:8:"cli_cuil";b:1;s:13:"cli_domicilio";b:1;s:12:"cli_telefono";b:1;s:6:"cli_cp";b:1;s:11:"ciud_nombre";b:1;s:11:"prov_nombre";b:1;s:9:"cli_email";b:1;s:10:"__casual__";b:1;s:14:"__revendedor__";b:1;}s:6:"casual";a:5:{s:16:"fecha_nacimiento";b:1;s:10:"casual_nac";b:1;s:9:"est_civil";b:1;s:16:"casual_profesion";b:1;s:12:"__conyugue__";b:1;}s:8:"conyugue";a:3:{s:11:"cony_nombre";b:1;s:13:"tipo_dni_cony";b:1;s:8:"cony_dni";b:1;}s:10:"revendedor";a:2:{s:18:"revendedor_negocio";b:1;s:15:"revendedor_cuit";b:1;}s:9:"blq-pagos";a:1:{s:9:"__pagos__";b:1;}s:5:"pagos";a:5:{s:12:"forma_nombre";b:1;s:10:"pago_monto";b:1;s:6:"cuotas";b:1;s:7:"recargo";b:1;s:12:"__mont_rec__";b:1;}s:8:"mont_rec";a:1:{s:9:"monto_rec";b:1;}s:7:"blq-tjs";a:1:{s:6:"__tj__";b:1;}s:2:"tj";a:8:{s:9:"tj_nombre";b:1;s:11:"tj_tipo_dni";b:1;s:10:"tj_cli_dni";b:1;s:7:"tj_cuil";b:1;s:12:"tj_domicilio";b:1;s:12:"tj_localidad";b:1;s:5:"tj_cp";b:1;s:12:"tj_fecha_nac";b:1;}}s:8:"children";a:12:{s:10:"__global__";a:5:{s:17:"bloque_javascript";b:1;s:8:"desc_blq";b:1;s:8:"clientes";b:1;s:9:"blq-pagos";b:1;s:7:"blq-tjs";b:1;}s:17:"bloque_javascript";a:0:{}s:8:"desc_blq";a:0:{}s:8:"clientes";a:2:{s:6:"casual";b:1;s:10:"revendedor";b:1;}s:6:"casual";a:1:{s:8:"conyugue";b:1;}s:8:"conyugue";a:0:{}s:10:"revendedor";a:0:{}s:9:"blq-pagos";a:1:{s:5:"pagos";b:1;}s:5:"pagos";a:1:{s:8:"mont_rec";b:1;}s:8:"mont_rec";a:0:{}s:7:"blq-tjs";a:1:{s:2:"tj";b:1;}s:2:"tj";a:0:{}}s:9:"functions";a:12:{s:10:"__global__";a:0:{}s:17:"bloque_javascript";a:0:{}s:8:"desc_blq";a:0:{}s:8:"clientes";a:0:{}s:6:"casual";a:0:{}s:8:"conyugue";a:0:{}s:10:"revendedor";a:0:{}s:9:"blq-pagos";a:0:{}s:5:"pagos";a:0:{}s:8:"mont_rec";a:0:{}s:7:"blq-tjs";a:0:{}s:2:"tj";a:0:{}}}

@@ -1,0 +1,23 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:256:"<span><h1>Listado Formas de Pago<br><br></h1>
+</span>
+<table class="table table-striped" style="font-size: 11px">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Tipo</th>
+<th>Forma</th>
+<th>Detalles/Eliminar</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:119:"<tr>
+<td>{nombre}</td>
+<td>{tipo}</td>
+<td>{forma}</td>
+<td>                  {__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:120:"<a class="btn btn-primary" href="/index.php?id={id_forma}&acc=31"><i class="icon-plus icon-white"></i>&nbsp;Detalles</a>";s:8:"blq-elim";s:173:"<a class="btn btn-danger" href="/FormaDePago/eliminar_forma_de_pago.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:4:{s:10:"__global__";a:1:{s:14:"__resultados__";b:1;}s:10:"resultados";a:5:{s:6:"nombre";b:1;s:4:"tipo";b:1;s:5:"forma";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:8:"id_forma";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}}

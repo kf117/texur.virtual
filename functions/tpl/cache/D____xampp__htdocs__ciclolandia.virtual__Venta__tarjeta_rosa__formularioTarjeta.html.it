@@ -1,0 +1,113 @@
+a:4:{s:6:"blocks";a:9:{s:10:"__global__";s:3698:"<div class="row mb10"><h1>Tarjeta Rosada <a class="pull-right btn btn-primary" href="/index.php?acc={acc}&id={venta}"><i class="icon-plus-sign icon-white" ></i>&nbsp;Agregar Tarjeta</a></h1></div>
+<div class="row" style="padding-left:30px;">
+<div style="float:left;margin-right:1px;">
+<form action="{accion}" method="POST" class="well span10">
+<div class="row " style="padding-left:40px;margin-top:2px;">
+<div class="alert alert-info"><strong>Nota:</strong> Todos los campos son obligatorios</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Apellido/s</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:180px;" name="apellido" id="apellido" value="{apellido}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Nombre/s</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="nombre" id="nombre"  value="{nombre}">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"fecha_nac",
+dateFormat:"%d-%m-%Y"
+});
+};
+</script>
+<label style="float:left;margin-right:10px;padding-top:4px;">Fecha de nacimiento</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:80px;" name="fecha_nac" id="fecha_nac" value="{fecha_nac}">
+</div>
+</div>
+</div>
+<div class="row " style="padding-left:40px;margin-top:2px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Tipo de documento</label>
+<div style="float:left;margin-right:20px;" id="tipo_documento">
+<select style="width:138px;" name="tipo_documento" id="tipo_documento" >
+<option value="0">Seleccione un tipo de documento</option>
+{__tipo_docs__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">N&uacute;mero de documento</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="nro_doc" id="nro_doc"  value="{nro_doc}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">CUIL</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:150px;" name="cuil" id="cuil" value="{cuil}">
+</div>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Domicilio</label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:180px;" name="domicilio" id="domicilio" value="{domicilio}">
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Provincia</label>
+<div style="float:left;margin-right:20px;">
+<select style="width:180px;" name="provincia" id="provincia" onchange="seleccionar_ciudad(this);">
+<option value="0">Seleccione una Provincia</option>
+{__blq_provincias__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Ciudad</label>
+<div style="float:left;margin-right:20px;" id="select_ciudades">
+<select style="width:180px;" name="ciudad" id="ciudad" >
+<option id="primera_ciudad" value="0">Seleccione una Provincia</option>
+{__blq_ciudades__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">CP</label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:50px;" name="cp" id="cp" value="{cp}">
+</div>
+</div>
+</div>
+<div class="clearfix">
+<input type="submit" value="Guardar" class="btn btn-primary ">
+</div>
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="venta" id="venta" value="{venta}">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+{__error_msg__}
+{__exito_msg__}
+</form>
+</div>
+</div>
+{__blq-res__}
+{__blq-nores__}";s:9:"tipo_docs";s:68:"<option value="{id_tipo_doc}" {tipodoc_selected}>{tipo_doc}</option>";s:14:"blq_provincias";s:80:"<option value="{provincia_id}" {selected_provincia} >{provincia_nombre}</option>";s:12:"blq_ciudades";s:71:"<option value="{ciudad_id}" {selected_ciudad} >{ciudad_nombre}</option>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:7:"blq-res";s:202:"<table class="table table-striped">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Nro Documento</th>
+<th>Fecha de Nacimiento</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:439:"<tr>
+<td>{nombre_lis}</td>
+<td>{apellido_lis}</td>
+<td>{nro_doc_lis}</td>
+<td>{fecha_nac_lis}</td>
+<td><a class="btn btn-primary" href="/index.php?id={idlist}&tarjeta_id={tarjeta_id}&acc={acc_lis}"><i class="icon-edit icon-white"></i></a>
+<a class="btn btn-danger" href="/Venta/tarjeta_rosa/eliminar.php?id={idlist}&tarjeta_id={tarjeta_id}&acc={acc_lis}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a></td>
+</tr>";s:9:"blq-nores";s:64:"<div class="row alert alert-heading span10" >{alerta_info}</div>";}s:9:"variables";a:9:{s:10:"__global__";a:18:{s:3:"acc";b:1;s:5:"venta";b:1;s:6:"accion";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:9:"fecha_nac";b:1;s:13:"__tipo_docs__";b:1;s:7:"nro_doc";b:1;s:4:"cuil";b:1;s:9:"domicilio";b:1;s:18:"__blq_provincias__";b:1;s:16:"__blq_ciudades__";b:1;s:2:"cp";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:11:"__blq-res__";b:1;s:13:"__blq-nores__";b:1;}s:9:"tipo_docs";a:3:{s:11:"id_tipo_doc";b:1;s:16:"tipodoc_selected";b:1;s:8:"tipo_doc";b:1;}s:14:"blq_provincias";a:3:{s:12:"provincia_id";b:1;s:18:"selected_provincia";b:1;s:16:"provincia_nombre";b:1;}s:12:"blq_ciudades";a:3:{s:9:"ciudad_id";b:1;s:15:"selected_ciudad";b:1;s:13:"ciudad_nombre";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:7:"blq-res";a:1:{s:14:"__resultados__";b:1;}s:10:"resultados";a:7:{s:10:"nombre_lis";b:1;s:12:"apellido_lis";b:1;s:11:"nro_doc_lis";b:1;s:13:"fecha_nac_lis";b:1;s:6:"idlist";b:1;s:10:"tarjeta_id";b:1;s:7:"acc_lis";b:1;}s:9:"blq-nores";a:1:{s:11:"alerta_info";b:1;}}s:8:"children";a:9:{s:10:"__global__";a:7:{s:9:"tipo_docs";b:1;s:14:"blq_provincias";b:1;s:12:"blq_ciudades";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:7:"blq-res";b:1;s:9:"blq-nores";b:1;}s:9:"tipo_docs";a:0:{}s:14:"blq_provincias";a:0:{}s:12:"blq_ciudades";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"blq-res";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:0:{}s:9:"blq-nores";a:0:{}}s:9:"functions";a:9:{s:10:"__global__";a:0:{}s:9:"tipo_docs";a:0:{}s:14:"blq_provincias";a:0:{}s:12:"blq_ciudades";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"blq-res";a:0:{}s:10:"resultados";a:0:{}s:9:"blq-nores";a:0:{}}}

@@ -1,0 +1,87 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:3411:"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="iso-8859-1">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="hiper juegos">
+<script src="/global/js/jquery.js"></script>
+<script src="/global/js/jquery-extra.js"></script>
+<script src="/global/bootstrap/js/bootstrap.js"></script>
+<script src="/global/js/gestor.js"></script>
+<script src="/global/js/fckeditor/fckeditor.js"></script>
+<!-- <script src="../global/bootstrap/js/bootstrap-dropdown.js"></script>-->
+{__bloque_javascript__}
+<!-- Le styles -->
+<link href="/global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<link href="/global/css/general.css" rel="stylesheet" type="text/css">
+<link href="/global/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<script src="/global/bootstrap/js/collapse.js"></script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="/global/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="/global/calendar/jsDatePick.min.1.3.js"></script>
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/global/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/global/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/global/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/global/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<div class="row">
+<div class="span11 ">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<span class="brand" style="margin-left:2px; "href="#">Ciclolandiamotos version BETA</span>
+<div class="nav-collapse">
+<ul class="nav pull-right">
+<li class="dropdown" style="display: none;"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="badge badge-important">6</span>&nbsp;<span class="badge badge-info">10</span>&nbsp;Notificaciones</a></li>
+<li class="divider-vertical"></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i>&nbsp;{usuario}
+<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="/index.php?acc=7"><i class="icon-cog" ></i>&nbsp;Modificar Datos</a></li>
+<li class="divider"></li>
+<li><a href="/login/logout.php"><i class="icon-off"></i>&nbsp;Cerrar Sesi&oacute;n</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- /.nav-collapse -->
+</div>
+</div>
+</div>
+</div><!-- /navbar-inner -->
+</div><!-- /navbar -->
+<div class="container-fluid">
+<div class="row "><!--main-menu-span-->
+<div class=" fondo-negro">
+<div id="menu-acciones" class="span2" style="padding-top:30px;">
+{__acciones__}
+</div>
+</div>
+<div class="" style="margin-left: 320px; padding-top: 100px;">
+{contenido}
+</div>
+</div>
+</div>
+</body>
+</html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:8:"acciones";s:215:"<a href="{url_accion}" class="btn btn-inverse {accion_activa}" style="width:150px;display:{ver_acciones};">
+{accion_nombre}</a>
+<div style="padding:5px 0 5px 30px;display:{ver_sub_acciones};">
+{__accionesh__}
+</div>";s:9:"accionesh";s:210:"<a style="color:white;margin-bottom:10px;cursor:pointer;display:{ver_acciones_h};" href="{url_accionh}"  class=" {accionh_activa} clearfix">
+<i class="{accionh_icono} icon-white"></i>&nbsp;{accionh_nombre}
+</a>";}s:9:"variables";a:4:{s:10:"__global__";a:4:{s:21:"__bloque_javascript__";b:1;s:7:"usuario";b:1;s:12:"__acciones__";b:1;s:9:"contenido";b:1;}s:17:"bloque_javascript";a:1:{s:10:"javascript";b:1;}s:8:"acciones";a:6:{s:10:"url_accion";b:1;s:13:"accion_activa";b:1;s:12:"ver_acciones";b:1;s:13:"accion_nombre";b:1;s:16:"ver_sub_acciones";b:1;s:13:"__accionesh__";b:1;}s:9:"accionesh";a:5:{s:14:"ver_acciones_h";b:1;s:11:"url_accionh";b:1;s:14:"accionh_activa";b:1;s:13:"accionh_icono";b:1;s:14:"accionh_nombre";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:2:{s:17:"bloque_javascript";b:1;s:8:"acciones";b:1;}s:17:"bloque_javascript";a:0:{}s:8:"acciones";a:1:{s:9:"accionesh";b:1;}s:9:"accionesh";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:17:"bloque_javascript";a:0:{}s:8:"acciones";a:0:{}s:9:"accionesh";a:0:{}}}

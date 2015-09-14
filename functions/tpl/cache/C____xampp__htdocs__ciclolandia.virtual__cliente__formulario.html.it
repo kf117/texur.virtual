@@ -1,0 +1,154 @@
+a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:6648:"<div class="row span10">
+<h1>Gesti&oacute;n de Clientes</h1>
+</div>
+<div class="row span10" style="margin-top:30px;">
+<form class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+{__error_msg__}
+{__exito_msg__}
+<!--  DATOS DEL CLIENTE -->
+<div class="table-bordered " style="z-index:99999;">
+<div class="row " style="padding-left:40px;margin-top:20px;">
+<h3>Datos del Cliente</h3>
+</div>
+<div class="row" style="padding-left:40px;">
+<hr>
+<div class="row form-inline" style="padding-left:40px;margin-top:2px;padding-bottom:6px;">
+<input type="radio" name="group1" value="casual" > Cliente Casual &nbsp;&nbsp;&nbsp;
+<input  type="radio" name="group1" value="revendedor" > Cliente Revendedor
+</div>
+</div>
+<div class="row " style="padding-left:40px;margin-top:2px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Apellido/s<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="apellido" id="apellido" value="{apellido}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Nombre/s<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class="row " style="padding-left:40px;margin-top:2px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Tipo de documento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;" id="tipo_documento">
+<select style="width:158px;" name="tipo_documento" id="tipo_documento" >
+<option id="primer_tipo">Seleccione un tipo de documento</option>
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">N&uacute;mero de documento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="nro_doc" id="nro_doc"  value="{nro_doc}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Tel&eacute;fono<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:96px;" name="telefono" id="telefono" value="{telefono}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Domicilio<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:200px;" name="domicilio" id="domicilio" value="{domicilio}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Provincia<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<select style="width:200px;" name="provincia" id="provincia" onchange="seleccionar_ciudad(this);">
+<option>Seleccione una Provincia</option>
+{__blq_provincias__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Ciudad</label>
+<div style="float:left;margin-right:20px;" id="select_ciudades">
+<select style="width:200px;" name="ciudad" id="ciudad" >
+<option id="primera_ciudad">Seleccione una Provincia</option>
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">CP<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:50px;" name="cp" id="cp" value="{cp}">
+</div>
+</div>
+<hr>
+<div class="row" id="info_casual" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Lugar de nacimiento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:150px;" name="lugar_nac" id="lugar_nac" value="{lugar_nac}">
+</div>
+</div>
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"fecha_nac",
+dateFormat:"%d-%m-%Y"
+});
+};
+</script>
+<label style="float:left;margin-right:10px;padding-top:4px;">Fecha de nacimiento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:80px;" name="fecha_nac" id="fecha_nac" value="{fecha_nac}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Estado Civil<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;" >
+<select style="width:200px;" name="estado_civil" id="estado_civil" >
+<option value="0">Seleccione Estado Civil</option>
+{__estados_civiles__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Profesión<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="profesion" id="profesion"  value="{profesion}">
+</div>
+</div>
+<hr>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Conyugue</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:180px;" name="conyugue" id="conyugue" value="{conyugue}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Tipo de documento </label>
+<div style="float:left;margin-right:20px;">
+<select style="width:100px;" name="tipo_documento_cony" id="tipo_documento_cony" >
+<option id="primer_tipo">Seleccione un tipo de documento</option>
+{__tipo_dni_c__}
+</select>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">N&uacute;mero de documento<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:130px;" name="nro_doc_c" id="nro_doc_c"  value="{nro_doc_c}">
+</div>
+</div>
+<hr>
+<div class="row" id="info_revendedor" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">CUIT</label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:150px;" name="cuit" id="cuit" value="{cuit}">
+</div>
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Negocio<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:200px;" name="negocio" id="negocio"  value="{negocio}">
+</div>
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+<span class="alert alert-info">Campos obligatorios<span class="campo-oblg">*</span></span>
+<input type="submit" class="btn btn-primary" value="Guardar" />
+</form>
+<!-- TODO -> CP; ESTADO CIVIL; CONYUGUE; -->
+</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:14:"blq_provincias";s:80:"<option value="{provincia_id}" {selected_provincia} >{provincia_nombre}</option>";s:15:"estados_civiles";s:51:"<option value="{est_civil_id}">{est_civil}</option>";s:10:"tipo_dni_c";s:53:"<option value="{tipo_dni_id_c}">{tipo_dni_c}</option>";}s:9:"variables";a:6:{s:10:"__global__";a:20:{s:6:"accion";b:1;s:3:"acc";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:7:"nro_doc";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:18:"__blq_provincias__";b:1;s:2:"cp";b:1;s:9:"lugar_nac";b:1;s:9:"fecha_nac";b:1;s:19:"__estados_civiles__";b:1;s:9:"profesion";b:1;s:8:"conyugue";b:1;s:14:"__tipo_dni_c__";b:1;s:9:"nro_doc_c";b:1;s:4:"cuit";b:1;s:7:"negocio";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:14:"blq_provincias";a:3:{s:12:"provincia_id";b:1;s:18:"selected_provincia";b:1;s:16:"provincia_nombre";b:1;}s:15:"estados_civiles";a:2:{s:12:"est_civil_id";b:1;s:9:"est_civil";b:1;}s:10:"tipo_dni_c";a:2:{s:13:"tipo_dni_id_c";b:1;s:10:"tipo_dni_c";b:1;}}s:8:"children";a:6:{s:10:"__global__";a:5:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:14:"blq_provincias";b:1;s:15:"estados_civiles";b:1;s:10:"tipo_dni_c";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:14:"blq_provincias";a:0:{}s:15:"estados_civiles";a:0:{}s:10:"tipo_dni_c";a:0:{}}s:9:"functions";a:6:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:14:"blq_provincias";a:0:{}s:15:"estados_civiles";a:0:{}s:10:"tipo_dni_c";a:0:{}}}

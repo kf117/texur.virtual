@@ -1,0 +1,48 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:1534:"<form action="../vinietas/rn.php" method="POST"  >
+<input type="hidden" name="id" id="id" value="{id}">
+<input type="hidden" name="menu" id="menu" value="{menu}">
+<input type="hidden" name="ac" id="ac" value="{ac}">
+<div class="row">
+<div class="span6">
+<div class="row">
+<div class="span4">
+<label>T&iacute;tulo</label>
+<input class="span4 clearfix requerido" type="text" name="titulo" id="titulo">
+</div>
+<div class="span2">
+<label>Estado</label>
+<select  name="estado" id="estado"  class="span2">
+<option value="1" {selected1} >Publicada</option>
+<option value="0" {selected0} >No Publicada</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="span2">
+<label>Votos Positivos</label>
+<input class="span2 clearfix requerido" type="text" name="positivos" id="positivos">
+</div>
+<div class="span2">
+<label>Votos Negativos</label>
+<input class="span2 clearfix requerido" type="text" name="negativos" id="negativos">
+</div>
+</div>
+<div class="row">
+<div class="span3">
+<label>Imagen</label>
+<input type="FILE" name="imagen" id="imagen"  class="span3">
+</div>
+<div class="span3">
+<label>Epigrafe de la imagen</label>
+<input class="span3  requerido" type="text" name="epigrafe_img" id="epigrafe_img">
+</div>
+</div>
+<label>Video de Youtube</label>
+<img src="/cm/global/img/youtube.jpg" alt="enlace youtube" class="mb10" />
+<input class="span5 clearfix requerido" type="text" name="video" id="video">
+</div>
+</div>
+<div class="well-large span1 offset5">
+<button class="btn btn-primary" type="submit">Guardar</button>
+</div>
+</form>";}s:9:"variables";a:1:{s:10:"__global__";a:5:{s:2:"id";b:1;s:4:"menu";b:1;s:2:"ac";b:1;s:9:"selected1";b:1;s:9:"selected0";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

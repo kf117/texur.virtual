@@ -1,0 +1,16 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:156:"<script language="javascript">var numpages;</script>
+{__plantilla__}
+<script language="javascript">numpages={num_pg};</script>
+<script>firsthide();</script>";s:9:"plantilla";s:982:"<div class="cuadro-slide mb20 " id="rota" name="rota">
+<div class="img-slide " id="imgSlide" style="position:relative;" > <a href="{url}" title="{titulo}" class="pic-slide"><img src="{img_cen}" alt="{titulo}" width="250" class="reset"/></a>
+<div id="rel" class="controles-slide" >
+<ul id="botoneraSlide"   >
+<li><img src="/global/img/slides_atras.gif" alt="retroceder" id="slides_atras" onClick="fnc_prev();" onMouseOver="sgppnov(this)" onMouseOut="sgppnou(this)" /></li>
+<li><img src="/global/img/slides_play.gif" alt="play/pausa" onMouseOver="sgppnov(this)" onMouseOut="sgppnou(this)" onClick="stopstart(this)" id="slides_play" name="pause" /></li>
+<li><img src="/global/img/slides_siguiente.gif" alt="avanzar" id="slides_siguiente" onClick="fnc_next();" onMouseOver="sgppnov(this)" onMouseOut="sgppnou(this)"/></li>
+</ul>
+</div>
+</div>
+<h1 class="t16 bold mb5 pl10 pr10"><a href="{url}" title="{titulo}" class="azul">{titulo}</a></h1>
+<p class="t12 pl10 pr10">{copete}</p>
+</div>";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:13:"__plantilla__";b:1;s:6:"num_pg";b:1;}s:9:"plantilla";a:4:{s:3:"url";b:1;s:6:"titulo";b:1;s:7:"img_cen";b:1;s:6:"copete";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:9:"plantilla";b:1;}s:9:"plantilla";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:9:"plantilla";a:0:{}}}

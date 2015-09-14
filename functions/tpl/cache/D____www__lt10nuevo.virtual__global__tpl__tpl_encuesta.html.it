@@ -1,0 +1,24 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:1117:"{fin}
+<div class="encuesta lineacorte mb10">
+<h1 class="tit-enc t16 bold menu georgia mb10">encuesta</h1>
+<p class="bold lineapunto pb10 mb10 azul">{titulo}</p>
+<form action="" name="encuesta" id="encuesta" enctype="application/x-www-form-urlencoded" >
+<ul class="lineapunto pb10 mb10">
+{__opcion__}
+</ul>
+<div class="rojo" id="mensaje" style="display:none;"></div>
+<div class="botonera-encuesta mb10"> <a href="/encuestas/ver_resultados.php?id={id_enc}&voto=1" rel="iframe" rev="width:440 height:500 scrolling:no " >
+<div id="votar" onclick="javascript:votar('{id_enc}','voto')" style="display:none;margin:0;padding:0;">
+<input type="image" class="boton-votar left none reset-padding" src="/global/img/boton-votar.png" title="Votar"/>
+</div>
+</a> <a href="/encuestas/ver_resultados.php?id={id_enc}&voto=1" rel="iframe" rev="width:500 height:500 scrolling:no " onclick="javascript:votar('{id_enc}','noVoto')" style="cursor:pointer;">
+<input type="image" class="boton-resultado left none reset-padding" src="/global/img/boton-resultado.png" title="Ver Resultados"/>
+</a>
+<div class="clear"></div>
+</div>
+</form>
+</div>";s:6:"opcion";s:208:"<li>
+<input name="opcion" type="radio" class="none reset-padding left mr5"  id="opcion" value="{id_op}" onclick="limpiarMsj();" />
+<label class="azul t11 left">{opcion}</label>
+<div class="clear"></div>
+</li>";}s:9:"variables";a:2:{s:10:"__global__";a:4:{s:3:"fin";b:1;s:6:"titulo";b:1;s:10:"__opcion__";b:1;s:6:"id_enc";b:1;}s:6:"opcion";a:2:{s:5:"id_op";b:1;s:6:"opcion";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:6:"opcion";b:1;}s:6:"opcion";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:6:"opcion";a:0:{}}}

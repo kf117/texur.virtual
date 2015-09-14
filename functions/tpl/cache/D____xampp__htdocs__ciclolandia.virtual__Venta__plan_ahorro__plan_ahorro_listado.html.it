@@ -1,0 +1,78 @@
+a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:2449:"<span><h1>Planes de ahorro <a href="/index.php?acc=51" class="btn btn-primary pull-right"><i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nuevo</a></h1></span>
+<div class="row span10 mt10" >
+<form id="listVentas" class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<!-- BUSCADOR DE MOTO -->
+<!--  DATOS DE LA MOTO -->
+<div class="row " style="padding-left:40px;">
+<h3>Buscador</h3>
+</div>
+<div class="row " style="padding-left:40px;padding-top:20px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">DNI del Cliente</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="dni" id="dni" value="{dni}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Apellido del Cliente</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="apellido" id="apellido" value="{apellido}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nombre del Cliente</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="nombre" id="nombre" value="{nombre}">
+</div>
+</div>
+<div class="row " style="padding-left:40px;display:none;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro Chasis Moto</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:210px;" name="chasis" id="chasis" value="{chasis}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro Motor</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:210px;" name="motor" id="motor" value="{motor}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;display:none;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Revendedor</label>
+<select  name="suc" id="suc" style="float:left;margin-right:10px;">
+<option value="0">Seleccione una opción</option>
+{__sucs__}
+</select>
+</div>
+<!-- FIN DE DATOS LA MOTO -->
+<div align="center" class="mt10">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqVentas();" class="btn btn-inverse">Limpiar Busqueda</button>
+</div>
+</div>
+{paginado}
+<div id="res_ajax_retirar"></div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>NºVenta</th>
+<th>Vendedor</th>
+<th>Cliente</th>
+<th>Fecha</th>
+<th>Acumulado</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+{paginado}";s:4:"sucs";s:61:"<option value="{suc_id}" {selected_suc}>{suc_nombre}</option>";s:10:"resultados";s:149:"<tr>
+<td>{vta_num}</td>
+<td>{vendedor}</td>
+<td>{cliente}</td>
+<td>{fecha}</td>
+<td>${vta_precio}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:206:"<a class="btn btn-primary" href="/index.php?id={id_venta}&acc=51"><i class="icon-edit icon-white"></i></a>
+<a class="btn btn-primary" style="display:none;" href="/index.php?id={id_venta}&acc=46">T. Rosa</a>";s:8:"blq-elim";s:261:"{__moto_id_blq__}
+<a class="btn btn-danger"  style="display:none;"
+onclick="window.open('/Venta/eliminarVenta.php?id={id_venta_e}&acc=14', 'Popup', 'height=230,width=300,scrollTo,resizable=1,scrollbars=1,location=0');">
+<i class="icon-trash icon-white"></i></a>";s:11:"moto_id_blq";s:114:"<a class="btn btn-inverse" onclick="retirarMoto({id_moto_e});"> Retirar <i class=" icon-share icon-white"></i></a>";}s:9:"variables";a:6:{s:10:"__global__";a:10:{s:6:"accion";b:1;s:3:"acc";b:1;s:3:"dni";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:6:"chasis";b:1;s:5:"motor";b:1;s:8:"__sucs__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;}s:4:"sucs";a:3:{s:6:"suc_id";b:1;s:12:"selected_suc";b:1;s:10:"suc_nombre";b:1;}s:10:"resultados";a:7:{s:7:"vta_num";b:1;s:8:"vendedor";b:1;s:7:"cliente";b:1;s:5:"fecha";b:1;s:10:"vta_precio";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:8:"id_venta";b:1;}s:8:"blq-elim";a:2:{s:15:"__moto_id_blq__";b:1;s:10:"id_venta_e";b:1;}s:11:"moto_id_blq";a:1:{s:9:"id_moto_e";b:1;}}s:8:"children";a:6:{s:10:"__global__";a:2:{s:4:"sucs";b:1;s:10:"resultados";b:1;}s:4:"sucs";a:0:{}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:1:{s:11:"moto_id_blq";b:1;}s:11:"moto_id_blq";a:0:{}}s:9:"functions";a:6:{s:10:"__global__";a:0:{}s:4:"sucs";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}s:11:"moto_id_blq";a:0:{}}}

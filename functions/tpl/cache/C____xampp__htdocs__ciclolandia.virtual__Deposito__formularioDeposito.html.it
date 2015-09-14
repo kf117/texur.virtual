@@ -1,0 +1,62 @@
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:2470:"<div class="row span10">
+<h1>Gesti&oacute;n de Sucursal</h1>
+</div>
+<div class="row span10" style="margin-top:30px;">
+<form class="well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="id" id="id" value="{id}">
+{__error_msg__}
+{__exito_msg__}
+<!--  DATOS DEL DEPOSITO -->
+<div class="table-bordered " style="z-index:99999;margin-top:5px;">
+<div class="row " style="padding-left:40px;margin-top:20px;">
+<h3>Datos de la Sucursal</h3>
+</div>
+<div class="row " style="padding-left:40px;margin-top:20px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Nombre<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:300px;" name="nombreDeposito" id="nombreDeposito" value="{nombreDeposito}">
+</div>
+<label style="float:left;margin-right:0px;padding-top:4px;">Tel&eacute;fono<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<div style="float:left">
+<input type="text"  style="width:96px;" name="telefono" id="telefono" value="{telefono}">
+</div>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:0px;padding-top:4px;">Direcci&oacute;n<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<input type="text"  style="width:154px;" name="direccion" id="direccion" value="{direccion}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:0px;padding-top:4px;">Provincia<span class="campo-oblg">*</span></label>
+<div style="float:left;margin-right:20px;">
+<select style="width:200px;" name="provincia" id="provincia" onchange="seleccionar_ciudad(this);">
+<option>Seleccione una Provincia</option>
+{__blq_provincias__}
+</select>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:27px;padding-top:4px;">Ciudad</label>
+<div style="float:left;margin-right:20px;" id="select_ciudades">
+<select style="width:200px;" name="ciudad" id="ciudad" >
+<option id="primera_ciudad">Seleccione una Provincia</option>
+{__blq_ciudades__}
+</select>
+</div>
+</div>
+</div>
+<!-- FIN DATOS DEL DEPOSITO -->
+<div class="row" style="padding-top:20px;">
+<span class="alert alert-info" style="margin-left: 30px">Campos obligatorios<span class="campo-oblg">*</span></span>
+<input type="submit" class="btn btn-primary" value="Guardar" />
+</div>
+</form>
+</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:14:"blq_provincias";s:80:"<option value="{provincia_id}" {selected_provincia} >{provincia_nombre}</option>";s:12:"blq_ciudades";s:69:"<option value="{ciud_id}" {selected_ciudad} >{ciudad_nombre}</option>";}s:9:"variables";a:5:{s:10:"__global__";a:10:{s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:14:"nombreDeposito";b:1;s:8:"telefono";b:1;s:9:"direccion";b:1;s:18:"__blq_provincias__";b:1;s:16:"__blq_ciudades__";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:14:"blq_provincias";a:3:{s:12:"provincia_id";b:1;s:18:"selected_provincia";b:1;s:16:"provincia_nombre";b:1;}s:12:"blq_ciudades";a:3:{s:7:"ciud_id";b:1;s:15:"selected_ciudad";b:1;s:13:"ciudad_nombre";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:14:"blq_provincias";b:1;s:12:"blq_ciudades";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:14:"blq_provincias";a:0:{}s:12:"blq_ciudades";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:14:"blq_provincias";a:0:{}s:12:"blq_ciudades";a:0:{}}}
