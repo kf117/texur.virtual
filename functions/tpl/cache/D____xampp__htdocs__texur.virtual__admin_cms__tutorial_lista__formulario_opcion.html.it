@@ -1,0 +1,46 @@
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:1396:"<div class="row mb10"> <a href="index.php?acc={acc}&page={page}" class="btn btn-primary pull-left mb10 ml30"><i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nueva</a></div>
+{__error_msg__}
+{__exito_msg__}
+<div class="row" style="padding-left:30px;">
+<div style="float:left;margin-right:1px;">
+<form class="well" method="POST" action="{action_form}" enctype =  "multipart/form-data">
+<h3>Opciones de Lista ({lista_titulo})</h3><br>
+<div class="row">
+<div class="form-group span4">
+<label for="opcion">Opci&oacute;n </label>
+<input type="text" class="form-control" id="opcion" name="opcion" value="{opcion}">
+</div>
+<div class="form-group span4">
+<label for="lista_sgte">Lista Siguiente </label>
+<select class="form-control" id="lista_sgte" name="lista_sgte">
+<option value="0">-Sin Lista Siguiente-</option>
+{__sel_opciones__}
+</select>
+</div>
+</div>
+<div class="row">
+<div class="form-group span4">
+<label for="imagen">Imagen <i>(jpg, png, gif)</i></label>
+<input type="file" class="form-control" id="imagen" name="imagen" />
+</div>
+{__img_block__}
+</div>
+<hr>
+<input type="submit" value="Guardar" class="btn btn-primary  ">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="lista_id" id="lista_id" value="{lista_id}">
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="page" id="page" value="{page}">
+</form>
+</div>
+</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:12:"sel_opciones";s:70:"<option value="{opcion_id}" {opcion_selected}>{opcion_nombre}</option>";s:9:"img_block";s:393:"<div class="form-group span4" style="display:{mostrar_boton}" >
+<label>&nbsp;</label>
+<img width="150" src="{img_src}" id="image_preview" />
+<input type="hidden" value="{img_src}"  id="imagen_src" name="imagen_src" />
+<input type="hidden" value="0"  id="borrar_imagen" name="borrar_imagen" />
+<p  onclick="borrar_imagen('image_preview','borrar_imagen');" class="btn">Eliminar Imagen</p>
+</div>";}s:9:"variables";a:5:{s:10:"__global__";a:11:{s:3:"acc";b:1;s:4:"page";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:11:"action_form";b:1;s:12:"lista_titulo";b:1;s:6:"opcion";b:1;s:16:"__sel_opciones__";b:1;s:13:"__img_block__";b:1;s:8:"lista_id";b:1;s:2:"id";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:12:"sel_opciones";a:3:{s:9:"opcion_id";b:1;s:15:"opcion_selected";b:1;s:13:"opcion_nombre";b:1;}s:9:"img_block";a:2:{s:13:"mostrar_boton";b:1;s:7:"img_src";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:12:"sel_opciones";b:1;s:9:"img_block";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:12:"sel_opciones";a:0:{}s:9:"img_block";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:12:"sel_opciones";a:0:{}s:9:"img_block";a:0:{}}}

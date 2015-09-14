@@ -1,0 +1,53 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:972:"<link href="conf/adminV2.css" rel="stylesheet" type="text/css">
+<table cellSpacing="0" cellPadding="0" width="774" border="0">
+<tr>
+<td valign="top" bgColor="#bdbdae">
+<table cellSpacing="0" cellPadding="0" border="0">
+<tr>
+<td width=8 height=25><img height=1 alt="" src="../global/img/1x1.gif" width=8 border=0></td>
+<td class=negro width=62>Menú<img height=1 alt="" src="../global/img/1x1.gif" width=5 border=0><img height=5 alt="" src="../global/img/item_naranja.gif" width=3 border=0></td>
+<td width="10"><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+<td vAlign=top ><img height=10 alt="" src="../global/img/px_negro.gif" width=1 border=0></td>
+{__menu_principal__}
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top" bgColor=#000000>
+<table cellSpacing="0" cellPadding="0" width="774" border="0">
+<tr>
+<td height=1><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+</tr>
+</table>
+</td>
+</tr>
+{__menu_secundario__}
+</table>";s:14:"menu_principal";s:308:"<td width="10"><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+<td align="center">{item_principal}</td>
+<td width="10"><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+<td vAlign=top ><img height=10 alt="" src="../global/img/px_negro.gif" width=1 border=0></td>";s:15:"menu_secundario";s:801:"<tr>
+<td valign="top" bgColor="#f2f2f2">
+<table cellSpacing="0" cellPadding="0" bgColor="#f2f2f2" border="0">
+<tr>
+<td width=8 height=25><img height=1 alt="" src="../global/img/1x1.gif" width=8 border=0></td>
+<td class=negro align=right width=62><img height=8 alt="" src="../global/img/1x1.gif" width="62" border="0"></td>
+<td width="10"><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+<td vAlign=top ><img height=10 alt="" src="../global/img/px_negro.gif" width=1 border=0></td>
+{__bloque_secundario__}
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<table cellSpacing="0" cellPadding="0" width="774" bgColor="#bdbdae" border="0">
+<tr>
+<td bgColor=#000000 colSpan=4 height=1><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+</tr>
+</table>
+</td>
+</tr>";s:17:"bloque_secundario";s:294:"<td width="10"><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+<td>{item_secundario}</td>
+<td width="10"><img height=1 alt="" src="../global/img/1x1.gif" width=1 border=0></td>
+<td vAlign=top ><img height=10 alt="" src="../global/img/px_negro.gif" width=1 border=0></td>";}s:9:"variables";a:4:{s:10:"__global__";a:2:{s:18:"__menu_principal__";b:1;s:19:"__menu_secundario__";b:1;}s:14:"menu_principal";a:1:{s:14:"item_principal";b:1;}s:15:"menu_secundario";a:1:{s:21:"__bloque_secundario__";b:1;}s:17:"bloque_secundario";a:1:{s:15:"item_secundario";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:2:{s:14:"menu_principal";b:1;s:15:"menu_secundario";b:1;}s:14:"menu_principal";a:0:{}s:15:"menu_secundario";a:1:{s:17:"bloque_secundario";b:1;}s:17:"bloque_secundario";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:14:"menu_principal";a:0:{}s:15:"menu_secundario";a:0:{}s:17:"bloque_secundario";a:0:{}}}

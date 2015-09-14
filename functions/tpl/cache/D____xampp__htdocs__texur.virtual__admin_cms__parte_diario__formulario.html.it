@@ -1,0 +1,147 @@
+a:4:{s:6:"blocks";a:8:{s:10:"__global__";s:4717:"<div class="row mb10"> <a href="/index.php?acc={acc}&page={page}" class="btn btn-primary pull-left mb10 ml30"><i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nuevo</a></div>
+{__error_msg__}
+{__exito_msg__}
+<div class="row" style="padding-left:30px;">
+<div style="float:left;margin-right:1px;">
+<form class="well" method="POST">
+<h3>Datos Generales</h3><br>
+<div class="row">
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"fecha",
+dateFormat:"%d-%m-%Y"
+});
+};</script>
+<div class="form-group span4">
+<label for="fecha">Fecha <span class="campo-oblg">*</span></label>
+<input type="text" class="form-control" id="fecha" name="fecha" value="{fecha}">
+</div>
+<div class="form-group span6">
+<div class="span2 left" >
+<label for="curson">Cursos</label>
+<select class="form-control span2" multiple="multiple" id="curson" name="curson">
+{__seln_cursos__}
+</select>
+</div>
+<div class="span1 left" >
+<br>
+<p class="btn btn-small " onclick="desasignar('cu_asig','curso','curson');"><i class="icon icon-arrow-left"></i></p>
+<p class="btn btn-small " onclick="asignar('cu_asig','curson','curso');"><i class="icon icon-arrow-right"></i></p>
+</div>
+<script>
+function asignar(lista,desde,hasta){
+if($("#"+desde).val()!=null){
+if($("#"+lista).val()=="")
+$("#"+lista).val(""+$("#"+desde).val())
+else
+$("#"+lista).val($("#"+lista).val()+","+$("#"+desde).val())
+$('#'+desde+' option:selected').each(function(){
+$("#"+hasta).append("<option value='"+$(this).val()+"'>"+$(this).html()+"</option>");
+});
+$('#'+desde+' option:selected').remove();
+}else{
+alert("Elija una opción")
+}
+}
+function desasignar(lista,desde,hasta){
+if($("#"+desde).val()!=null){
+var elementos=$("#"+lista).val().split(",");
+$('#'+desde+' option:selected').each(function(){
+elementos.splice($.inArray($(this).val() ,elementos),1);
+$("#"+hasta).append("<option value='"+$(this).val()+"'>"+$(this).html()+"</option>");
+});
+$('#'+desde+' option:selected').remove();
+$("#"+lista).val(elementos.join(","))
+}else{
+alert("Elija una opción")
+}
+}
+</script>
+<div class="left span2" >
+<label for="alumno">Cursos Asignados</label>
+<select class="form-control span2" multiple="multiple" id="curso" name="curso">
+{__sel_asig_cursos__}
+</select>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="form-group span4">
+<label for="asignatura">Asignatura <span class="campo-oblg">*</span></label>
+<select class="form-control" id="asignatura" name="asignatura">
+<option value="0">Seleccione una Asignatura</option>
+{__sel_materias__}
+</select>
+</div>
+<div class="form-group span4">
+</div>
+</div>
+<hr>
+<h3>Planeamiento Diario</h3><br>
+<div class="form-group ">
+<label for="contenido_ex">Contenido Explicado <span class="campo-oblg">*</span></label>
+<textarea rows="6" class="form-control span10" id="contenido_ex" name="contenido_ex">{contenido_ex}</textarea>
+</div>
+<div class="form-group ">
+<label for="contenido_ej">Contenido Ejercitario <span class="campo-oblg">*</span></label>
+<textarea rows="6" class="form-control span10" id="contenido_ej" name="contenido_ej">{contenido_ej}</textarea>
+</div>
+<div class="form-group ">
+<label for="tareas">Tareas</label>
+<textarea rows="6" class="form-control span10" id="tareas" name="tareas">{tareas}</textarea>
+</div>
+<hr>
+<h3>Observaciones de Disciplina</h3><br>
+<div class="row">
+<div class="form-group span4">
+<label for="alumno">Alumno/Curso (Email)</label>
+<select class="form-control" id="alumno" name="alumno">
+<option value="0">Seleccione una Opción</option>
+<optgroup label="Alumnos">
+{__sel_alumnos__}
+</optgroup>
+<optgroup label="Cursos">
+{__sel_cursos_email__}
+</optgroup>
+<option value="todos" {todos_selected}>Todos</option>
+</select>
+</div>
+<div class="checkbox span5">
+<div class="span2 left">
+<label>
+<input type="checkbox" name="no_tarea" {no_tarea}> No hizo la tarea
+</label>
+<label>
+<input type="checkbox" name="tardanza" {tardanza}> Llego tarde
+</label>
+</div>
+<div class="span2 left">
+<label>
+<input type="checkbox" name="ausente" {ausente}> Ausente
+</label>
+<label>
+<input type="checkbox" name="excelente" {excelente}> Excelente Trabajo
+</label>
+</div>
+</div>
+</div>
+<div class="form-group ">
+<label for="tareas">Otra</label>
+<textarea rows="6" class="form-control span10" id="otra" name="otra">{otra}</textarea>
+</div>
+<hr>
+<span class="alert alert-info" style="margin-left: 30px">Campos obligatorios<span class="campo-oblg">*</span></span>
+<input type="submit" value="Guardar" class="btn btn-primary ">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="cu_asig" id="cu_asig" value="{cu_asig}">
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="page" id="page" value="{page}">
+</form>
+</div>
+</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:56:"<div class="alert alert-success">
+{mensaje_exito}
+</div>";s:11:"seln_cursos";s:47:"<option value="{cun_id}" >{cun_nombre}</option>";s:15:"sel_asig_cursos";s:45:"<option value="{cu_id}" >{cu_nombre}</option>";s:12:"sel_materias";s:58:"<option value="{ma_id}" {ma_selected}>{ma_nombre}</option>";s:11:"sel_alumnos";s:60:"<option value="a_{al_id}" {al_selected}>{al_nombre}</option>";s:16:"sel_cursos_email";s:63:"<option value="c_{cue_id}" {cue_selected}>{cue_nombre}</option>";}s:9:"variables";a:8:{s:10:"__global__";a:21:{s:3:"acc";b:1;s:4:"page";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:5:"fecha";b:1;s:15:"__seln_cursos__";b:1;s:19:"__sel_asig_cursos__";b:1;s:16:"__sel_materias__";b:1;s:12:"contenido_ex";b:1;s:12:"contenido_ej";b:1;s:6:"tareas";b:1;s:15:"__sel_alumnos__";b:1;s:20:"__sel_cursos_email__";b:1;s:14:"todos_selected";b:1;s:8:"no_tarea";b:1;s:8:"tardanza";b:1;s:7:"ausente";b:1;s:9:"excelente";b:1;s:4:"otra";b:1;s:7:"cu_asig";b:1;s:2:"id";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:11:"seln_cursos";a:2:{s:6:"cun_id";b:1;s:10:"cun_nombre";b:1;}s:15:"sel_asig_cursos";a:2:{s:5:"cu_id";b:1;s:9:"cu_nombre";b:1;}s:12:"sel_materias";a:3:{s:5:"ma_id";b:1;s:11:"ma_selected";b:1;s:9:"ma_nombre";b:1;}s:11:"sel_alumnos";a:3:{s:5:"al_id";b:1;s:11:"al_selected";b:1;s:9:"al_nombre";b:1;}s:16:"sel_cursos_email";a:3:{s:6:"cue_id";b:1;s:12:"cue_selected";b:1;s:10:"cue_nombre";b:1;}}s:8:"children";a:8:{s:10:"__global__";a:7:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:11:"seln_cursos";b:1;s:15:"sel_asig_cursos";b:1;s:12:"sel_materias";b:1;s:11:"sel_alumnos";b:1;s:16:"sel_cursos_email";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:11:"seln_cursos";a:0:{}s:15:"sel_asig_cursos";a:0:{}s:12:"sel_materias";a:0:{}s:11:"sel_alumnos";a:0:{}s:16:"sel_cursos_email";a:0:{}}s:9:"functions";a:8:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:11:"seln_cursos";a:0:{}s:15:"sel_asig_cursos";a:0:{}s:12:"sel_materias";a:0:{}s:11:"sel_alumnos";a:0:{}s:16:"sel_cursos_email";a:0:{}}}

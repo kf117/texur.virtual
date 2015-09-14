@@ -1,0 +1,99 @@
+
+              <div class="row span10" >
+                  
+                  <form id="listClientes" class=" well" action="{accion}" method="POST">
+                    <input type="hidden"  name="acc" id="acc" value="{acc}">
+
+                      <!-- BUSCADOR DE MOTO -->             
+
+                  <!--  DATOS DE LA MOTO -->
+                 
+                    <div class="row " style="padding-left:40px;">
+                      <h3>Buscador de Profesores</h3>
+                    </div>  
+
+                      
+
+                    <div class="row " style="padding-left:40px;padding-top:20px;">
+                      <label style="float:left;margin-right:7px;padding-top:4px;">Apellido</label> 
+                      <div style="float:left;margin-right:10px;">
+                        <input type="text" style="width:110px;" name="nick" id="nick" value="{nick}">
+                      </div>
+                      
+                   
+                      
+                       <div class="row" style="padding-left:40px;">
+                        <label style="float:left;margin-right:7px;padding-top:4px;">Tipo de usuario</label> 
+                      <div style="float:left;margin-right:10px;" >
+                        <select style="width:196px;" name="tipo_usuario" id="tipo_usuario" >
+                            <option  value="0" >Seleccione tipo de usuario</option>
+                            <!-- BEGIN perfiles -->
+                            <option value="{perfil_id}" {select_perfil}>{perfil_n_s}</option>
+                            <!-- END perfiles -->
+                                            
+                        </select>
+                          
+                      </div> 
+                        
+                     
+                    </div>
+                      <div class="row" style="padding-left:40px;">
+                       
+                    </div>
+                      </div>
+                      
+                  
+               
+                  <!-- FIN DE DATOS LA MOTO -->
+                  <div align="center" class="mt10">   
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                        <button onclick="limpiarBsqUsuario();" class="btn btn-inverse">Limpiar Busqueda</button>
+                  </div>
+    </div>                    
+    
+<div class="row span10" >{paginado}</div>
+        
+<table class="table table-striped">
+    
+              <thead>
+                <tr>
+                  
+                  <th>Nickname</th>
+                  <th>Apellido</th>
+                  <th>Nombre</th>
+                  <th>Teléfono</th>
+                  <th>Domicilio</th>
+                  <th>Tipo de Usuario</th>
+                  
+                  <th>&nbsp;</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- BEGIN resultados --> 
+                <tr>
+                  
+                  <td>{nickname}</td>
+                  <td>{apellido}</td>
+                  <td>{nombre}</td>
+                  <td>{telefono}</td>
+                  <td>{domicilio}</td>
+                  <td>{tipo_de_usuario_lis}</td>
+                  
+                  
+                  <td>
+                      
+                      <!-- BEGIN blq-edit -->    
+                  <a class="btn btn-primary" href="/index.php?id={id_editar}&acc=22"><i class="icon-edit icon-white"></i></a>
+                  <!-- END blq-edit -->
+                  <!-- BEGIN blq-elim -->
+                 <a class="btn btn-danger" href="/usuario/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+                     <i class="icon-trash icon-white"></i></a>
+                  <!-- END blq-elim -->
+                  </td>
+                </tr>
+                <!-- END resultados -->
+                
+              </tbody>
+</table>
+        <div class="row span10" >{paginado}</div>

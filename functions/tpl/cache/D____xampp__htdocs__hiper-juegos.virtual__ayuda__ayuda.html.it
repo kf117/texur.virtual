@@ -1,0 +1,167 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:10547:"<div id="content2">
+<!-- content -->
+<h1>Ayuda</h1>
+<!-- PLUGINS -->
+<div class="entry" id="plugins">
+<h2>Complementos</h2>
+<table cellspacing="4" cellpadding="1" border="0">
+<tbody><tr valign="top"><td>
+<div class="text">
+Para jugar a nuestros juegos en l&iacute;nea gratis debes tener instalado en tu ordenador unos programas espec&iacute;ficos (complementos):<br> Java, Shockwave y Flash<br>Aseg&uacute;rate de que los complementos mencionados est&aacute;n correctamente instalados.<br>
+<br>
+<a href="javascript:checkPlugins();">Comprueba si tu navegador dispone de la &uacute;ltima versi&oacute;n de esos complementos</a> </div>
+</td>
+<td id="flash_download" class="icons">
+<div class="img"><img border="0" title="Macromedia Flash Player" alt="Macromedia Flash Player" src="img/dwn_flash.jpg"><br><a target="_blank" href="http://get.adobe.com/flashplayer/">descargar</a></div>
+</td>
+<td id="shockwave_download" class="icons">
+<div class="img"><img border="0" title="Macromedia Shockwave" alt="Macromedia Shockwave" src="img/dwn_shockwave.jpg"><br><a target="_blank" href="http://www.adobe.com/shockwave/download/">descargar</a></div>
+</td>
+<td id="java_download" class="icons">
+<div class="img"><img border="0" title="Java" alt="Java" src="img/dwn_java.jpg"><br><a target="_blank" href="http://www.java.com/getjava/">descargar</a></div>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+&lt;!--
+if( !checkShockwave() ) {
+_ge('shockwave_download').className = 'icons';
+}
+if( !checkFlash() ) {
+_ge('flash_download').className = 'icons';
+}
+if( !checkJava() ) {
+_ge('java_download').className = 'icons';
+}
+--&gt;
+</script><script language="VBScript">
+on error resume next
+If MSDetect = "true" Then
+For iii = 2 to actFlash_version
+If Not(IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash." &amp; iii))) Then
+Else
+flashinstalled = 2
+flashversion = iii
+End If
+Next
+End If
+If flashinstalled = 0 Then
+flashinstalled = 1
+End If
+</script>
+</div>
+<!-- FAQ -->
+<div class="entry last" id="faq"><a name="faq"></a>
+<h2>Preguntas m&aacute;s frecuentes</h2>
+<div class="entry"><a name="q01"></a>
+<h3>1. Los juegos no funcionan, &iquest;qu&eacute; debo hacer?</h3>
+<p>Esto puede deberse a varias razones. Lee detenidamente los siguientes puntos.
+</p><ul>
+<li>Para los juegos en l&iacute;nea, necesitas tener instalados tres programas (gratuitos) en tu ordenador: Java, Schockwave y Flash. Comprueba los complementos instalados en el enlace que aparece en la parte superior de esta p&aacute;gina "Haz clic en este enlace y desc&aacute;rgate la &uacute;ltima versi&oacute;n" para verificar que tienes la &uacute;ltima versi&oacute;n instalada en el ordenador.</li>
+<li>Algunos juegos solo funcionan correctamente con el navegador Internet Explorer (IE). Intenta jugar utilizando IE si no lo has hecho ya. Es posible que algunos juegos funcionen mejor en el navegador alternativo Firefox, puedes descargarlo desde <a target="_blanc" href="http://www.mozilla.com/en-US/products/download.html?product=firefox-2.0.0.10&amp;os=win&amp;lang=es-ES">http://www.mozilla.com/en-US/products/download.html?product=firefox-2.0.0.10&amp;os=win&amp;lang=es-ES</a>. O, si est&aacute;s utilizando un Mac, desde: <a target="_blanc" href="http://www.mozilla.com/products/download.html?product=firefox-2.0.0.10&amp;os=osx&amp;lang=es-ES">http://www.mozilla.com/products/</a>.</li>
+<li>Es posible que los juegos no funcionen porque tu conexi&oacute;n a Internet sea demasiado lenta. Algunos de los juegos tardan cierto tiempo en cargarse con conexiones lentas.</li>
+<li>Algunos juegos est&aacute;n enlazados con el sitio web del desarrollador. Si el sitio no funciona correctamente, puede que el juego tampoco lo haga. Normalmente el juego suele volver a funcionar al d&iacute;a siguiente.</li>
+<li>Tambi&eacute;n es posible que la configuraci&oacute;n de tu cortafuegos sea demasiado estricta y que no permita el uso de cookies. La mayor&iacute;a de nuestros juegos intentar&aacute;n descargar cookies a tu ordenador. Puede que debas modificar la configuraci&oacute;n del cortafuegos para nuestro sitio web.</li>
+</ul>
+<p></p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q02"></a>
+<h3>2. &iquest; Todos los juegos son gratis?</h3>
+<p>
+La mayor&iacute;a de nuestros juegos son gratis y pueden utilizarse de forma ilimitada. Tambi&eacute;n ofrecemos la descarga de juegos de gran calidad, cuyo periodo de prueba suele ser limitado. Cuando este periodo termina, debes comprar el juego si quieres seguir jugando. Los juegos de Zigiz son gratuitos. Sin embargo, puedes comprar cr&eacute;ditos para ganar dinero de verdad. La compra de cr&eacute;ditos es opcional. Puedes jugar gratis a estos juegos todo el tiempo que quieras.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q04"></a>
+<h3>3. Un juego funcion&oacute; sin problemas la primera vez, pero ahora no funciona. &iquest;Qu&eacute; debo hacer?</h3>
+<p>
+Puede que Java no est&eacute; instalado correctamente. Puedes resolver el problema siguiendo estos pasos:
+</p><p>
+Abre Internet Explorer
+</p><ul>
+<li>Haz clic en "Herramientas"</li>
+<li>Haz clic en "Opciones de Internet"</li>
+<li>Haz clic en "Seguridad"</li>
+<li>Haz clic en "Nivel personalizado"</li>
+<li>Haz clic en "Activar" en todas las opciones en las que aparezca la palabra "Java".</li>
+</ul>
+<p></p><p>
+Configura tambi&eacute;n lo siguiente:
+</p><p>Abre Internet Explorer
+</p><ul>
+<li>Haz clic en "Herramientas"</li>
+<li>Haz clic en "Opciones de Internet"</li>
+<li>Haz clic en "Opciones avanzadas"</li>
+<li>Marca "Java (sun)" y desmarcas "Microsoft VM".</li>
+</ul>
+Si el problema no se resuelve, intenta jugar en el navegador alternativo Firefox (utiliza el enlace que aparece en la primera pregunta para descargarlo).
+<p></p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q05"></a>
+<h3>4. Me gustar&iacute;a que Hiper-Juegos.com.ar fuera mi p&aacute;gina de inicio. &iquest;Qu&eacute; debo hacer?</h3>
+<p>
+Para configurar Hiper-Juegos.com.ar como tu p&aacute;gina de inicio, entra en "Inicio", "Panel de control", "Opciones de Internet". Escribe Hiper-Juegos.com.ar en el campo que aparece y haz clic en "Aplicar" y despu&eacute;s en "Aceptar".
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q06"></a>
+<h3>5. &iquest;C&oacute;mo puedo a&ntilde;adir un juego a "Mis juegos"?</h3>
+<p>
+guste mucho en nuestra p&aacute;gina, podr&aacute;s guardarlo en "Mis juegos". Debajo de cada juego, aparece un bot&oacute;n gris con el texto "A&ntilde;adir a Mis juegos". Si haces clic en este bot&oacute;n, el juego se a&ntilde;adir&aacute; a tu P&aacute;gina de juegos. Ten en cuenta que esto solo funciona para un ordenador, como el de tu casa. No funcionar&aacute; en un ordenador compartido, como el del colegio o el trabajo.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q07"></a>
+<h3>6. He comprado un juego pero no he recibido el mensaje con mi c&oacute;digo de registro. &iquest;Cu&aacute;ndo lo recibir&eacute;?</h3>
+<p>
+Deber&iacute;as recibir el mensaje de respuesta con el c&oacute;digo de registro en el plazo de una hora. En caso contrario, mira tu buz&oacute;n de correo no deseado. Con este c&oacute;digo de registro, puedes descargar el juego a tu ordenador, lo que te permite jugar siempre que quieras. Conserva el mensaje con el c&oacute;digo de registro por si acaso formateas el ordenador.
+Tambi&eacute;n es posible que la entrega del juego se haya retrasado porque has pedido el juego en CD. En este caso, puede que el juego tarde cuatro semanas en llegar. Ten paciencia.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q08"></a>
+<h3>7. &iquest;Se puede hacer algo con los juegos en coreano y chino?</h3>
+<p>
+A pesar de que sabemos que muchos de vosotros no sab&eacute;is coreano ni chino, nuestro primer objetivo es colgar juegos de calidad en la p&aacute;gina. Los desarrolladores suelen estar en China y Corea. Nos gustar&iacute;a contar con m&aacute;s juegos en ingl&eacute;s en la p&aacute;gina, pero no hay muchos juegos de calidad en ingl&eacute;s. Por este motivo, colgamos una mezcla de juegos en ingl&eacute;s, chino y coreano.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q09"></a>
+<h3>8. &iquest;Puedo bajar el volumen del juego?</h3>
+<p>
+Algunos juegos tienen la opci&oacute;n de bajar el volumen o de apagarlo, pero la mayor&iacute;a de ellos no. Si te molesta mucho, baja el volumen de tu ordenador o ap&aacute;galo completamente.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q10"></a>
+<h3>9. &iquest;Ser&iacute;a posible que nos intercambi&aacute;ramos los enlaces y banners de nuestras p&aacute;ginas?</h3>
+<p>
+Lo sentimos, pero no intercambiamos enlaces ni banners. Todos los anuncios de la p&aacute;gina son comerciales.</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q11"></a>
+<h3>10. &iquest;Puedo jugar a vuestros juegos con un joystick?</h3>
+<p>
+Ten en cuenta que los controles de nuestros juegos corresponden al teclado y el rat&oacute;n de tu ordenador. No se puede jugar con la ayuda de un joystick ni cualquier otro elemento.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry"><a name="q12"></a>
+<h3>11. &iquest;Puedo suscribirme a vuestra p&aacute;gina?</h3>
+<p>
+No es necesario que te suscribas a nuestro portal de juegos. Simplemente tienes que hacer clic y jugar al juego que quieras de forma inmediata. Solo se te pedir&aacute; que incluyas informaci&oacute;n en unos pocos juegos, pero es opcional.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+<div class="entry last"><a name="q13"></a>
+<h3>12. &iquest;Puedo descargar los juegos a mi tel&eacute;fono m&oacute;vil?</h3>
+<p>
+Los juegos de nuestros portales no est&aacute;n dise&ntilde;ados para su descarga en tel&eacute;fonos m&oacute;viles. Sin embargo, si dispones de un tel&eacute;fono con conexi&oacute;n a Internet, quiz&aacute;s puedas jugar, pero no est&aacute;n dise&ntilde;ados para ello.
+</p>
+<div class="gotop"><a href="javascript:scroll(0,0);">Inicio</a></div>
+</div>
+</div>
+<!-- content end -->
+</div>";}s:9:"variables";a:1:{s:10:"__global__";a:0:{}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

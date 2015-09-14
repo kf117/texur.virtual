@@ -1,0 +1,93 @@
+
+              <div class="row  mb10" >
+                  
+                  <h1 class="span10">Lista de Opciones de Scanycar III</h1>
+    </div>
+<div class="clearfix"></div>
+<div class="row ">
+    <form id="listOps" method="POST" action="index.php?acc=70" class="well span10">
+        <input name="acc" id="acc" type="hidden" />
+                    <div class="row">
+                        
+                        <div class="form-group span3">
+                            <label>Opci&oacute;n</label> 
+                           
+                            <input value="{opcion}" name="opcion" id="opcion" />
+                                
+                        </div>
+                        <div class="form-group span3">
+                            <label>Opci&oacute;n Previa</label>
+                            <select class="form-control" name="padre" id="padre" >
+                                 <option value="" {selected_null}>Seleccione una Opci&oacute;n</option>
+                                 <option value="0" {selected_0} >Pantalla Inicial</option>
+                               <!-- BEGIN sel_opb -->
+                                <option value="{opb_id}" {opb_selected}>{opb_nombre}</option>
+                                <!-- END sel_opb -->
+                            </select>
+                        </div> 
+                    </div>
+                    
+                   
+        
+        <script>
+            function limpiarBsqOps(){
+                $("#padre").val("");
+                
+                $("#opcion").val("");
+                $('#listOps').submit();
+            }
+        </script>
+        
+        
+                    <div align="center" class="mt10">   
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                        <button onclick="limpiarBsqOps();" class="btn btn-inverse">Limpiar Busqueda</button>
+                    </div>
+                   
+
+    </form>
+</div>
+<div class="clearfix"></div>
+<!-- BEGIN error_msg -->
+                      <div class="row " ><div class="alert alert-error span10">
+                        {mensaje_error}
+                      </div></div>
+                  <!-- END error_msg -->
+    <!-- BEGIN exito_msg -->
+    <div class="row " ><div class="alert alert-success span10">
+                        {mensaje_exito}
+                      </div></div>
+                      
+                  <!-- END exito_msg -->
+                  <div class="row " ><div class="span10">
+                          {paginado}</div></div>  
+        
+                  <!-- BEGIN resultados-table --> 
+                  <div class="row">
+<table class="table table-striped span10">
+
+              <thead>
+                <tr>
+                  <th>Opci&oacute;n</th>   
+                  <th>Opci&oacute;n Previa</th>
+                  <th></th>  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- BEGIN resultados --> 
+                <tr>
+                  
+                  <td >{opcion_lis}</td>
+                  <td >{opcion_previa_lis}</td>
+                  
+                  <td><a class="btn btn-primary" href="index.php?id={idlist}&acc=53&page={pagelist}"><i class="icon-edit icon-white"></i></a>
+                 <a class="btn btn-danger" href="index.php?del={idelim}&acc={accelim}&page={pagelist}" onclick="return confirmDel();">
+                     <i class="icon-trash icon-white"></i></a></td>
+                </tr>
+                <!-- END resultados -->
+                
+              </tbody>
+</table>
+                      </div>
+          <!-- END resultados-table --> 
+          <div class="row" ><div class="span10">{paginado}</div></div>  

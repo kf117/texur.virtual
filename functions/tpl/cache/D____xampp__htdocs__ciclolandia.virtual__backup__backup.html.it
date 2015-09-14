@@ -1,0 +1,29 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:775:"<div class="row span10">
+<h1>Gesti&oacute;n de BackUPs</h1>
+<a  onclick="shadowShowing();" href="/backup/generar_backup.php" target="_self" class="btn btn-primary btn-large pull-right"><i class="icon-white icon-wrench"></i> Generar BackUp</a>
+</div>
+<div class="row span10 mt30">
+<h2>Archivos</h2>
+<div class="inline row table-bordered mt10 p30">
+{__blq-nores__}
+{__backups__}
+</div>
+</div>
+<script>
+function eliminarBackup(arc){
+if(confirm("¿Esta seguro de eliminar el backup?")) {
+window.location.href="../backup/backup_borrar.php?arc="+arc;
+}
+}
+function shadowShowing(){
+//alert("asd");
+document.getElementById("shadoww").style.opacity=0.5;
+document.getElementById("shadoww").style.zIndex=999999;
+}
+</script>
+<div id="shadoww"  ><img src="/global/img/loading.gif" /></div>";s:9:"blq-nores";s:54:"<div class=" alert alert-heading" >{alerta_info}</div>";s:7:"backups";s:284:"<div class="mr20 well " style="width:230px;float:left;">
+<a href="/backup/backup_descargar.php?arc={archivo_nombre}" target="_blank" class="btn btn-primary">
+<i class="icon-download-alt icon-white"></i></a><img src="/global/img/sql.jpg" />{archivo_nombre}
+{__blq-eliminarbup__}
+</div>";s:15:"blq-eliminarbup";s:145:"<div onclick=" eliminarBackup('{archivo_nombre_elim}');"  class="btn btn-danger btn-mini pull-right">
+<i class="icon-trash icon-white"></i></div>";}s:9:"variables";a:4:{s:10:"__global__";a:2:{s:13:"__blq-nores__";b:1;s:11:"__backups__";b:1;}s:9:"blq-nores";a:1:{s:11:"alerta_info";b:1;}s:7:"backups";a:2:{s:14:"archivo_nombre";b:1;s:19:"__blq-eliminarbup__";b:1;}s:15:"blq-eliminarbup";a:1:{s:19:"archivo_nombre_elim";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:2:{s:9:"blq-nores";b:1;s:7:"backups";b:1;}s:9:"blq-nores";a:0:{}s:7:"backups";a:1:{s:15:"blq-eliminarbup";b:1;}s:15:"blq-eliminarbup";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:9:"blq-nores";a:0:{}s:7:"backups";a:0:{}s:15:"blq-eliminarbup";a:0:{}}}

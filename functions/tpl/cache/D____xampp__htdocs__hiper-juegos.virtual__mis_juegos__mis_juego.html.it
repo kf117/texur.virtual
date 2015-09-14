@@ -1,0 +1,38 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:1110:"<div id="content">
+<div class="system-message-error" id="system-message">
+<div class="system-message-right">
+<div class="system-message-text">test</div>
+</div>
+</div>
+<div id="topitems">
+<h4 class="leftheader">TUS FAVORITOS</h4>    <ul id="breadcrumb">
+<li class="bcr"><a href="/">Inicio</a> &gt; </li><li class="bcr">Tus favoritos (<span>{cantidad}</span> juegos)</li>      </ul>
+</div>
+<div id="my-games">
+<div class="instructions">
+Aquí encontrarás todos los juegos que has añadido a Tus favoritos.<br>Puedes eliminar juegos de esta lista haciendo clic en la X a la derecha del juego.</div><div class="pagination-container"><div class="info">Mostrando 1&ndash;3 de un total de 3 juegos</div><div class="buttons"></div></div><div id="my-games-background">
+<div style="display: none;" id="sgAdMrHp300x250"></div>
+<script>AdFront.push('sgAdMrHp300x250');</script><ul class="game-list">
+{__juegos__}
+</ul>
+<div class="cb">&nbsp;</div>
+</div><div class="pagination-container"><div class="info">Mostrando 1&ndash;3 de un total de 3 juegos</div><div class="buttons"></div></div></div>                        </div>";s:6:"juegos";s:607:"<li class="game-item game-item_{juego_id}">
+<li class="expanded-game-item">
+<div class="delete"></div>
+<div class="image">
+<div class="game-thumb-stars">
+<a title="Jugar a {juego_nombre}" href="{juego_url}">
+<img class="onerror" title="Jugar a {juego_nombre}" alt="Jugar a {juego_nombre}" src="{img_juego}">
+</a>
+<div class="rating stars-10"></div>
+</div>
+</div>
+<div class="game-data">
+<a class="title" href="{juego_url}">
+{juego_nombre}        </a>
+<a class="description" href="{juego_url}">
+{juego_descripcion}        </a>
+<div class="times-played">
+Jugado {jugado} veces	        </div>
+</div>
+</li></li>";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:8:"cantidad";b:1;s:10:"__juegos__";b:1;}s:6:"juegos";a:6:{s:8:"juego_id";b:1;s:12:"juego_nombre";b:1;s:9:"juego_url";b:1;s:9:"img_juego";b:1;s:17:"juego_descripcion";b:1;s:6:"jugado";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:6:"juegos";b:1;}s:6:"juegos";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:6:"juegos";a:0:{}}}

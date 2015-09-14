@@ -1,0 +1,8 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:220:"<div class="row mt50">
+<div class="span8 offset2">
+<div class="hero-unit">
+<h1>Bienvenido, {nombre_us}</h1>
+<p>Hola!, Debes seleccionar una opci&oacute;n del men&uacute; para comenzar a trabajar.</p>
+</div>
+</div>
+</div>";}s:9:"variables";a:1:{s:10:"__global__";a:1:{s:9:"nombre_us";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

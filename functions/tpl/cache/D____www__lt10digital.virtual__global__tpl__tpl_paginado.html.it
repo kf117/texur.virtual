@@ -1,0 +1,12 @@
+a:4:{s:6:"blocks";a:9:{s:10:"__global__";s:15:"{__paginador__}";s:9:"paginador";s:245:"<div id="paginador">
+{__inicio__}
+{__anterior__}
+{__internals__}
+{__siguiente__}
+{__fin__}
+&nbsp;&nbsp;Total: <b>{nro_pags}</b> pág.
+<!-- &nbsp;&nbsp;<img src="../global/img/punto.gif" border="0">&nbsp;&nbsp;Página {pgn} de {nro_pags} -->
+</div>";s:6:"inicio";s:163:"<div id="paginadorBloque"><a href="{base_first}" title="primero" alt="primero"><img src="../global/img/pag_1.gif" alt="" width="7" height="5" border="0"></a></div>";s:8:"anterior";s:163:"<div id="paginadorBloque"><a href="{base_ant}" title="anterior" alt="anterior"><img src="../global/img/pag_2.gif" alt="" width="4" height="5" border="0"></a></div>";s:9:"internals";s:67:"<div id="paginadorBloque_actual">
+{__another__}
+{__actual__}
+</div>";s:7:"another";s:53:"<a href="{base_int_oth}">&nbsp;{ir_int_oth}&nbsp;</a>";s:6:"actual";s:27:"&nbsp;<b>{ir_int}</b>&nbsp;";s:9:"siguiente";s:165:"<div id="paginadorBloque"><a href="{base_sig}" title="siguiente" alt="siguiente"><img src="../global/img/pag_3.gif" alt="" width="4" height="5" border="0"></a></div>";s:3:"fin";s:174:"<div id="paginadorBloque"><a href="{base_last}" title="&ugrave;ltimo" alt="&ugrave;ltimo"><img src="../global/img/pag_4.gif" alt="" width="7" height="5" border="0"></a></div>";}s:9:"variables";a:9:{s:10:"__global__";a:1:{s:13:"__paginador__";b:1;}s:9:"paginador";a:7:{s:10:"__inicio__";b:1;s:12:"__anterior__";b:1;s:13:"__internals__";b:1;s:13:"__siguiente__";b:1;s:7:"__fin__";b:1;s:8:"nro_pags";b:1;s:3:"pgn";b:1;}s:6:"inicio";a:1:{s:10:"base_first";b:1;}s:8:"anterior";a:1:{s:8:"base_ant";b:1;}s:9:"internals";a:2:{s:11:"__another__";b:1;s:10:"__actual__";b:1;}s:7:"another";a:2:{s:12:"base_int_oth";b:1;s:10:"ir_int_oth";b:1;}s:6:"actual";a:1:{s:6:"ir_int";b:1;}s:9:"siguiente";a:1:{s:8:"base_sig";b:1;}s:3:"fin";a:1:{s:9:"base_last";b:1;}}s:8:"children";a:9:{s:10:"__global__";a:1:{s:9:"paginador";b:1;}s:9:"paginador";a:5:{s:6:"inicio";b:1;s:8:"anterior";b:1;s:9:"internals";b:1;s:9:"siguiente";b:1;s:3:"fin";b:1;}s:6:"inicio";a:0:{}s:8:"anterior";a:0:{}s:9:"internals";a:2:{s:7:"another";b:1;s:6:"actual";b:1;}s:7:"another";a:0:{}s:6:"actual";a:0:{}s:9:"siguiente";a:0:{}s:3:"fin";a:0:{}}s:9:"functions";a:9:{s:10:"__global__";a:0:{}s:9:"paginador";a:0:{}s:6:"inicio";a:0:{}s:8:"anterior";a:0:{}s:9:"internals";a:0:{}s:7:"another";a:0:{}s:6:"actual";a:0:{}s:9:"siguiente";a:0:{}s:3:"fin";a:0:{}}}

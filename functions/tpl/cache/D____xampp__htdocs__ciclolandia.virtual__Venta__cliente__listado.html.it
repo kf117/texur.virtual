@@ -1,0 +1,97 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:3574:"<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="iso-8859-1">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="hiper juegos">
+<script src="/global/js/jquery.js"></script>
+<script src="/global/js/jquery-extra.js"></script>
+<script src="/global/bootstrap/js/bootstrap.js"></script>
+<script src="/global/js/gestor.js"></script>
+<script src="/global/js/fckeditor/fckeditor.js"></script>
+<!-- <script src="../global/bootstrap/js/bootstrap-dropdown.js"></script>-->
+{__bloque_javascript__}
+<!-- Le styles -->
+<link href="/global/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/global/css/jquery.custom.css" rel="stylesheet" type="text/css">
+<link href="/global/css/general.css" rel="stylesheet" type="text/css">
+<script src="/global/bootstrap/js/collapse.js"></script>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="/global/calendar/jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="/global/calendar/jsDatePick.min.1.3.js"></script>
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/global/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/global/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/global/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/global/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+<div class="row span10 mt20" >
+<form id="listClientes" class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="1">
+<!-- BUSCADOR DE MOTO -->
+<!--  DATOS DE LA MOTO -->
+<div class="row " style="padding-left:40px;">
+<h3>Buscador de Clientes</h3>
+</div>
+<div class="row " style="padding-left:40px;padding-top:20px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">DNI</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:110px;" name="dni" id="dni" value="{dni}">
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Tipo de Cliente</label>
+<div style="float:left;margin-right:10px;" >
+<select style="width:196px;" name="tipo_cliente" id="tipo_cliente" >
+<option id="primera_marca" value="" >Seleccione tipo de Cliente</option>
+<option value="casual" {select_casual}>Casual</option>
+<option value="revendedor" {select_revendedor}>Revendedor</option>
+</select>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+</div>
+</div>
+<!-- FIN DE DATOS LA MOTO -->
+<div align="center" class="mt10">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqCliente();" class="btn btn-inverse">Limpiar Busqueda</button>
+<a href="../cliente/cliente.php" class="btn btn-primary"><i class="icon-white icon-plus-sign"></i>&nbsp;AGREGAR NUEVO</a>
+</div>
+</div>
+<div class="row span10" >{paginado}</div>
+<table class="span10 table table-striped">
+<thead>
+<tr>
+<th>Nro DNI</th>
+<th>Apellido</th>
+<th>Nombre</th>
+<th>Teléfono</th>
+<th>Domicilio</th>
+<th>Tipo de Cliente</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div class="row span10" >{paginado}</div>
+</body>
+</html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:10:"resultados";s:165:"<tr>
+<td>{dni_lis}</td>
+<td>{apellido}</td>
+<td>{nombre}</td>
+<td>{telefono}</td>
+<td>{domicilio}</td>
+<td>{tipo_de_cliente_lis}</td>
+<td>
+{__blq-edit__}
+</td>
+</tr>";s:8:"blq-edit";s:117:"<a class="btn btn-primary" href="/Venta/cliente/agregar.php?id={id_agregar}"><i class="icon-plus icon-white"></i></a>";}s:9:"variables";a:4:{s:10:"__global__";a:7:{s:21:"__bloque_javascript__";b:1;s:6:"accion";b:1;s:3:"dni";b:1;s:13:"select_casual";b:1;s:17:"select_revendedor";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;}s:17:"bloque_javascript";a:1:{s:10:"javascript";b:1;}s:10:"resultados";a:7:{s:7:"dni_lis";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:19:"tipo_de_cliente_lis";b:1;s:12:"__blq-edit__";b:1;}s:8:"blq-edit";a:1:{s:10:"id_agregar";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:2:{s:17:"bloque_javascript";b:1;s:10:"resultados";b:1;}s:17:"bloque_javascript";a:0:{}s:10:"resultados";a:1:{s:8:"blq-edit";b:1;}s:8:"blq-edit";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:17:"bloque_javascript";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}}}

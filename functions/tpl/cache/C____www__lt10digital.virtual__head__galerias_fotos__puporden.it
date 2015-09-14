@@ -1,0 +1,70 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:3198:"<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><title>Administración de contenidos</title>
+<link href="../global/css/adminV2.css" rel="stylesheet" type="text/css">
+<script src="../global/js/asignar_lista.js"></script>
+<script src="../global/js/ordenar_lista.js"></script>
+<script language="JavaScript">
+function evaluar_form() {
+variable = document.forms.ordenar.listapos;
+setListaPos("lista_orden", variable);
+return true;
+}
+</script>
+</head>
+<body>
+<form name='ordenar' method='post' action='{frm_action}' onsubmit='return evaluar_form()'>
+<table cellpadding='0' cellspacing='0' width='330' bgcolor='#F6FAFA' align="center">
+<tr><td width='1' bgcolor='#999999'><img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="1" border="0"></td>
+<td>
+<table cellpadding='0' cellspacing='0' width='330'>
+<tr>
+<td height='1' colspan='15' bgcolor='#999999'><img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="1" border="0"></td>
+</tr>
+</table>
+<input type='hidden' name='listapos' id='listapos'>
+<input type='hidden' name='id_h' id='id_h' value='{id_h}' />
+<table cellpadding='0' cellspacing='0' width='330'>
+<tr>
+<td bgcolor='#417383' width='8' rowspan='2'><img src="{dir_global_local}img/1x1.gif" alt="" width="8" height="1" border="0"></td>
+<td class='blanco' bgcolor='#417383' rowspan='2'>Options:</td>
+<td bgcolor='#417383' valign='top' width='5' rowspan='2'><img src="{dir_global_local}img/rem_blanco.gif" alt="" width="5" height="5" border="0"></td>
+<td width='*' height='12'><img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="1" border="0"></td>
+</tr>
+<tr>
+<td height='1' bgcolor='#417383'><img src="{dir_global_local}img/1x1.gif" alt="" width="220" height="1" border="0"></td>
+</tr>
+</table>
+<img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="8" border="0"><br>
+<table cellpadding='0' cellspacing='0' width='330'>
+<tr>
+<td align='center'>
+<select size='10' class='form_250' name='lista_orden' id='lista_orden'>
+{__listado__}
+</select>
+</td>
+<td>
+<span style="cursor:pointer"><img src="{dir_global_local}img/flecha_arriba.gif" onClick="subir('lista_orden')" border="0"></span>
+<br><img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="8" border="0"><br>
+<span style="cursor:pointer"><img src="{dir_global_local}img/flecha_abajo.gif" onClick="bajar('lista_orden')" border="0"></span>
+</td>
+</tr>
+</table>
+<img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="20" border="0"><br>
+</td>
+<td width='1' bgcolor='#999999'><img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="1" border="0"></td>
+<table cellpadding='0' cellspacing='0' width='330' align="center">
+<tr>
+<td height='1' bgcolor='#999999'><img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="1" border="0"></td>
+</tr>
+<tr>
+<td align='center' height='25'><input type='image' src='{dir_global_local}img/bot_guardar.gif'>
+<span style="cursor:pointer"><img src="{dir_global_local}img/bot_volver.gif" width="64" height="18" alt="" border="0" onClick="window.close();"></span></td>
+</tr>
+</table>
+</tr>
+<img src="{dir_global_local}img/1x1.gif" alt="" width="1" height="20" border="0">
+</table>
+</form>
+</body>
+</html>";s:7:"listado";s:36:"<option value="{id}">{name}</option>";}s:9:"variables";a:2:{s:10:"__global__";a:4:{s:10:"frm_action";b:1;s:16:"dir_global_local";b:1;s:4:"id_h";b:1;s:11:"__listado__";b:1;}s:7:"listado";a:2:{s:2:"id";b:1;s:4:"name";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:7:"listado";b:1;}s:7:"listado";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:7:"listado";a:0:{}}}

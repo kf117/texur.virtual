@@ -1,0 +1,43 @@
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:1859:"<!-- RADIOS ON-LINE -->
+<div class="radios-home">
+<div class="mb5">
+<div class="AM left" style="padding-right:0px;">
+<div class="botonAM reset"><a href="{link_am}" title="Escuchar en vivo" ><img src="../global/img/1x1.gif" alt="Escuchar en vivo" width="105" height="31"></a></div>
+<div class="progAM bold pl10">
+<p><span>{programa_am}</span></p>
+</div>
+<div class="condAM t10 mb2 pl10"><input name="text1" id="text1" value="{conductor_am}" style="padding:0px; margin:0; color: #067105; background:#dae4db; border:0; font: 11px Arial, Helvetica, sans-serif;"></div>
+<div class="horaAM t10 pl10">{horario_am}</div>
+</div>
+<div class="fotoAM left" style="padding-right:0px;"><img src="{img_am}" width="106" border="0" class="reset"/></div>
+<div class="clear"></div>
+</div>
+<div class="FM ml10" >
+<div class="botonFM  left" style="padding-right:3px;"><a href="{link_fm}" title="Escuchar en vivo"><img src="../global/img/1x1.gif" alt="Escuchar en vivo" width="93" height="20"></a></div>
+<div class="txtAM left " style="padding-right:0px; valign:middle;">
+<input name="text" id="text" value="{programa_fm}" style="padding:0px; margin:0; color: #FEF8F6; background:#D45C14; border:0; font: bold 11px Arial, Helvetica, sans-serif;">
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<!-- /RADIOS ON-LINE -->
+<script>
+<!--
+/*Text box marquee by Dave Methvin,
+Windows Magazine
+May be used/modified if credit line is
+retained*/
+ScrollSpeed = 250
+ScrollChars = 1
+function ScrollMarquee() {
+window.setTimeout('ScrollMarquee()',ScrollSpeed);
+var msg = document.getElementById("text").value;
+document.getElementById("text").value = msg.substring(ScrollChars) +
+msg.substring(0,ScrollChars);
+var msg1 = document.getElementById("text1").value;
+document.getElementById("text1").value = msg1.substring(ScrollChars) +
+msg1.substring(0,ScrollChars);
+}
+ScrollMarquee()
+//-->
+</script>";}s:9:"variables";a:1:{s:10:"__global__";a:7:{s:7:"link_am";b:1;s:11:"programa_am";b:1;s:12:"conductor_am";b:1;s:10:"horario_am";b:1;s:6:"img_am";b:1;s:7:"link_fm";b:1;s:11:"programa_fm";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

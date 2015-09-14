@@ -1,0 +1,9 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:325:"{fin}
+<div class="marcoRight">
+<div style="margin-bottom: 1px;"><img src="../global/img/union.gif" alt="" width="302" height="32" border="0"></div>
+<div class="contenidoUnion">
+{__noticia__}
+<div class="verListado"><a href="index.php?acc=ns_lo&id_s=20">ver listado completo de noticias</a><br clear="all"></div>
+</div>
+</div>";s:7:"noticia";s:186:"<div class="flecha"><img src="../global/img/union_flecha.gif" alt="" width="4" height="7" border="0"></div>
+<div class="titulo"><a href="{url_noticia}">{titulo}</a></div><br clear="all">";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:3:"fin";b:1;s:11:"__noticia__";b:1;}s:7:"noticia";a:2:{s:11:"url_noticia";b:1;s:6:"titulo";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:7:"noticia";b:1;}s:7:"noticia";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:7:"noticia";a:0:{}}}

@@ -1,0 +1,35 @@
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:894:"<ul class="breadcrumb">
+<li  onclick="buscadorOpenClose();" style="cursor:pointer;">Busqueda</li>
+<li class="pull-right" onclick="buscadorOpenClose();" style="cursor:pointer;"><i id="iconoBus" class="icon-eye-open"></i></li>
+</ul>
+<div id="buscadorLis" style="display:none">
+<form class="form-horizontal" action="" method="POST">
+<div class="control-group well">
+<div class="row">
+<label class="control-label " style="width:200px;padding-right:10px ">T&iacute;tulo / Copete / Desarrollo</label>
+<div class="controls ml10">
+<input type="text" id="palabra" name="palabra" placeholder="Palabra/s a buscar">
+<button type="submit" class="btn">Buscar</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+<h3>Registros  {__encontrados__}</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>T&iacute;tulo</th>
+<th>Estado</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+{paginado}
+</tbody>
+</table>";s:11:"encontrados";s:44:"<small>( encontrados {encontrados} )</small>";s:10:"resultados";s:63:"<tr>
+<td>{titulo}</td>
+<td>{publicada}</td>
+<td>@mdo</td>
+</tr>";}s:9:"variables";a:3:{s:10:"__global__";a:3:{s:15:"__encontrados__";b:1;s:14:"__resultados__";b:1;s:8:"paginado";b:1;}s:11:"encontrados";a:1:{s:11:"encontrados";b:1;}s:10:"resultados";a:2:{s:6:"titulo";b:1;s:9:"publicada";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:2:{s:11:"encontrados";b:1;s:10:"resultados";b:1;}s:11:"encontrados";a:0:{}s:10:"resultados";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:11:"encontrados";a:0:{}s:10:"resultados";a:0:{}}}

@@ -1,0 +1,222 @@
+a:4:{s:6:"blocks";a:27:{s:10:"__global__";s:4894:"<div class="row span10">
+<h1>Formulario de Venta</h1>
+{__imprimir__}
+</div>
+<div class="row span10" style="margin-top:30px;">
+<form class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="moto_id" id="moto_id" value="{moto_id}">
+<input type="hidden"  name="id" id="id" value="{id}">
+{__error_msg__}
+{__exito_msg__}
+<!--  DATOS DE LA VENTA -->
+<div>
+<h4>DATOS DE LA MOTO</h4>
+{__realiz__}
+<br><b>Marca:</b>{marca}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ubicación:</b>&nbsp;&nbsp;{sucursal_moto_ac}
+<br><b>Modelo:</b>{modelo}&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Nro Motor</b>&nbsp;&nbsp;{motor}
+<br><b>Color:</b>{color}  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Nro Chasis:</b>&nbsp;&nbsp;{chasis}
+<br><b>Precio Contado:</b>{precio_venta}
+<br><b>Precio Financiado:</b>{precio_financiado}
+</div><br>
+<div class="btn btn-primary mb20" onclick="agregarCliente();"><i class="icon-white icon-plus-sign"></i>&nbsp;Agregar Cliente</div>
+<br><br>
+<!--  END DATOS DE LA VENTA -->
+{__blq-clientes__}
+<div class="btn btn-primary mb20" onclick="agregarTarjetaRosa();"><i class="icon-white icon-plus-sign"></i>&nbsp;Agregar Tarjeta Rosa</div>
+{__blq-tarjeta__}
+<br>
+<!--style="display:none;"-->
+<div class="btn btn-primary mb20" onclick="agregarPago();"><i class="icon-white icon-plus-sign"></i>&nbsp;Agregar Pago</div>
+{__blq-pagos__}
+<br>
+{__blq-ver-bot-doc__}
+<div id="data_extra" style="display:none;">
+<h4>Documentos </h4><br>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Nro Factura</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="factura" id="factura"  value="{factura}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">01</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="01" id="01"  value="{01}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">12</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="12" id="12"  value="{12}">
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Debe (Patente)</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="debe_patente" id="debe_patente"  value="{debe_patente}">
+</div>
+</div>
+<br>
+</div>
+<h4>DATOS DE LA VENTA</h4><br>
+<script type="text/javascript">
+window.onload = function(){
+new JsDatePick({
+useMode:2,
+target:"fecha",
+dateFormat:"%d-%m-%Y"
+});
+};</script>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Fecha de entrega</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:118px;" name="fecha" id="fecha"  value="{fecha}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Hora</label>
+<div style="float:left;margin-right:5px;">
+<select name="hora" id="hora" style="width: 50px;">
+{__horas__}
+</select>
+</div>
+<div style="float:left;margin-right:20px;">:
+<select name="min" id="min" style="width: 50px;">
+{__mins__}
+</select>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Precio Venta</label>
+<div style="float:left;margin-right:20px;">
+<input type="text" style="width:150px;" name="importe" id="importe"  value="{importe}">
+<input type="hidden" style="width:150px;" name="importe_aux" id="importe_aux"  value="{importe}">
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Clave de permiso</label>
+<div style="float:left;margin-right:20px;">
+<input type="password" style="width:150px;" name="permiso" id="permiso"  >
+</div>
+{__blq-vendedores__}
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Sucursal (donde se realiza la venta)</label>
+<div style="float:left;margin-right:20px;">
+<select name="sucursal" id="sucursal" >
+{__sucursales__}
+</select>
+</div>
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Descripción </label>
+<div style="float:left;margin-right:20px;">
+<input name="descripcion" id="descripcion" class="span5" value="{descripcion}" />
+</div>
+<label style="float:left;margin-right:10px;padding-top:4px;">Monto adicional</label>
+<div style="float:left;margin-right:20px;">
+<input name="monto_adi" id="monto_adi" class="span2" value="{monto_adi}" />
+</div>
+</div>
+<div class="row mb20" style="padding-left:40px;">
+<span ><b>Debe:</b>{debe}</span>
+<h4>{venta_fin}</h4>
+</div>
+<input type="submit" value="Cargar" class="btn btn-primary btn-large" > {__blq-elim__}
+</form>
+</div>";s:8:"imprimir";s:311:"<a style="display: none;" href="/Venta/imprimir.php?id={venta_id}" target="_blank" class="btn btn-primary pull-right" ><i class="icon-print icon-white"></i>&nbsp;Imprimir</a>
+<div class="btn btn-primary pull-right" onclick="imprimirVenta('{venta_id}');"><i class="icon-white icon-print"></i>&nbsp;Imprimir</div>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:55:"<div class="alert alert-success">
+{mensaje_exito}</div>";s:6:"realiz";s:75:"<div class="pull-right "><b>Realizada el {fecha_realizacion}</b><br>
+</div>";s:12:"blq-clientes";s:297:"<h4>Clientes</h4>
+<div id="cli_quitar" name="cli_quitar"></div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nro DNI</th>
+<th>Apellido</th>
+<th>Nombre</th>
+<th>Teléfono</th>
+<th>Domicilio</th>
+<th>Tipo de Cliente</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__clientes__}
+</tbody>
+</table>";s:8:"clientes";s:188:"<tr>
+<td>{dni_lis}</td>
+<td>{apellido}</td>
+<td>{nombre}</td>
+<td>{telefono}</td>
+<td>{domicilio}</td>
+<td>{tipo_de_cliente_lis}</td>
+<td>
+{__clientes-qtr__}
+{__clientes-ver__}
+</td>
+</tr>";s:12:"clientes-qtr";s:144:"<a class="btn btn-danger" onclick="$('#cli_quitar').load('/Venta/cliente/quitar.php?id={id_quitar}');"><i class="icon-trash icon-white"></i></a>";s:12:"clientes-ver";s:137:"<div class="btn btn-primary"  onclick="window.open('/Venta/cliente/ver.php?id={id_ver_mas}','Cliente','height=500,width=350');">Ver</div>";s:11:"blq-tarjeta";s:290:"<br><br>
+<h4>Tarjetas Rosa</h4>
+<div id="tarjeta_quitar" name="tarjeta_quitar"></div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nro DNI</th>
+<th>Apellido</th>
+<th>Nombre</th>
+<th>CUIL</th>
+<th>Domicilio</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__tarjetas__}
+</tbody>
+</table>";s:8:"tarjetas";s:210:"<tr>
+<td>{dni_lis_tarjeta}</td>
+<td>{apellido_tarjeta}</td>
+<td>{nombre_tarjeta}</td>
+<td>{cuil_tarjeta}</td>
+<td>{domicilio_tarjeta}</td>
+<td>
+{__tarjeta-qtr1__}
+{__tarjeta-qtr__}
+{__tarjeta-ver__}
+</td>
+</tr>";s:12:"tarjeta-qtr1";s:160:"<a class="btn btn-danger" onclick="$('#tarjeta_quitar').load('/Venta/tarjeta/quitar_1.php?id={id_quitar_tarjeta_1}');"><i class="icon-trash icon-white"></i></a>";s:11:"tarjeta-qtr";s:156:"<a class="btn btn-danger" onclick="$('#tarjeta_quitar').load('/Venta/tarjeta/quitar.php?id={id_quitar_tarjeta}');"><i class="icon-trash icon-white"></i></a>";s:11:"tarjeta-ver";s:145:"<div class="btn btn-primary"  onclick="window.open('/Venta/tarjeta/ver.php?id={id_ver_mas_tarjeta}','Cliente','height=500,width=350');">Ver</div>";s:9:"blq-pagos";s:309:"<h4>Pagos</h4>
+<div id="pagos_quitar" name="pagos_quitar"></div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Forma de pago</th>
+<th>Monto</th>
+<th>Monto+Recargo</th>
+<th>Cuotas</th>
+<th>Valor de Cuota</th>
+<th>Recargo</th>
+<th>Fecha</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__pagos__}
+</tbody>
+</table>";s:5:"pagos";s:251:"<tr
+{__id_blq__}
+{__id_blq-2__}
+>
+<td>{forma_lis}</td>
+<td>{monto_lis}</td>
+<td>{monto_rec_lis}</td>
+<td>{cuotas_lis}</td>
+<td>{cuotas_val_lis}</td>
+<td>{recargo_lis}</td>
+<td>{fecha_lis}</td>
+<td>
+{__blq-quitar-pago-bd__}
+{__blq-quitar__}
+</td>
+</tr>";s:6:"id_blq";s:53:"id="pago_id_{id_id_pago}"
+name="pago_id_{id_id_pago}"";s:8:"id_blq-2";s:58:"id="pago_num_{num_num_pago}"
+name=pago_num_{num_num_pago}"";s:18:"blq-quitar-pago-bd";s:104:"<a class="btn btn-danger" onclick="borrarPagoBd('{id_pago}');"><i class="icon-trash icon-white"></i></a>";s:10:"blq-quitar";s:110:"<a class="btn btn-danger" onclick="borrarPagoSession('{num_pago}');"><i class="icon-trash icon-white"></i></a>";s:15:"blq-ver-bot-doc";s:141:"{ver_bot_doc}
+<div class="btn btn-primary mb20" onclick="agregarDataExtra();"><i class="icon-white icon-plus-sign"></i>&nbsp;Documentos</div>";s:5:"horas";s:48:"<option value="{hora}" {selhora}>{hora}</option>";s:4:"mins";s:45:"<option value="{min}" {selmin}>{min}</option>";s:14:"blq-vendedores";s:183:"<label style="float:left;margin-right:10px;padding-top:4px;">Vendedor</label>
+<select style="float:left;margin-right:20px;"  name="vendedor" id="vendedor" >
+{__vendedores__}
+</select>";s:10:"vendedores";s:81:"<option value="{vendedor_id}" {vendedor_select}>{vendedor_nombre_perfil}</option>";s:10:"sucursales";s:55:"<option value="{suc_id}" {selsuc}>{suc_nombre}</option>";s:8:"blq-elim";s:248:"<a class="btn btn-danger btn-large"
+onclick="window.open('/Venta/eliminarVenta.php?id={id_venta_elim}&acc=14', 'Popup', 'height=230,width=300,scrollTo,resizable=1,scrollbars=1,location=0');">
+Eliminar Venta <i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:27:{s:10:"__global__";a:35:{s:12:"__imprimir__";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:7:"moto_id";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:10:"__realiz__";b:1;s:5:"marca";b:1;s:16:"sucursal_moto_ac";b:1;s:6:"modelo";b:1;s:5:"motor";b:1;s:5:"color";b:1;s:6:"chasis";b:1;s:12:"precio_venta";b:1;s:17:"precio_financiado";b:1;s:16:"__blq-clientes__";b:1;s:15:"__blq-tarjeta__";b:1;s:13:"__blq-pagos__";b:1;s:19:"__blq-ver-bot-doc__";b:1;s:7:"factura";b:1;s:2:"01";b:1;i:12;b:1;s:12:"debe_patente";b:1;s:5:"fecha";b:1;s:9:"__horas__";b:1;s:8:"__mins__";b:1;s:7:"importe";b:1;s:18:"__blq-vendedores__";b:1;s:14:"__sucursales__";b:1;s:11:"descripcion";b:1;s:9:"monto_adi";b:1;s:4:"debe";b:1;s:9:"venta_fin";b:1;s:12:"__blq-elim__";b:1;}s:8:"imprimir";a:1:{s:8:"venta_id";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:6:"realiz";a:1:{s:17:"fecha_realizacion";b:1;}s:12:"blq-clientes";a:1:{s:12:"__clientes__";b:1;}s:8:"clientes";a:8:{s:7:"dni_lis";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:19:"tipo_de_cliente_lis";b:1;s:16:"__clientes-qtr__";b:1;s:16:"__clientes-ver__";b:1;}s:12:"clientes-qtr";a:1:{s:9:"id_quitar";b:1;}s:12:"clientes-ver";a:1:{s:10:"id_ver_mas";b:1;}s:11:"blq-tarjeta";a:1:{s:12:"__tarjetas__";b:1;}s:8:"tarjetas";a:8:{s:15:"dni_lis_tarjeta";b:1;s:16:"apellido_tarjeta";b:1;s:14:"nombre_tarjeta";b:1;s:12:"cuil_tarjeta";b:1;s:17:"domicilio_tarjeta";b:1;s:16:"__tarjeta-qtr1__";b:1;s:15:"__tarjeta-qtr__";b:1;s:15:"__tarjeta-ver__";b:1;}s:12:"tarjeta-qtr1";a:1:{s:19:"id_quitar_tarjeta_1";b:1;}s:11:"tarjeta-qtr";a:1:{s:17:"id_quitar_tarjeta";b:1;}s:11:"tarjeta-ver";a:1:{s:18:"id_ver_mas_tarjeta";b:1;}s:9:"blq-pagos";a:1:{s:9:"__pagos__";b:1;}s:5:"pagos";a:11:{s:10:"__id_blq__";b:1;s:12:"__id_blq-2__";b:1;s:9:"forma_lis";b:1;s:9:"monto_lis";b:1;s:13:"monto_rec_lis";b:1;s:10:"cuotas_lis";b:1;s:14:"cuotas_val_lis";b:1;s:11:"recargo_lis";b:1;s:9:"fecha_lis";b:1;s:22:"__blq-quitar-pago-bd__";b:1;s:14:"__blq-quitar__";b:1;}s:6:"id_blq";a:1:{s:10:"id_id_pago";b:1;}s:8:"id_blq-2";a:1:{s:12:"num_num_pago";b:1;}s:18:"blq-quitar-pago-bd";a:1:{s:7:"id_pago";b:1;}s:10:"blq-quitar";a:1:{s:8:"num_pago";b:1;}s:15:"blq-ver-bot-doc";a:1:{s:11:"ver_bot_doc";b:1;}s:5:"horas";a:2:{s:4:"hora";b:1;s:7:"selhora";b:1;}s:4:"mins";a:2:{s:3:"min";b:1;s:6:"selmin";b:1;}s:14:"blq-vendedores";a:1:{s:14:"__vendedores__";b:1;}s:10:"vendedores";a:3:{s:11:"vendedor_id";b:1;s:15:"vendedor_select";b:1;s:22:"vendedor_nombre_perfil";b:1;}s:10:"sucursales";a:3:{s:6:"suc_id";b:1;s:6:"selsuc";b:1;s:10:"suc_nombre";b:1;}s:8:"blq-elim";a:1:{s:13:"id_venta_elim";b:1;}}s:8:"children";a:27:{s:10:"__global__";a:13:{s:8:"imprimir";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:6:"realiz";b:1;s:12:"blq-clientes";b:1;s:11:"blq-tarjeta";b:1;s:9:"blq-pagos";b:1;s:15:"blq-ver-bot-doc";b:1;s:5:"horas";b:1;s:4:"mins";b:1;s:14:"blq-vendedores";b:1;s:10:"sucursales";b:1;s:8:"blq-elim";b:1;}s:8:"imprimir";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:6:"realiz";a:0:{}s:12:"blq-clientes";a:1:{s:8:"clientes";b:1;}s:8:"clientes";a:2:{s:12:"clientes-qtr";b:1;s:12:"clientes-ver";b:1;}s:12:"clientes-qtr";a:0:{}s:12:"clientes-ver";a:0:{}s:11:"blq-tarjeta";a:1:{s:8:"tarjetas";b:1;}s:8:"tarjetas";a:3:{s:12:"tarjeta-qtr1";b:1;s:11:"tarjeta-qtr";b:1;s:11:"tarjeta-ver";b:1;}s:12:"tarjeta-qtr1";a:0:{}s:11:"tarjeta-qtr";a:0:{}s:11:"tarjeta-ver";a:0:{}s:9:"blq-pagos";a:1:{s:5:"pagos";b:1;}s:5:"pagos";a:4:{s:6:"id_blq";b:1;s:8:"id_blq-2";b:1;s:18:"blq-quitar-pago-bd";b:1;s:10:"blq-quitar";b:1;}s:6:"id_blq";a:0:{}s:8:"id_blq-2";a:0:{}s:18:"blq-quitar-pago-bd";a:0:{}s:10:"blq-quitar";a:0:{}s:15:"blq-ver-bot-doc";a:0:{}s:5:"horas";a:0:{}s:4:"mins";a:0:{}s:14:"blq-vendedores";a:1:{s:10:"vendedores";b:1;}s:10:"vendedores";a:0:{}s:10:"sucursales";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:27:{s:10:"__global__";a:0:{}s:8:"imprimir";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:6:"realiz";a:0:{}s:12:"blq-clientes";a:0:{}s:8:"clientes";a:0:{}s:12:"clientes-qtr";a:0:{}s:12:"clientes-ver";a:0:{}s:11:"blq-tarjeta";a:0:{}s:8:"tarjetas";a:0:{}s:12:"tarjeta-qtr1";a:0:{}s:11:"tarjeta-qtr";a:0:{}s:11:"tarjeta-ver";a:0:{}s:9:"blq-pagos";a:0:{}s:5:"pagos";a:0:{}s:6:"id_blq";a:0:{}s:8:"id_blq-2";a:0:{}s:18:"blq-quitar-pago-bd";a:0:{}s:10:"blq-quitar";a:0:{}s:15:"blq-ver-bot-doc";a:0:{}s:5:"horas";a:0:{}s:4:"mins";a:0:{}s:14:"blq-vendedores";a:0:{}s:10:"vendedores";a:0:{}s:10:"sucursales";a:0:{}s:8:"blq-elim";a:0:{}}}

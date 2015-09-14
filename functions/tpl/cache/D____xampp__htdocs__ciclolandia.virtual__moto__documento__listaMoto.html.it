@@ -1,0 +1,80 @@
+a:4:{s:6:"blocks";a:7:{s:10:"__global__";s:2388:"<div class="row span10" >
+<form id="listMotos" class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<!-- BUSCADOR DE MOTO -->
+<!--  DATOS DE LA MOTO -->
+<div class="row " style="padding-left:40px;">
+<h3>Buscador de motos</h3>
+</div>
+<div class="row " style="padding-left:40px;">
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro de DNI</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:100px;" name="dni" id="dni" value="{dni}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Patente</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:100px;" name="patente" id="patente" value="{patente}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro de chasis</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:100px;" name="nro_chasis" id="nro_chasis" value="{nro_chasis_frm}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Nro de motor</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:100px;" name="nro_motor" id="nro_motor"  value="{nro_motor_frm}">
+</div>
+<label style="float:left;margin-right:7px;padding-top:4px;">Estado</label>
+<div style="float:left;margin-right:0px;" id="select_modelos">
+<select style="width:100px;" name="estado" id="estado" >
+<option  value="2" {select_2}>Pendiente</option>
+<option  value="1" {select_1}>Entregada</option>
+</select>
+<label style="float:left;margin-right:7px;padding-top:4px;">Apellido Cliente</label>
+<div style="float:left;margin-right:10px;">
+<input type="text" style="width:100px;" name="cli_apellido" id="cli_apellido"  value="{cli_apellido}">
+</div>
+<div class="row" style="padding-left:40px;">
+</div>
+</div>
+<!-- FIN DE DATOS LA MOTO -->
+</div>
+<div align="center" class="mt10 clearfix">
+<button type="submit" class="btn btn-primary">Buscar</button>
+<button onclick="limpiarBsqPatentamiento();" class="btn btn-inverse">Limpiar Busqueda</button>
+</div>
+</form>
+<div class="row span10" >{paginado}</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>DNI</th>
+<th>Nro de Chasis</th>
+<th>Nro de Motor</th>
+<th>Patente</th>
+{__blq-ret__}
+{__blq-ingreso__}
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>
+<div class="row span10" >{paginado}</div>";s:7:"blq-ret";s:60:"<th>Fecha Retirada{ver_ret}</th>
+<th>Responsable Retiro</th>";s:11:"blq-ingreso";s:60:"<th>Fecha ingreso{ver_ing}</th>
+<th>Responsable Ingreso</th>";s:10:"resultados";s:177:"<tr>
+<td>{nombre_lis}</td>
+<td>{dni_lis}</td>
+<td>{nro_chasis}</td>
+<td>{nro_motor}</td>
+<td>{patente_lis}</td>
+{__blq-ret2__}
+{__blq-ingreso2__}
+<td>
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-ret2";s:44:"<td>{retirada}</td>
+<td>{resp_retirada}</td>";s:12:"blq-ingreso2";s:42:"<td>{ingreso}</td>
+<td>{resp_ingreso}</td>";s:8:"blq-elim";s:129:"<a class="btn btn-primary" href="/index.php?id_moto={id_eliminar}&acc=44" >
+<i class="icon-briefcase icon-white"></i> Patente</a>";}s:9:"variables";a:7:{s:10:"__global__";a:13:{s:6:"accion";b:1;s:3:"acc";b:1;s:3:"dni";b:1;s:7:"patente";b:1;s:14:"nro_chasis_frm";b:1;s:13:"nro_motor_frm";b:1;s:8:"select_2";b:1;s:8:"select_1";b:1;s:12:"cli_apellido";b:1;s:8:"paginado";b:1;s:11:"__blq-ret__";b:1;s:15:"__blq-ingreso__";b:1;s:14:"__resultados__";b:1;}s:7:"blq-ret";a:1:{s:7:"ver_ret";b:1;}s:11:"blq-ingreso";a:1:{s:7:"ver_ing";b:1;}s:10:"resultados";a:8:{s:10:"nombre_lis";b:1;s:7:"dni_lis";b:1;s:10:"nro_chasis";b:1;s:9:"nro_motor";b:1;s:11:"patente_lis";b:1;s:12:"__blq-ret2__";b:1;s:16:"__blq-ingreso2__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-ret2";a:2:{s:8:"retirada";b:1;s:13:"resp_retirada";b:1;}s:12:"blq-ingreso2";a:2:{s:7:"ingreso";b:1;s:12:"resp_ingreso";b:1;}s:8:"blq-elim";a:1:{s:11:"id_eliminar";b:1;}}s:8:"children";a:7:{s:10:"__global__";a:3:{s:7:"blq-ret";b:1;s:11:"blq-ingreso";b:1;s:10:"resultados";b:1;}s:7:"blq-ret";a:0:{}s:11:"blq-ingreso";a:0:{}s:10:"resultados";a:3:{s:8:"blq-ret2";b:1;s:12:"blq-ingreso2";b:1;s:8:"blq-elim";b:1;}s:8:"blq-ret2";a:0:{}s:12:"blq-ingreso2";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:7:{s:10:"__global__";a:0:{}s:7:"blq-ret";a:0:{}s:11:"blq-ingreso";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-ret2";a:0:{}s:12:"blq-ingreso2";a:0:{}s:8:"blq-elim";a:0:{}}}

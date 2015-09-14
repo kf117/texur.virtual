@@ -1,0 +1,31 @@
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:439:"<div id="content2">
+<div id="header_container">
+<h1 style="display: inline;" class="blue">{cat_nombre_sup}</h1>
+<div class="goback"><a href="/index.html">Vuelve a la p&aacute;gina de Inicio</a></div>
+</div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr valign="top">
+<td width="100%">
+<div id="categories_ul">
+<ul>
+{__subcats__}
+</ul>
+</div>
+<div class="spacer">&nbsp;</div>
+</td>
+</tr>
+</tbody></table>
+</div>";s:7:"subcats";s:431:"<!--firstinrow-->
+<li class="{firstinrow}">
+<a href="{url_cat}"><img width="120" height="90" border="0" onerror="javascript:if (this.src!='/img/noimage.gif') this.src='/img/noimage.gif'" alt="{cat_nombre}" src="{img_cat}"></a>
+<div class="captioncell">
+<table cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td valign="middle" align="center">
+<a href="{url_cat}">{cat_nombre}</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</li>";}s:9:"variables";a:2:{s:10:"__global__";a:2:{s:14:"cat_nombre_sup";b:1;s:11:"__subcats__";b:1;}s:7:"subcats";a:4:{s:10:"firstinrow";b:1;s:7:"url_cat";b:1;s:10:"cat_nombre";b:1;s:7:"img_cat";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:7:"subcats";b:1;}s:7:"subcats";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:7:"subcats";a:0:{}}}

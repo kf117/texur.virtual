@@ -1,0 +1,28 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:393:"<span><h1>Listado de Proveedores</h1> <a class="btn btn-primary pull-right" href="/index.php?acc=4">
+<i class="icon-plus-sign icon-white"></i>&nbsp;Agregar Nuevo</a></span>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Empresa</th>
+<th>Tel&eacute;fono</th>
+<th>Email</th>
+<th>Provincia</th>
+<th>M&oacute;vil</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+</tbody>
+</table>";s:10:"resultados";s:145:"<tr>
+<td>{empresa}</td>
+<td>{telefono}</td>
+<td>{email}</td>
+<td>{provincia}</td>
+<td>{movil}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:106:"<a class="btn btn-primary" href="/index.php?id={id_editar}&acc=4"><i class="icon-edit icon-white"></i></a>";s:8:"blq-elim";s:157:"<a class="btn btn-danger" href="/proveedor/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:4:{s:10:"__global__";a:1:{s:14:"__resultados__";b:1;}s:10:"resultados";a:7:{s:7:"empresa";b:1;s:8:"telefono";b:1;s:5:"email";b:1;s:9:"provincia";b:1;s:5:"movil";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:1:{s:9:"id_editar";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:1:{s:10:"resultados";b:1;}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}}}

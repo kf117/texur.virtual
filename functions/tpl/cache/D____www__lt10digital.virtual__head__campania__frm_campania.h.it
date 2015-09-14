@@ -1,0 +1,439 @@
+a:4:{s:6:"blocks";a:20:{s:10:"__global__";s:5874:"{fin}
+<span class='titulo'>Campa&ntilde;as</span><br>
+<div class='celeste' id='acciondesc'>Administración de Campa&ntilde;as</div>
+<form action="{dest_rn}" method="post" enctype="multipart/form-data" name="formulario" onSubmit="return evaluar_form()">
+<table bgcolor="#f6fafa" cellpadding="0" cellspacing="0" width="512">
+<tr>
+<td bgcolor="#999999" width="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td>
+<table cellpadding="0" cellspacing="0" width="510">
+<tr>
+<td colspan="7" bgcolor="#999999" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr align="left">
+<td height="20" width="17"><div align="left"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></div></td>
+<td width="101" ><div align="left"><a href="gestor.php?{agregar_nuevo}" class="celeste">Agregar Nueva Campa&ntilde;a</a></div></td>
+<td width="18"><div align="left"><img src="../global/img/ic_nuevo.gif" alt="" border="0" height="15" width="17"></div></td>
+<td valign="top" width="188"><div align="left"><img src="../global/img/px_gris.gif" alt="" border="0" height="8" width="1"></div></td>
+<td width="127">&nbsp;</td>
+<td width="57" >&nbsp;</td>
+</tr>
+</table>
+<input name="op" id="op" type="hidden" value="{op}" />
+<input name="id" id="id" type="hidden" value="{id}" />
+<input name="id_item" id="id_item" type="hidden" value="{id_item}" />
+<input type="hidden" name="campPub" id="campPub" value="{campPub}" />
+<input type="hidden" name="banner" id="banner" value="{banner}" />
+<div align="center" class="alfabeto"><strong>{mensaje}</strong></div><br>
+<table border="0" cellpadding="0" cellspacing="0" width="508">
+<tr>
+<td rowspan="2" bgcolor="#417383" width="10"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td width="150" rowspan="2" bgcolor="#417383" class="blanco"><font color="#FFFFFF">Datos de la Campa&ntilde;a</font></td>
+<td rowspan="2" bgcolor="#417383" valign="top" width="5"><img src="../global/img/rem_blanco.gif" alt="" border="0" height="5" width="5"></td>
+<td height="12" width="415"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table>
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1"><br>
+<table border="0" cellpadding="0" cellspacing="0" width="510">
+<tr>
+<td align="right">Nombre de Campaña:</td>
+<td align="left">
+<input type="text" name="nombre" id="nombre" value="{nombre}" class="form_350" maxlength="150" >*
+<img src="../global/img/1x1.gif" alt="" border="0" height="1" width="10">
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Fecha de Inicio:</td>
+<td align="left">
+<input type="text" name="fecha_ini" id="fecha_ini" value="{fecha_ini}" readonly class="form_100" onchange="cargarBanners();"/>
+&nbsp;<img src="../global/img/cal.gif" id="f_trigger_i" name="f_trigger_i" alt="" style="cursor: pointer;" title="Seleccionar Fecha" />
+<script>
+Calendar.setup({
+inputField     :    "fecha_ini",		  // id of the input field
+ifFormat       :    "%d-%m-%Y",       // format of the input field
+showsTime      :    false,			  // will display a time selector
+button         :    "f_trigger_i",	  // trigger for the calendar (button ID)
+singleClick    :    true,			  // double-click mode
+step           :    1                 // show all years in drop-down boxes (instead of every other year as default)
+});
+</script>*<span onClick="javascript:limpiarFecha(fecha_ini)" class="#f6fafa" style="cursor:pointer">Limpiar</span>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Fecha de Fin:</td>
+<td align="left">
+<input type="text" name="fecha_fin" id="fecha_fin" value="{fecha_fin}" readonly class="form_100" onchange="cargarBanners();"/>
+&nbsp;<img src="../global/img/cal.gif" id="f_trigger_f" name="f_trigger_f" alt="" style="cursor: pointer;" title="Seleccionar Fecha" />
+<script>
+Calendar.setup({
+inputField     :    "fecha_fin",		  // id of the input field
+ifFormat       :    "%d-%m-%Y",       // format of the input field
+showsTime      :    false,			  // will display a time selector
+button         :    "f_trigger_f",	  // trigger for the calendar (button ID)
+singleClick    :    true,			  // double-click mode
+step           :    1                 // show all years in drop-down boxes (instead of every other year as default)
+});
+</script>*<span onClick="javascript:limpiarFecha(fecha_fin)" class="#f6fafa" style="cursor:pointer">Limpiar</span>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Hora de inicio:</td>
+<td align="left">
+<select name="hora_i" class="form_40">
+{__hora_i__}
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Hora de Fin:</td>
+<td align="left">
+<select name="hora_f" class="form_40">
+{__hora_f__}
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+{__selecciones__}
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+{__zonaelegida__}
+{__bloqueBanners__}
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<br> <img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<img src="../global/img/1x1.gif" alt="" border="0" height="8" width="1">
+<div align="center"></div></td>
+<td bgcolor="#999999" width="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="512" bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#999999" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td align="center" height="18">
+<input type="image" src="../global/img/bot_guardar.gif" width="64" height="18"></td>
+</tr>
+</table>
+</form>";s:6:"hora_i";s:56:"<option value="{hora_i}" {hselected_i}>{hora_i}</option>";s:6:"hora_f";s:56:"<option value="{hora_f}" {hselected_f}>{hora_f}</option>";s:11:"selecciones";s:3125:"<tr>
+<td align="right">Tipo:</td>
+<td align="left">
+<select name="tipo" id="tipo" class="form_200" onchange="lista_select()">
+<option value="0">--Seleccione un Tipo --</option>
+<option value="1" >General</option>
+<option value="2" >Secciones</option>
+<option value="3" >Regiones</option>
+<option value="4" >Home</option>
+</select>*
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_secciones" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Secciones:</td>
+<td align="left">
+<select name="secciones" id="secciones" class="form_200">
+{__blk_secciones__}
+</select>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_regiones" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Regiones:</td>
+<td align="left">
+<select name="regiones" id="regiones" class="form_200">
+{__blk_regiones__}
+</select>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_home" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Zonas Home:</td>
+<td align="left">
+<select name="zonashome" id="zonashome" class="form_200">
+{__blk_zonashome__}
+</select>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_zonasgen" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Zonas Banner:</td>
+<td align="left">
+<select name="zonaG" id="zonaG" class="form_200" onchange="cargarBanners();">
+{optZonaDef}
+{__blk_zonasA__}
+{__blk_zonasD__}
+</select>*
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_zonassec" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Zonas Banner:</td>
+<td align="left">
+<select name="zonaS" id="zonaS" class="form_200" onchange="cargarBanners();">
+{optZonaDef}
+{__blk_zonasSec__}
+{__blk_zonasDSec__}
+</select>*
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_zonasreg" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Zonas (reg):</td>
+<td align="left">
+<select name="zonaR" id="zonaR" class="form_200" onchange="cargarBanners();">
+{optZonaDef}
+{__blk_zonasReg__}
+{__blk_zonasDReg__}
+</select>*
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+<div id="div_zonashome" style="display:none">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" width="128">Zonas Banner:</td>
+<td align="left">
+<select name="zonaH" id="zonaH" class="form_200" onchange="cargarBanners();">
+{optZonaDef}
+{__blk_zonasHom__}
+{__blk_zonasDHom__}
+</select>*
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>";s:13:"blk_secciones";s:65:"<option value="{id_sec}" {selected} {disabled}>{seccion}</option>";s:12:"blk_regiones";s:64:"<option value="{id_reg}" {selected} {disabled}>{region}</option>";s:13:"blk_zonashome";s:70:"<option value="{id_zonhom}" {selected} {disabled}>{zonashome}</option>";s:10:"blk_zonasA";s:62:"<option value="{id_zG}" {selected} {disabled}>{zonaG}</option>";s:10:"blk_zonasD";s:39:"<optgroup label="{optZona}"></optgroup>";s:12:"blk_zonasSec";s:62:"<option value="{id_zS}" {selected} {disabled}>{zonaS}</option>";s:13:"blk_zonasDSec";s:39:"<optgroup label="{optZona}"></optgroup>";s:12:"blk_zonasReg";s:62:"<option value="{id_zR}" {selected} {disabled}>{zonaR}</option>";s:13:"blk_zonasDReg";s:39:"<optgroup label="{optZona}"></optgroup>";s:12:"blk_zonasHom";s:62:"<option value="{id_zH}" {selected} {disabled}>{zonaH}</option>";s:13:"blk_zonasDHom";s:39:"<optgroup label="{optZona}"></optgroup>";s:11:"zonaelegida";s:504:"<tr>
+<td align="right">Tipo Campaña:</td>
+<td align="left"><b>&nbsp;&nbsp;{tipocamp}<b></td>
+<input type="hidden" value="{tipocamp}" id="nombretipo" name="nombretipo">
+<input type="hidden" value="{tipocamp}" id="tipo" name="tipo">
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+{__tipoubicacion__}
+<tr>
+<td align="right">Zona elegida:</td>
+<td align="left"><b>&nbsp;&nbsp;{zonaelegida}<b></td>
+<input type="hidden" value="{zonaelegidaid}" id="zona" name="zona">
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>";s:13:"tipoubicacion";s:215:"<tr>
+<td align="right">Ubicacion:</td>
+<input type="hidden" value="{ubicacionelegidaid}" id="ubid" name="ubid">
+<td align="left"><b>&nbsp;&nbsp;{ubicacionelegida}<b></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>";s:13:"bloqueBanners";s:3449:"<tr>
+<td align="right">Standar:</td>
+<td align="left"><b>&nbsp;&nbsp;{standar}<b></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Cant. Impresiones Compradas:</td>
+<td align="left">
+<input type="text" name="impComp" id="impComp" value="{impComp}" class="form_200" />
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Estado:</td>
+<td align="left">
+<select name="estado" id="estado" class="form_200">
+<option value="0">--Selecciones un Estado --</option>
+<option value="a" {selected_a}>Activo</option>
+<option value="na" {selected_na}>No Activo</option>
+</select>*
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><div align="left">
+<table width="508" border="0" cellpadding="0" cellspacing="0" dwcopytype="CopyTableRow">
+<tr>
+<td rowspan="2" bgcolor="#417383" width="8"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+<td class="blanco" width="130" rowspan="2" bgcolor="#417383"><font color="#FFFFFF">Banner Asociado </font></td>
+<td rowspan="2" bgcolor="#417383" valign="top" width="5"><img src="../global/img/rem_blanco.gif" alt="" border="0" height="5" width="5"></td>
+<td height="12" width="*"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table>
+</div></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Link: http://</td>
+<td><input type="text" name="link" id="link" class="form_350" maxlength="255" value="{link}" /></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">Abrir en:</td>
+<td>
+<select name="target" id="target" class="form_150">
+<option value="p" {select_p}>Misma P&aacute;gina</option>
+<option value="b" {select_b}>Otra P&aacute;gina</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><div align="center">
+<div id="div_empty" style="visibility: {img_empty_foto}"> No hay ninguna Banner asociado </div>
+<div id='div_img' style="visibility: {img_visible_foto}">
+<div align="center">
+{__flash__}
+{__imagen__}
+<!--<div><a href="#img_anchor" onClick="unSetImagen('div_img','div_empty','img','imagen','img_del','img_mod')">Eliminar imagen</a></div>-->
+</div>
+</div>
+</div>
+</td>
+</tr>
+{iniCargarFile}
+<tr>
+<td align="right">Banner Asociado: </td>
+<td><input name="foto" type="file" id="foto" class="form_350">
+<br><div align="center">El Banner debe ser extensión jpg, gif &oacute; swf</h6></div>
+<input name="img_del" type="hidden" id="img_del" value="0">
+<input name="img_mod" type="hidden" id="img_mod" value="0">
+</td>
+</tr>
+{finCargarFile}
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2"><table border="0" cellpadding="0" cellspacing="0" width="508">
+<tr>
+<td height="12" width="*"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#417383" height="1"><img src="../global/img/1x1.gif" alt="" border="0" height="1" width="180"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><b>Cantidad de Impresiones realizadas:{impRealizados}</b></td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><b>Cantidad de Clicks realizados:{cliksRealizos}</b></td>
+</tr>";s:5:"flash";s:517:"<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0' name='img1' width='450' id='img1'>
+<param name='movie' value='{pathFlash}'>
+<param name='quality' value='high'>
+<param name='WMode' value='transparent'>
+<embed src='{pathFlash}' width='450' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' name='img1' id='img1' wmode='transparent'></embed>
+</object>";s:6:"imagen";s:73:"<img src='{pathFoto}' width='450' alt='' name='img1' border='1' id='img'>";}s:9:"variables";a:20:{s:10:"__global__";a:17:{s:3:"fin";b:1;s:7:"dest_rn";b:1;s:13:"agregar_nuevo";b:1;s:2:"op";b:1;s:2:"id";b:1;s:7:"id_item";b:1;s:7:"campPub";b:1;s:6:"banner";b:1;s:7:"mensaje";b:1;s:6:"nombre";b:1;s:9:"fecha_ini";b:1;s:9:"fecha_fin";b:1;s:10:"__hora_i__";b:1;s:10:"__hora_f__";b:1;s:15:"__selecciones__";b:1;s:15:"__zonaelegida__";b:1;s:17:"__bloqueBanners__";b:1;}s:6:"hora_i";a:2:{s:6:"hora_i";b:1;s:11:"hselected_i";b:1;}s:6:"hora_f";a:2:{s:6:"hora_f";b:1;s:11:"hselected_f";b:1;}s:11:"selecciones";a:12:{s:17:"__blk_secciones__";b:1;s:16:"__blk_regiones__";b:1;s:17:"__blk_zonashome__";b:1;s:10:"optZonaDef";b:1;s:14:"__blk_zonasA__";b:1;s:14:"__blk_zonasD__";b:1;s:16:"__blk_zonasSec__";b:1;s:17:"__blk_zonasDSec__";b:1;s:16:"__blk_zonasReg__";b:1;s:17:"__blk_zonasDReg__";b:1;s:16:"__blk_zonasHom__";b:1;s:17:"__blk_zonasDHom__";b:1;}s:13:"blk_secciones";a:4:{s:6:"id_sec";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:7:"seccion";b:1;}s:12:"blk_regiones";a:4:{s:6:"id_reg";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:6:"region";b:1;}s:13:"blk_zonashome";a:4:{s:9:"id_zonhom";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:9:"zonashome";b:1;}s:10:"blk_zonasA";a:4:{s:5:"id_zG";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:5:"zonaG";b:1;}s:10:"blk_zonasD";a:1:{s:7:"optZona";b:1;}s:12:"blk_zonasSec";a:4:{s:5:"id_zS";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:5:"zonaS";b:1;}s:13:"blk_zonasDSec";a:1:{s:7:"optZona";b:1;}s:12:"blk_zonasReg";a:4:{s:5:"id_zR";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:5:"zonaR";b:1;}s:13:"blk_zonasDReg";a:1:{s:7:"optZona";b:1;}s:12:"blk_zonasHom";a:4:{s:5:"id_zH";b:1;s:8:"selected";b:1;s:8:"disabled";b:1;s:5:"zonaH";b:1;}s:13:"blk_zonasDHom";a:1:{s:7:"optZona";b:1;}s:11:"zonaelegida";a:4:{s:8:"tipocamp";b:1;s:17:"__tipoubicacion__";b:1;s:11:"zonaelegida";b:1;s:13:"zonaelegidaid";b:1;}s:13:"tipoubicacion";a:2:{s:18:"ubicacionelegidaid";b:1;s:16:"ubicacionelegida";b:1;}s:13:"bloqueBanners";a:15:{s:7:"standar";b:1;s:7:"impComp";b:1;s:10:"selected_a";b:1;s:11:"selected_na";b:1;s:4:"link";b:1;s:8:"select_p";b:1;s:8:"select_b";b:1;s:14:"img_empty_foto";b:1;s:16:"img_visible_foto";b:1;s:9:"__flash__";b:1;s:10:"__imagen__";b:1;s:13:"iniCargarFile";b:1;s:13:"finCargarFile";b:1;s:13:"impRealizados";b:1;s:13:"cliksRealizos";b:1;}s:5:"flash";a:1:{s:9:"pathFlash";b:1;}s:6:"imagen";a:1:{s:8:"pathFoto";b:1;}}s:8:"children";a:20:{s:10:"__global__";a:5:{s:6:"hora_i";b:1;s:6:"hora_f";b:1;s:11:"selecciones";b:1;s:11:"zonaelegida";b:1;s:13:"bloqueBanners";b:1;}s:6:"hora_i";a:0:{}s:6:"hora_f";a:0:{}s:11:"selecciones";a:11:{s:13:"blk_secciones";b:1;s:12:"blk_regiones";b:1;s:13:"blk_zonashome";b:1;s:10:"blk_zonasA";b:1;s:10:"blk_zonasD";b:1;s:12:"blk_zonasSec";b:1;s:13:"blk_zonasDSec";b:1;s:12:"blk_zonasReg";b:1;s:13:"blk_zonasDReg";b:1;s:12:"blk_zonasHom";b:1;s:13:"blk_zonasDHom";b:1;}s:13:"blk_secciones";a:0:{}s:12:"blk_regiones";a:0:{}s:13:"blk_zonashome";a:0:{}s:10:"blk_zonasA";a:0:{}s:10:"blk_zonasD";a:0:{}s:12:"blk_zonasSec";a:0:{}s:13:"blk_zonasDSec";a:0:{}s:12:"blk_zonasReg";a:0:{}s:13:"blk_zonasDReg";a:0:{}s:12:"blk_zonasHom";a:0:{}s:13:"blk_zonasDHom";a:0:{}s:11:"zonaelegida";a:1:{s:13:"tipoubicacion";b:1;}s:13:"tipoubicacion";a:0:{}s:13:"bloqueBanners";a:2:{s:5:"flash";b:1;s:6:"imagen";b:1;}s:5:"flash";a:0:{}s:6:"imagen";a:0:{}}s:9:"functions";a:20:{s:10:"__global__";a:0:{}s:6:"hora_i";a:0:{}s:6:"hora_f";a:0:{}s:11:"selecciones";a:0:{}s:13:"blk_secciones";a:0:{}s:12:"blk_regiones";a:0:{}s:13:"blk_zonashome";a:0:{}s:10:"blk_zonasA";a:0:{}s:10:"blk_zonasD";a:0:{}s:12:"blk_zonasSec";a:0:{}s:13:"blk_zonasDSec";a:0:{}s:12:"blk_zonasReg";a:0:{}s:13:"blk_zonasDReg";a:0:{}s:12:"blk_zonasHom";a:0:{}s:13:"blk_zonasDHom";a:0:{}s:11:"zonaelegida";a:0:{}s:13:"tipoubicacion";a:0:{}s:13:"bloqueBanners";a:0:{}s:5:"flash";a:0:{}s:6:"imagen";a:0:{}}}

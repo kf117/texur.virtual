@@ -1,0 +1,105 @@
+a:4:{s:6:"blocks";a:19:{s:10:"__global__";s:1194:"<div class="row span10">
+<h1>Formulario de Plan de Ahorro</h1>
+{__imprimir__}
+</div>
+<div class="row span10" style="margin-top:30px;">
+<form class=" well" action="{accion}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="moto_id" id="moto_id" value="{moto_id}">
+<input type="hidden"  name="id" id="id" value="{id}">
+{__error_msg__}
+{__exito_msg__}
+{__ver_asig__}
+<div class="btn btn-primary mb20" onclick="agregarCliente();"><i class="icon-white icon-plus-sign"></i>&nbsp;Agregar Cliente</div>
+{__blq-clientes__}
+<br>
+<!--style="display:none;"-->
+<div class="btn btn-primary mb20" onclick="agregarPago();"><i class="icon-white icon-plus-sign"></i>&nbsp;Agregar Pago</div>
+{__blq-pagos__}
+<br>
+<div class="row" style="padding-left:40px;">
+{__blq-vendedores__}
+</div>
+<div class="row" style="padding-left:40px;">
+<label style="float:left;margin-right:10px;padding-top:4px;">Sucursal (donde se realiza el plan)</label>
+<div style="float:left;margin-right:20px;">
+<select name="sucursal" id="sucursal" >
+{__sucursales__}
+</select>
+</div>
+</div>
+<input type="submit" value="Cargar" class="btn btn-primary btn-large" > {__blq-elim__}
+</form>
+</div>";s:8:"imprimir";s:174:"<a style="display: none;" href="/Venta/imprimir.php?id={venta_id}" target="_blank" class="btn btn-primary pull-right" ><i class="icon-print icon-white"></i>&nbsp;Imprimir</a>";s:9:"error_msg";s:54:"<div class="alert alert-error">
+{mensaje_error}
+</div>";s:9:"exito_msg";s:55:"<div class="alert alert-success">
+{mensaje_exito}</div>";s:8:"ver_asig";s:95:"<div class="btn btn-primary mb20" onclick="asignarMotoPlan({id_asig});">ASIGNAR MOTO</div>
+<br>";s:12:"blq-clientes";s:297:"<h4>Clientes</h4>
+<div id="cli_quitar" name="cli_quitar"></div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Nro DNI</th>
+<th>Apellido</th>
+<th>Nombre</th>
+<th>Teléfono</th>
+<th>Domicilio</th>
+<th>Tipo de Cliente</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__clientes__}
+</tbody>
+</table>";s:8:"clientes";s:188:"<tr>
+<td>{dni_lis}</td>
+<td>{apellido}</td>
+<td>{nombre}</td>
+<td>{telefono}</td>
+<td>{domicilio}</td>
+<td>{tipo_de_cliente_lis}</td>
+<td>
+{__clientes-qtr__}
+{__clientes-ver__}
+</td>
+</tr>";s:12:"clientes-qtr";s:144:"<a class="btn btn-danger" onclick="$('#cli_quitar').load('/Venta/cliente/quitar.php?id={id_quitar}');"><i class="icon-trash icon-white"></i></a>";s:12:"clientes-ver";s:137:"<div class="btn btn-primary"  onclick="window.open('/Venta/cliente/ver.php?id={id_ver_mas}','Cliente','height=500,width=350');">Ver</div>";s:9:"blq-pagos";s:309:"<h4>Pagos</h4>
+<div id="pagos_quitar" name="pagos_quitar"></div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Forma de pago</th>
+<th>Monto</th>
+<th>Monto+Recargo</th>
+<th>Cuotas</th>
+<th>Valor de Cuota</th>
+<th>Recargo</th>
+<th>Fecha</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{__pagos__}
+</tbody>
+</table>";s:5:"pagos";s:251:"<tr
+{__id_blq__}
+{__id_blq-2__}
+>
+<td>{forma_lis}</td>
+<td>{monto_lis}</td>
+<td>{monto_rec_lis}</td>
+<td>{cuotas_lis}</td>
+<td>{cuotas_val_lis}</td>
+<td>{recargo_lis}</td>
+<td>{fecha_lis}</td>
+<td>
+{__blq-quitar-pago-bd__}
+{__blq-quitar__}
+</td>
+</tr>";s:6:"id_blq";s:53:"id="pago_id_{id_id_pago}"
+name="pago_id_{id_id_pago}"";s:8:"id_blq-2";s:58:"id="pago_num_{num_num_pago}"
+name=pago_num_{num_num_pago}"";s:18:"blq-quitar-pago-bd";s:104:"<a class="btn btn-danger" onclick="borrarPagoBd('{id_pago}');"><i class="icon-trash icon-white"></i></a>";s:10:"blq-quitar";s:110:"<a class="btn btn-danger" onclick="borrarPagoSession('{num_pago}');"><i class="icon-trash icon-white"></i></a>";s:14:"blq-vendedores";s:183:"<label style="float:left;margin-right:10px;padding-top:4px;">Vendedor</label>
+<select style="float:left;margin-right:20px;"  name="vendedor" id="vendedor" >
+{__vendedores__}
+</select>";s:10:"vendedores";s:81:"<option value="{vendedor_id}" {vendedor_select}>{vendedor_nombre_perfil}</option>";s:10:"sucursales";s:55:"<option value="{suc_id}" {selsuc}>{suc_nombre}</option>";s:8:"blq-elim";s:242:"<a class="btn btn-danger btn-large"
+onclick="if(confirm('¿Esta seguro que desea eliminar el plan de ahorro?'))location.href='/Venta/plan_ahorro/eliminar.php?id={id_venta_elim}&acc=50';">
+Eliminar Plan <i class="icon-trash icon-white"></i></a>";}s:9:"variables";a:19:{s:10:"__global__";a:13:{s:12:"__imprimir__";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:7:"moto_id";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:12:"__ver_asig__";b:1;s:16:"__blq-clientes__";b:1;s:13:"__blq-pagos__";b:1;s:18:"__blq-vendedores__";b:1;s:14:"__sucursales__";b:1;s:12:"__blq-elim__";b:1;}s:8:"imprimir";a:1:{s:8:"venta_id";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:8:"ver_asig";a:1:{s:7:"id_asig";b:1;}s:12:"blq-clientes";a:1:{s:12:"__clientes__";b:1;}s:8:"clientes";a:8:{s:7:"dni_lis";b:1;s:8:"apellido";b:1;s:6:"nombre";b:1;s:8:"telefono";b:1;s:9:"domicilio";b:1;s:19:"tipo_de_cliente_lis";b:1;s:16:"__clientes-qtr__";b:1;s:16:"__clientes-ver__";b:1;}s:12:"clientes-qtr";a:1:{s:9:"id_quitar";b:1;}s:12:"clientes-ver";a:1:{s:10:"id_ver_mas";b:1;}s:9:"blq-pagos";a:1:{s:9:"__pagos__";b:1;}s:5:"pagos";a:11:{s:10:"__id_blq__";b:1;s:12:"__id_blq-2__";b:1;s:9:"forma_lis";b:1;s:9:"monto_lis";b:1;s:13:"monto_rec_lis";b:1;s:10:"cuotas_lis";b:1;s:14:"cuotas_val_lis";b:1;s:11:"recargo_lis";b:1;s:9:"fecha_lis";b:1;s:22:"__blq-quitar-pago-bd__";b:1;s:14:"__blq-quitar__";b:1;}s:6:"id_blq";a:1:{s:10:"id_id_pago";b:1;}s:8:"id_blq-2";a:1:{s:12:"num_num_pago";b:1;}s:18:"blq-quitar-pago-bd";a:1:{s:7:"id_pago";b:1;}s:10:"blq-quitar";a:1:{s:8:"num_pago";b:1;}s:14:"blq-vendedores";a:1:{s:14:"__vendedores__";b:1;}s:10:"vendedores";a:3:{s:11:"vendedor_id";b:1;s:15:"vendedor_select";b:1;s:22:"vendedor_nombre_perfil";b:1;}s:10:"sucursales";a:3:{s:6:"suc_id";b:1;s:6:"selsuc";b:1;s:10:"suc_nombre";b:1;}s:8:"blq-elim";a:1:{s:13:"id_venta_elim";b:1;}}s:8:"children";a:19:{s:10:"__global__";a:9:{s:8:"imprimir";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:8:"ver_asig";b:1;s:12:"blq-clientes";b:1;s:9:"blq-pagos";b:1;s:14:"blq-vendedores";b:1;s:10:"sucursales";b:1;s:8:"blq-elim";b:1;}s:8:"imprimir";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:8:"ver_asig";a:0:{}s:12:"blq-clientes";a:1:{s:8:"clientes";b:1;}s:8:"clientes";a:2:{s:12:"clientes-qtr";b:1;s:12:"clientes-ver";b:1;}s:12:"clientes-qtr";a:0:{}s:12:"clientes-ver";a:0:{}s:9:"blq-pagos";a:1:{s:5:"pagos";b:1;}s:5:"pagos";a:4:{s:6:"id_blq";b:1;s:8:"id_blq-2";b:1;s:18:"blq-quitar-pago-bd";b:1;s:10:"blq-quitar";b:1;}s:6:"id_blq";a:0:{}s:8:"id_blq-2";a:0:{}s:18:"blq-quitar-pago-bd";a:0:{}s:10:"blq-quitar";a:0:{}s:14:"blq-vendedores";a:1:{s:10:"vendedores";b:1;}s:10:"vendedores";a:0:{}s:10:"sucursales";a:0:{}s:8:"blq-elim";a:0:{}}s:9:"functions";a:19:{s:10:"__global__";a:0:{}s:8:"imprimir";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:8:"ver_asig";a:0:{}s:12:"blq-clientes";a:0:{}s:8:"clientes";a:0:{}s:12:"clientes-qtr";a:0:{}s:12:"clientes-ver";a:0:{}s:9:"blq-pagos";a:0:{}s:5:"pagos";a:0:{}s:6:"id_blq";a:0:{}s:8:"id_blq-2";a:0:{}s:18:"blq-quitar-pago-bd";a:0:{}s:10:"blq-quitar";a:0:{}s:14:"blq-vendedores";a:0:{}s:10:"vendedores";a:0:{}s:10:"sucursales";a:0:{}s:8:"blq-elim";a:0:{}}}
