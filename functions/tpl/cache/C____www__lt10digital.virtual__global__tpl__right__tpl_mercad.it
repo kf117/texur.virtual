@@ -1,9 +1,0 @@
-a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:745:"{fin}
-<div class="marcoRight">
-<!--<div style="margin-bottom: 1px;"><img src="../global/img/mercados.gif" alt="" width="302" height="24" border="0"></div>-->
-<div class="contenidoMercados ">
-<div class="mb5"><a href="index.php?acc=mo_ha" title="Mercado de Hacienda"><img src="/global/img/banner-merc-hacienda.png" width="302" height="49" alt="Mercado de Hacienda" /></a></div>
-<div class="mb5"><a href="index.php?acc=mo_go" title="Mercado de Cereales"><img src="/global/img/banner-merc-granos.png" width="302" height="49" alt="Mercado de Cereales" /></a></div>
-<div><a href="index.php?acc=mo_va" title="Mercado de Valores"><img src="/global/img/banner-merc-valores.png" width="302" height="49" alt="Mercado de Valores" /></a></div>
-</div>
-</div>";}s:9:"variables";a:1:{s:10:"__global__";a:1:{s:3:"fin";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

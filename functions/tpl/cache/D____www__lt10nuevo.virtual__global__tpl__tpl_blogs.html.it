@@ -1,6 +1,0 @@
-a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:90:"<div class="blogs-home">
-<h1 class="t9 arial">BLOGS</h1>
-<ul>
-{__plantilla__}
-</ul>
-</div>";s:9:"plantilla";s:118:"<li><a href="http://{url}" class="blogs-link arial t11" title="{titulo}"><span>{titulo}:</span> {descripcion}</a></li>";}s:9:"variables";a:2:{s:10:"__global__";a:1:{s:13:"__plantilla__";b:1;}s:9:"plantilla";a:3:{s:3:"url";b:1;s:6:"titulo";b:1;s:11:"descripcion";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:9:"plantilla";b:1;}s:9:"plantilla";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:9:"plantilla";a:0:{}}}

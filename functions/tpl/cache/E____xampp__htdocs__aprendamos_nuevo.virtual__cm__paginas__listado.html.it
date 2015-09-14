@@ -1,5 +1,0 @@
-a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:172:"<form action="../paginas/contenedor.php" method="POST">
-<label>Nombre:</label>
-<input type="text" name="nombre" id="nombre" />
-<input type="submit" value="Enviar"/>
-</form>";}s:9:"variables";a:1:{s:10:"__global__";a:0:{}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}

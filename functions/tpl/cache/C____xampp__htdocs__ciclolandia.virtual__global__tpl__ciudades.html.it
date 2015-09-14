@@ -1,5 +1,0 @@
-a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:85:"<select style="width:200px;" name="ciudad" id="ciudad" >
-{__blq_ciudades__}
-</select>";s:12:"blq_ciudades";s:54:"<option value="{ciudad_id}">
-{ciudad_nombre}
-</option>";}s:9:"variables";a:2:{s:10:"__global__";a:1:{s:16:"__blq_ciudades__";b:1;}s:12:"blq_ciudades";a:2:{s:9:"ciudad_id";b:1;s:13:"ciudad_nombre";b:1;}}s:8:"children";a:2:{s:10:"__global__";a:1:{s:12:"blq_ciudades";b:1;}s:12:"blq_ciudades";a:0:{}}s:9:"functions";a:2:{s:10:"__global__";a:0:{}s:12:"blq_ciudades";a:0:{}}}

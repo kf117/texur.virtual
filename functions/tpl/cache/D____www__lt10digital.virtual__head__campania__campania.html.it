@@ -1,7 +1,0 @@
-a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:222:"<table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="250" valign="top" height="100%"><br>{listado}</td>
-<td width="5">&nbsp;</td>
-<td width="492" valign="top"><br>{formulario}</td>
-</tr>
-</table>";}s:9:"variables";a:1:{s:10:"__global__";a:2:{s:7:"listado";b:1;s:10:"formulario";b:1;}}s:8:"children";a:1:{s:10:"__global__";a:0:{}}s:9:"functions";a:1:{s:10:"__global__";a:0:{}}}
