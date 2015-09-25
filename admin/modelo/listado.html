@@ -1,0 +1,142 @@
+<form id="listMarca" action="index.php?acc={acc_form}" method="POST">
+    <input type="hidden"  name="acc" id="acc" value="{acc_form}">
+
+ <!-- BUSCADOR DE MOTO -->             
+
+<!--  DATOS DE LA MOTO -->
+                 
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+        <h1>Lista de Modelos</h1>
+    </div>
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+        <h3>Datos para busqueda</h3>
+    </div>
+</div>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Modelo</label>
+                <input class="form-control" type="text" name="nombre" id="nombre"  value="{nombre}">
+            </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Marca</label>
+                <select class="form-control"  name="marca" id="marca"  >
+                    <option value="">Seleccione una Marca</option>
+                    <!-- BEGIN marcas -->
+                    <option value="{marca_id}" {selected_marca}>{marca_nombre}</option>
+                    <!-- END marcas -->
+                </select>    
+            </div>
+        </div>
+        
+</div>
+
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+            <button  type="submit" class="btn btn-primary " ><i class="fa fa-search"></i> Buscar</button>
+        </div>   
+        <div class="col-lg-3 col-md-3">
+            <a class="btn btn-success" href="javascript:void(0)" onclick="limpiarBusquedaMarca('listMarca');"><i class="fa fa-refresh"></i> Nueva Busqueda</a>
+        </div>  
+</div>
+<script type="text/javascript">
+    function limpiarBusquedaMarca(form){
+      $("#nombre").val("");
+      $("#marca").val("");
+      $("#"+form).submit();
+    }
+</script>
+ </form>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+ <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>
+
+<div class="row">{paginado}
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<table class="table table-striped">
+    
+              <thead>
+                <tr>
+                  
+                  <th>Foto</th>
+                  <th>Modelo</th>
+                  <th>Marca</th>
+                  
+                  <th>&nbsp;</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- BEGIN resultados --> 
+                <tr>
+                  
+                  <td>
+                    <!-- BEGIN img-lis-modelo -->
+                    <img src="../img/modelo/{modelo_foto}" width="50"  class="img-responsive img-circle">
+                    <!-- END img-lis-modelo -->
+
+                    <!-- BEGIN img-lis-modelo-na -->
+                    <i class="fa fa-car fa-3x">{no_aviable}</i>
+                    <!-- END img-lis-modelo-na -->
+                  </td>
+                  <td>{modelo}</td>
+                  
+                  <td>{marca_lis}</td>
+                  
+                  <td>
+                      
+                      <!-- BEGIN blq-edit -->    
+                  <a class="btn btn-primary" href="index.php?id={id_editar}&acc=72"><i class="fa fa-pencil-square-o"></i></a>
+                  <!-- END blq-edit -->
+                  <!-- BEGIN blq-elim -->
+                 <a class="btn btn-danger" href="modelo/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+                     <i class="fa fa-trash-o"></i></a>
+                  <!-- END blq-elim -->
+                  </td>
+                </tr>
+                <!-- END resultados -->
+                <!-- BEGIN resultados-vacio --> 
+                <tr>
+                    <td colspan="3">
+                    {esta_vacio}
+                    </td>
+                </tr>
+                <!-- END resultados-vacio --> 
+              </tbody>
+</table>
+    </div>
+{paginado}</div>

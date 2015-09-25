@@ -1,0 +1,165 @@
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:5199:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h1>Nuevo Usuario</h1>
+<p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+</div>
+</div>
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="elim_img" id="elim_img" value="0">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<!--  DATOS DEL CLIENTE -->
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Datos</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Nombre <span class="campo-oblg">*</span></label>
+<input class="form-control" type="text"  name="nombre" id="nombre" value="{nombre}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Apellido <span class="campo-oblg">*</span></label>
+<input class="form-control" type="text"  name="apellido" id="apellido" value="{apellido}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Estado <span class="campo-oblg">*</span></label>
+<select class="form-control"  name="estado" id="estado" >
+<option value="0" >Seleccione un Estado</option>
+{__estados__}
+</select>
+<p class="help-block">Notas al final
+</p>
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Scanycar III ID </label>
+<input class="form-control" type="text"  name="scanycar" id="scanycar" value="{scanycar}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Email <span class="campo-oblg">*</span></label>
+<input class="form-control" type="text"  name="email" id="email" value="{email}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Password <span class="campo-oblg">*</span></label>
+<input class="form-control" type="password"  name="password" id="password" value="{password}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Datos de envio</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Direcci&oacute;n </label>
+<input class="form-control" type="text"  name="direccion" id="direccion" value="{direccion}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Extra </label>
+<input class="form-control" type="text"  name="extra" id="extra" placeholder="Depto, Piso, etc..." value="{extra}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Pa&iacute;s </label>
+<select class="form-control" name="pais" id="pais">
+<option>Seleccione un Pa&iacute;s</option>
+{__paises__}
+</select>
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Provincia </label>
+<input class="form-control" type="text"  name="provincia" id="provincia" value="{provincia}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Ciudad </label>
+<input class="form-control" type="text"  name="ciudad" id="ciudad" value="{ciudad}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+<div class="form-group">
+<label>C&oacute;digo Postal </label>
+<input class="form-control" type="text"  name="cp" id="cp" value="{cp}">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>Tel&eacute;fono </label>
+<input class="form-control" type="text"  name="telefono" id="telefono" value="{telefono}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4">
+<div class="form-group">
+<label>M&oacute;vil </label>
+<input class="form-control" type="text"  name="movil" id="movil" value="{movil}">
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<p class="help-block"><b>Registrado:</b> El usuario se registro pero no valido su email.<br>
+<b>Confirmado:</b>El usuario se registro y valido su email pero no fue validado por el administrador<br>
+<b>Validado:</b>El usuario se registro , valido su correo y adem&aacute;s fue validado por el administrador
+</p>
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<input type="submit" class="btn btn-primary" value="Guardar" />
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+</form>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_exito}
+</div>";s:7:"estados";s:71:"<option value="{estado_id}" {selected_estado} >{estado_nombre}</option>";s:6:"paises";s:64:"<option value="{pais_id}" {selected_pais}>{pais_nombre}</option>";}s:9:"variables";a:5:{s:10:"__global__";a:19:{s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:8:"apellido";b:1;s:11:"__estados__";b:1;s:8:"scanycar";b:1;s:5:"email";b:1;s:8:"password";b:1;s:9:"direccion";b:1;s:5:"extra";b:1;s:10:"__paises__";b:1;s:9:"provincia";b:1;s:6:"ciudad";b:1;s:2:"cp";b:1;s:8:"telefono";b:1;s:5:"movil";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:7:"estados";a:3:{s:9:"estado_id";b:1;s:15:"selected_estado";b:1;s:13:"estado_nombre";b:1;}s:6:"paises";a:3:{s:7:"pais_id";b:1;s:13:"selected_pais";b:1;s:11:"pais_nombre";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:7:"estados";b:1;s:6:"paises";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"estados";a:0:{}s:6:"paises";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"estados";a:0:{}s:6:"paises";a:0:{}}}

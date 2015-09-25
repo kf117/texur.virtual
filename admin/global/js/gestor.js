@@ -34,6 +34,12 @@ function confirmDel(){
     else return false;
 }
 
+function confirmDelCategoria(){
+    if(confirm("Los productos que esten asignados a esta categor\u00CDa quedar\u00E1n sin asignaci\u00F3n ,seguro que desea eliminar este registro?")) 
+        return true;
+    else return false;
+}
+
 /////////////////////////MARCAS///////////////////////////////////////
 function poderEditarMarca(id){
     $("#marca_"+id).val($('#marca_nombre_'+id).text());

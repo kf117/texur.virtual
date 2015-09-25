@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">  
+        <h1>Nueva Categor&iacute;a</h1>
+        <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+    </div>
+</div>
+              
+                  
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+    <input type="hidden"  name="id" id="id" value="{id}">
+    <input type="hidden"  name="elim_img" id="elim_img" value="0">
+    <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>     
+                  <!--  DATOS DEL CLIENTE -->
+              
+                    <div class="row">
+                          <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                       <h3>Datos</h3>
+                          </div>
+                    </div>
+                  <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label>T&iacute;tulo <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="nombre" id="nombre" value="{nombre}">
+                                  </div>
+                              </div> 
+                              <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                  <div class="form-group">
+                                    <label>Publicada / No Publicada </label>
+                                    <select class="form-control"   name="publicada" id="publicada" >
+                                        <option value="1" {selected_p_1}>Publicada</option>
+                                        <option value="0" {selected_p_0}>No Publicada</option>                                        
+                                    </select>    
+                                    
+                                  </div>
+                              </div>
+                    </div>
+                    
+                    
+                        
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                      <label>Descripci&oacute;n</label>
+                                    <textarea class="form-control" name="descripcion" id="descripcion">{descripcion}</textarea>
+                                    <p class="help-block">Entre 130 y 150 palabras que describan el contendio de la categor&iacute;a (optimizaci&oacute;n de buscadores).</p>
+                                  </div>
+                              </div> 
+                              
+                    </div>
+                    
+
+                    
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label>Palabras Clave</label>
+                                    <textarea class="form-control" name="palabras_clave" id="palabras_clave">{palabras_clave}</textarea>
+                                    <p class="help-block">Palabras clave de la p&aacute;gina separadas por coma (optimizaci&oacute;n de buscadores).</p>
+                                  </div>
+                              </div> 
+                              
+                    </div>
+                  <div class="row">
+                              
+                              
+                    </div>
+
+                  
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                        <div class="row" >
+                            
+                            <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>        
+                        </div>
+                  <!-- FIN DATOS DEL CLIENTE -->
+                </form>
+                 
+            
+        
+

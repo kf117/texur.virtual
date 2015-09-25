@@ -1,0 +1,162 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">  
+        <h1>Parametros Generales del Sitio</h1>
+        <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+    </div>
+</div>
+              
+                  
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+    <input type="hidden"  name="idioma" id="idioma" value="{idioma}">
+    
+    <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>     
+                  <!--  DATOS DEL CLIENTE -->
+              
+                    <div class="row">
+                          <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                       <h3>Datos</h3>
+                          </div>
+                    </div>
+                  <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label>Domicilio </label>
+                                    <input class="form-control" type="text"  name="domicilio" id="domicilio" value="{domicilio}">
+                                  </div>
+                              </div> 
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label>Email <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="email" id="email" value="{email}">
+                                    <p class="help-block">Correo que se utiliza como receptor de los emails del sitio.</p>
+                                  </div>
+                              </div> 
+                    </div>
+                    
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label>Tel&eacute;fono </label>
+                                    <input class="form-control" type="text"  name="telefono" id="telefono" value="{telefono}">
+                                  </div>
+                              </div> 
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label><i class="fa fa-skype"></i>&nbsp;Skype </label>
+                                    <input class="form-control" type="text"  name="skype" id="skype" value="{skype}">
+                                    <p class="help-block">Cuenta de skype de contacto.</p>
+                                  </div>
+                              </div> 
+                    </div>
+
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label>Descripci&oacute;n </label>
+                                    <textarea class="form-control" type="text"  name="descripcion" id="descripcion">{descripcion}</textarea>
+                                    <p class="help-block">Informaci&oacute;n acerca de que trata el sitio ( 130 - 150 caracteres ).</p>
+                                  </div>
+                              </div> 
+                    </div>
+                    
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label>Palabras clave </label>
+                                    <textarea class="form-control" type="text"  name="palabras_clave" id="palabras_clave">{palabras_clave}</textarea>
+                                    <p class="help-block">Palabras claves del contenido del sitio ( separadas por "," ).</p>
+                                  </div>
+                              </div> 
+                    </div>    
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label><i class="fa fa-map-marker"></i>&nbsp;Google Map </label>
+                                    <textarea class="form-control" type="text" rows="5"  name="google_map" id="google_map">{google_map}</textarea>
+                                    <p class="help-block">C&oacute;digo para embeber google maps.</p>
+                                  </div>
+                              </div> 
+                        
+                              <!-- BEGIN map-preview -->
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label>Vista Previa del mapa </label>
+                                    {map_preview}
+                                  </div>
+                              </div> 
+                              <!-- END map-preview -->
+                    </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                      <label><i class="fa fa-facebook"></i> &nbsp;Facebook </label>
+                                    <input class="form-control" type="text"  name="facebook" id="facebook" value="{facebook}">
+                                    <p class="help-block">Enlace a la cuenta/p&aacute;gina de facebook.</p>
+                                  </div>
+                              </div> 
+                    </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label><i class="fa fa-twitter"></i>&nbsp;Twitter </label>
+                                    <input class="form-control" type="text"  name="twitter" id="twitter" value="{twitter}">
+                                    <p class="help-block">Enlace a la p&aacute;gina de Twitter.</p>
+                                  </div>
+                              </div> 
+                    </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label><i class="fa fa-google-plus"></i>&nbsp;Google Plus </label>
+                                    <input class="form-control" type="text"  name="google_plus" id="google_plus" value="{google_plus}">
+                                    <p class="help-block">Enlace a la p&aacute;gina de Google Plus.</p>
+                                  </div>
+                              </div> 
+                    </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label><i class="fa fa-youtube"></i>&nbsp;Youtube </label>
+                                    <input class="form-control" type="text"  name="youtube" id="youtube" value="{youtube}" />
+                                    <p class="help-block">Enlace al canal de Youtube.</p>
+                                  </div>
+                              </div> 
+                    </div>
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                        <div class="row" >
+                            
+                            <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>        
+                        </div>
+                  <!-- FIN DATOS DEL CLIENTE -->
+                </form>
+                 
+            
+        
+

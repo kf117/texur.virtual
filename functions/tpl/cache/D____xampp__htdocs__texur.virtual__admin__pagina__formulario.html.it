@@ -1,0 +1,147 @@
+a:4:{s:6:"blocks";a:4:{s:10:"__global__";s:4500:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h1>Nueva P&aacute;gina</h1>
+<p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+</div>
+</div>
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="elim_img" id="elim_img" value="0">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<!--  DATOS DEL CLIENTE -->
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Datos</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>T&iacute;tulo <span class="campo-oblg">*</span></label>
+<input class="form-control" type="text"  name="nombre" id="nombre" value="{nombre}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Destacada / No Destacada </label>
+<select class="form-control"   name="destacada" id="destacada" >
+<option value="0" {selected_0}>No Destacada</option>
+<option value="1" {selected_1}>Destacada</option>
+</select>
+<p class="help-block">Para saber si se muestra en home.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Foto </label>
+<input  type="file"  name="imagen" id="imagen"  >
+<p class="help-block">Solo jpg, jpge, pjpge, jpeg, png.<br> Hasta {max_size}</p>
+</div>
+</div>
+{__image_preview__}
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<div class="form-group">
+<label>Resumen <span class="campo-oblg">*</span></label>
+<script type="text/javascript">
+<!--
+// Automatically calculates the editor base path based on the _samples directory.
+// This is usefull only for these samples. A real application should use something like this:
+// oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+//var sBasePath = document.location.href.substring(0,document.location.href.lastIndexOf('_samples')) ;
+var sBasePath ='global/js/fckeditor/';
+var oFCKeditor = new FCKeditor( 'resumen' ) ;
+oFCKeditor.BasePath	= sBasePath ;
+oFCKeditor.Height	= 150 ;
+oFCKeditor.Value	= '{resumen}' ;
+oFCKeditor.Create() ;
+//-->
+</script>
+<p class="help-block">Resumen de p&aacute;gina destacada que se muestra en home.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<div class="form-group">
+<label>Texto <span class="campo-oblg">*</span></label>
+<script type="text/javascript">
+<!--
+// Automatically calculates the editor base path based on the _samples directory.
+// This is usefull only for these samples. A real application should use something like this:
+// oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+//var sBasePath = document.location.href.substring(0,document.location.href.lastIndexOf('_samples')) ;
+var sBasePath ='global/js/fckeditor/';
+var oFCKeditor = new FCKeditor( 'texto' ) ;
+oFCKeditor.BasePath	= sBasePath ;
+oFCKeditor.Height	= 300 ;
+oFCKeditor.Value	= '{texto}' ;
+oFCKeditor.Create() ;
+//-->
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<div class="form-group">
+<label>Palabras Clave</label>
+<textarea class="form-control" name="palabras_clave" id="palabras_clave">{palabras_clave}</textarea>
+<p class="help-block">Palabras clave de la p&aacute;gina separadas por coma (optimizaci&oacute;n de buscadores).</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Publicada / No Publicada </label>
+<select class="form-control"   name="publicada" id="publicada" >
+<option value="1" {selected_p_1}>Publicada</option>
+<option value="0" {selected_p_0}>No Publicada</option>
+</select>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<input type="submit" class="btn btn-primary" value="Guardar" />
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+</form>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_exito}
+</div>";s:13:"image_preview";s:425:"<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<img class="img-thumbnail" id="imagen_preview" width="90" src="{imagen}"> <br><br>
+<a class="btn btn-danger" href="javascript:void(0)" onclick="eliminarImagen('imagen_preview');"><i class="fa fa-trash"></i>&nbsp;Eliminar Imagen</a>
+</div>
+</div>
+<script>
+function eliminarImagen(id){
+$("#"+id).hide();
+$("#elim_img").val(1);
+}
+</script>";}s:9:"variables";a:4:{s:10:"__global__";a:15:{s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:10:"selected_0";b:1;s:10:"selected_1";b:1;s:8:"max_size";b:1;s:17:"__image_preview__";b:1;s:7:"resumen";b:1;s:5:"texto";b:1;s:14:"palabras_clave";b:1;s:12:"selected_p_1";b:1;s:12:"selected_p_0";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:13:"image_preview";a:1:{s:6:"imagen";b:1;}}s:8:"children";a:4:{s:10:"__global__";a:3:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:13:"image_preview";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:13:"image_preview";a:0:{}}s:9:"functions";a:4:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:13:"image_preview";a:0:{}}}

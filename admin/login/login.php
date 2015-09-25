@@ -15,7 +15,7 @@ $usuario=$db->consulta("SELECT * FROM usuario WHERE us_nick='$usuario' AND us_pa
 if(isset($usuario) && count($usuario)){
     $_SESSION["usuario_gestor"]=$usuario[0];   
 }else{
-    $_SESSION["mensaje_error"]="Wrong user or password.";
+    $_SESSION["mensaje_error"]="Usuario o contrase&ntilde;a incorretos.";
 }
 header("Location:../index.php");
 die();

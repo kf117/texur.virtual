@@ -590,5 +590,35 @@ function verificarrDireccionCorreo($direccion)
    else
      return false;
 }
+
+function max_upload_file_size(){
+	if(is_numeric(ini_get('upload_max_filesize')))
+	return ini_get('upload_max_filesize');
+
+	$numero=preg_replace("/[^0-9]/","",ini_get('upload_max_filesize'));
+	$letra=preg_replace("/[0-9]/","",ini_get('upload_max_filesize'));
+
+	switch ($letra) {
+		case 'K':
+		case 'k':
+			return $numero*1024;
+			break;
+		case 'M':
+		case 'm':
+			return $numero*1024*1024;
+			break;
+		case 'G':
+		case 'g':
+			return $numero*1024*1024*1024;
+			break;	
+	}
+
+}
+
+function validarMail($email){
+    $exp_email = '[_a-z0-9\-]+(\.[_a-z0-9\-]+)*\@[_a-z0-9\-]+(\.[a-z]{1,4})+';
+
+    return preg_match("/$exp_email/i", $email);
+}
         
 ?>

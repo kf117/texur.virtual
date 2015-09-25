@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">  
+        <h1>Terminos y condiciones del sitio</h1>
+    </div>
+</div>
+              
+                  
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+    <input type="hidden"  name="idioma" id="idioma" value="{idioma}">
+    
+    <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>     
+                  <!--  DATOS DEL CLIENTE -->
+              
+                    
+                    <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                    </div>
+                    
+                    
+                    
+
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                    <label>Texto </label>
+                                    <script type="text/javascript">
+                                        <!--
+                                        // Automatically calculates the editor base path based on the _samples directory.
+                                        // This is usefull only for these samples. A real application should use something like this:
+                                        // oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+                                        //var sBasePath = document.location.href.substring(0,document.location.href.lastIndexOf('_samples')) ;
+                                        var sBasePath ='global/js/fckeditor/';
+                                        var oFCKeditor = new FCKeditor( 'texto' ) ;
+                                        oFCKeditor.BasePath	= sBasePath ;
+                                        oFCKeditor.Height	= 300 ;
+                                        oFCKeditor.Value	= '{texto}' ;
+                                        oFCKeditor.Create() ;
+                                        //-->
+                                    </script>
+                                  </div>
+                              </div> 
+                    </div>
+                    
+                     
+                    
+                    
+                    
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                        <div class="row" >
+                            
+                            <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>        
+                        </div>
+                  <!-- FIN DATOS DEL CLIENTE -->
+                </form>
+                 
+            
+        
+

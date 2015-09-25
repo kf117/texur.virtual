@@ -1,0 +1,59 @@
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:1667:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h1>Terminos y condiciones del sitio</h1>
+</div>
+</div>
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="idioma" id="idioma" value="{idioma}">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<!--  DATOS DEL CLIENTE -->
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<div class="form-group">
+<label>Texto </label>
+<script type="text/javascript">
+<!--
+// Automatically calculates the editor base path based on the _samples directory.
+// This is usefull only for these samples. A real application should use something like this:
+// oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+//var sBasePath = document.location.href.substring(0,document.location.href.lastIndexOf('_samples')) ;
+var sBasePath ='global/js/fckeditor/';
+var oFCKeditor = new FCKeditor( 'texto' ) ;
+oFCKeditor.BasePath	= sBasePath ;
+oFCKeditor.Height	= 300 ;
+oFCKeditor.Value	= '{texto}' ;
+oFCKeditor.Create() ;
+//-->
+</script>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<input type="submit" class="btn btn-primary" value="Guardar" />
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+</form>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_exito}
+</div>";}s:9:"variables";a:3:{s:10:"__global__";a:6:{s:6:"accion";b:1;s:3:"acc";b:1;s:6:"idioma";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:5:"texto";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:2:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}}

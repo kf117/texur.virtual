@@ -1,0 +1,26 @@
+Según lo conversado durante nuestras visitas armamos un presupuesto para el software exclusivo que contendrá:
+
+Gestor de contenidos: (en 3 idiomas)
+
+-Administrador de usuarios del Sitio /Activar/Crear/Eliminar/Modificar
+-Administrador de Marcas: ABM (alta,baja,modificación) ---------------------------------LISTO
+-Administrador de Modelos: ABM----------------------------------------------------------LISTO
+-Administrador de "Que desea hacer?": ABM
+-Administrador de Opciones Scanycar III: ABM (Para generar los caminos) Nombre - Foto - Descripción (las opciones de la pantalla del scanycar)
+-Administrador de Tutoriales: ABM
+-Administrador de Cursos: ABM (Posibilidad de que sean públicos o no) Titulo, Descripción, Archivos, Videos de youtube
+-Administrador de Productos ABM - 1 Imagen - Nombre - Descripción - Categoría------------------------------------LISTO
+-Administrador Categorías de Productos: ABM------------------------------------------------LISTO
+-Administrador Parámetros del sitio: Datos de Contacto , mapa google, email, descripción , palabras claves.-----LISTO
+-Administrar Pagina de Quienes somos, Privacy Policy y terminos de uso.-------------------------------------LISTO
+
+Sitio web: (en 3 idiomas, responsive-adaptable a diferentes dispositivos) 
+
+-Los usuarios se pueden registrar / loguear.
+-Pueden acceder a los cursos y tutoriales si están habilitados para ellos.
+-Pueden ver el catalogo de productos, agregar productos para hacer un pedido. (se envia un email con los productos y los datos del solicitante)
+-Landing page, con slider de imagenes, productos destacados, cursos destacados y tutoriales destacados.
+-Pagina de contacto , para consultas.
+-Pagina Quienes Somos/Nuestra empresa.
+
+El costo sería de 25.000 con un máximo de 2 meses para la entrega.
