@@ -1,0 +1,198 @@
+<form id="listPedido" action="index.php?acc={acc_form}" method="POST">
+    <input type="hidden"  name="acc" id="acc" value="{acc_form}">
+
+                 
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+        <h1>Lista de Pedidos</h1>
+        
+    </div>
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+        <h3>Datos para busqueda</h3>
+    </div>
+</div>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" type="text" name="email" id="email"  value="{email}">
+            </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" type="text" name="nombre" id="nombre"  value="{nombre}">
+            </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Apellido</label>
+                <input class="form-control" type="text" name="apellido" id="apellido"  value="{apellido}">
+            </div>
+        </div>
+    
+</div>
+<div class="row">
+           
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                  <div class="form-group">
+                                    <label>Estado </label>
+                                    <select name="estado" id="estado" class="form-control">
+                                        <option value="">Seleccione un Estado</option>
+                                        <option value="1" {procesado_1}>Procesado</option>
+                                        <option value="0" {procesado_0}>No Procesado</option>
+                                    </select>
+                                  </div>
+        </div>
+    <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Desde</label>
+                <div class='input-group date' >
+                    <input type='text' class="form-control" id='desde' name="desde" value="{desde}" readonly/>
+                    <span class="input-group-addon cursor" onclick="elegirFecha('desde');">
+                        <span class="glyphicon glyphicon-calendar" ></span>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Hasta</label>
+                <div class='input-group date cursor' >
+                    <input type='text' class="form-control" id='hasta' name="hasta" value="{hasta}" readonly/>
+                    <span class="input-group-addon" onclick="elegirFecha('hasta');">
+                        <span class="glyphicon glyphicon-calendar" ></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+</div>    
+
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+            <button  type="submit" class="btn btn-primary " ><i class="fa fa-search"></i> Buscar</button>
+        </div>   
+        <div class="col-lg-3 col-md-3">
+            <a class="btn btn-success" href="javascript:void(0)" onclick="limpiarBusquedaPedido('listPedido');"><i class="fa fa-refresh"></i> Nueva Busqueda</a>
+        </div>  
+</div>
+<script type="text/javascript">
+    function limpiarBusquedaPedido(form){
+      $("#nombre").val("");
+      $("#email").val("");
+      $("#apellido").val("");
+      $("#curso").val("");
+      $("#estado").val("");
+      $("#"+form).submit();
+    }
+</script>
+ </form>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+ <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>
+<div class="row" > 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11" id="mensajeCB" name="mensajeCB">
+                    
+        </div> 
+    </div>
+<div class="row">{paginado}
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<table class="table ">
+    
+              <thead>
+                <tr>
+                  <th>Fecha Pedido</th>
+                  <th>Nombre y Apellido</th>
+                  <th>Email</th>
+                  <th>Direcci&oacute;n</th>
+                  <th>Estado</th>
+                  
+                  <th>&nbsp;</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- BEGIN resultados --> 
+                <tr class="alert {alerta_color}" id="{id_pedido}_row">
+                  <td>{fecha_lis}</td>  
+                  <td>{nombre_lis}</td>
+                  <td><a href="mailto:{email_lis}">{email_lis}</a></td>
+                  <td>{direccion_lis}</td>
+                  <td>
+                  
+                        <select class="form-control" name="estado_{id_pedido}" id="estado_{id_pedido}" onchange="cambiarEstadoPedido('{id_pedido}');">
+                                
+                                <option value="1" {procesado_lis_1}>Procesado</option>
+                                <option value="0" {procesado_lis_0}>No Procesado</option>
+                       </select>
+                      <script>
+                          function cambiarEstadoPedido(id){
+                               $("#mensajeCB").html('<i class="fa fa-loading fa-spin"></i>');
+                              $("#mensajeCB").load("ajax.php?func=cambiarEstadoPedido&ped="+id+"&val="+$("#estado_"+id).val());
+                              if($("#estado_"+id).val()==1){
+                                    $("#"+id+"_row").removeClass("alert-danger");
+                                    $("#"+id+"_row").addClass("alert-success");
+                              }else{
+                                  $("#"+id+"_row").addClass("alert-danger");
+                                    $("#"+id+"_row").removeClass("alert-success");
+                              }
+                              
+                          }
+                      </script>
+                  
+                  </td>
+                  
+                  
+                  <td>
+                      
+                      
+                  <!-- BEGIN blq-elim -->
+                 <a class="btn btn-danger" href="curso/eliminar_pedido.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+                     <i class="fa fa-trash-o"></i></a>
+                  <!-- END blq-elim -->
+                  </td>
+                </tr>
+                <!-- END resultados -->
+                <!-- BEGIN resultados-vacio --> 
+                <tr>
+                    <td colspan="6">
+                    {esta_vacio}
+                    </td>
+                </tr>
+                <!-- END resultados-vacio --> 
+              </tbody>
+</table>
+    </div>
+{paginado}</div>

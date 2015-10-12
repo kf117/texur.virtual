@@ -1,0 +1,3 @@
+-Cuando se valida la inscripcion de un Usuario a un Curso se debería enviar un email a dicho usuario avisandole de su validacíon.
+-Enviar un email cuando se procesa un pedido.
+-

@@ -34,7 +34,7 @@ var CellWidth = 30;// width of day cell.
 var TimeMode = 24;// TimeMode value. 12 or 24
 var StartYear = 1940; //First Year in drop down year selection
 var EndYear = 5; // The last year of pickable date. if current year is 2011, the last year that still picker will be 2016 (2011+5)
-var CalPosOffsetX = -1; //X position offset relative to calendar icon, can be negative value
+var CalPosOffsetX = -200; //X position offset relative to calendar icon, can be negative value
 var CalPosOffsetY = 0; //Y position offset relative to calendar icon, can be negative value
 
 //Configurable parameters start
@@ -55,7 +55,7 @@ var DisableColor = "#999966"; //color of disabled cell.
 var CalBgColor = "#ffffff"; //Background color of Calendar window.
   
 var WeekChar = 2;//number of character for week day. if 2 then Mo,Tu,We. if 3 then Mon,Tue,Wed.
-var DateSeparator = "/";//Date Separator, you can change it to "-" if you want.
+var DateSeparator = "-";//Date Separator, you can change it to "-" if you want.
 var ShowLongMonth = true;//Show long month name in Calendar header. example: "January".
 var ShowMonthYear = true;//Show Month and Year in Calendar header.
 var ThemeBg = "";//Background image of Calendar window.
@@ -66,9 +66,9 @@ var imageFilesPath = "./global/date/";
 //Configurable parameters end
 
 //use the Month and Weekday in your preferred language.
-var MonthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var WeekDayName1 = ["Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"];
-var WeekDayName2 = ["Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Sunday"];
+var MonthName = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Deciembre"];
+var WeekDayName1 = ["Domingo" , "Lunes" , "Martes" , "Miercoles" , "Jueves" , "Viernes" , "Sabado"];
+var WeekDayName2 = ["Lunes" , "Martes" , "Miercoles" , "Jueves" , "Viernes" , "Sabado" , "Domingo"];
 
 
 //end Configurable parameters

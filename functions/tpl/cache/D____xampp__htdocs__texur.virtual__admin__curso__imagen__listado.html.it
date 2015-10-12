@@ -1,0 +1,104 @@
+a:4:{s:6:"blocks";a:10:{s:10:"__global__";s:2165:"<form id="listVideoCurso" action="index.php?acc={acc_form}" method="POST">
+<input type="hidden"  name="acc" id="acc" value="{acc_form}">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h1>Lista de Im&aacute;genes</h1>
+</div>
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Datos para busqueda</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>T&iacute;tulo</label>
+<input class="form-control" type="text" name="nombre" id="nombre"  value="{nombre}">
+</div>
+</div>
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>Curso </label>
+<select name="curso" id="curso" class="form-control">
+<option value="">Seleccione un Curso</option>
+{__cursos__}
+</select>
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+<button  type="submit" class="btn btn-primary " ><i class="fa fa-search"></i> Buscar</button>
+</div>
+<div class="col-lg-3 col-md-3">
+<a class="btn btn-success" href="javascript:void(0)" onclick="limpiarBusquedaVideoCurso('listVideoCurso');"><i class="fa fa-refresh"></i> Nueva Busqueda</a>
+</div>
+</div>
+<script type="text/javascript">
+function limpiarBusquedaVideoCurso(form){
+$("#nombre").val("");
+$("#curso").val("");
+$("#"+form).submit();
+}
+</script>
+</form>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<div class="row">{paginado}
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Imagen</th>
+<th>T&iacute;tulo</th>
+<th>Curso</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+{__resultados-vacio__}
+</tbody>
+</table>
+</div>
+{paginado}</div>";s:6:"cursos";s:67:"<option value="{curso_id}" {curso_selected}>{curso_nombre}</option>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_exito}
+</div>";s:10:"resultados";s:132:"<tr>
+<td>
+{__img-lis__}
+{__img-lis-na__}
+</td>
+<td>{titulo}</td>
+<td>{curso_lis}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:7:"img-lis";s:84:"<img src="../img/curso/{imagen_foto}" width="50"  class="img-responsive img-circle">";s:10:"img-lis-na";s:48:"<i class="fa fa-bookmark fa-3x">{no_aviable}</i>";s:8:"blq-edit";s:107:"<a class="btn btn-primary" href="index.php?id={id_editar}&acc=92"><i class="fa fa-pencil-square-o"></i></a>";s:8:"blq-elim";s:151:"<a class="btn btn-danger" href="curso/imagen/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<i class="fa fa-trash-o"></i></a>";s:16:"resultados-vacio";s:46:"<tr>
+<td colspan="6">
+{esta_vacio}
+</td>
+</tr>";}s:9:"variables";a:10:{s:10:"__global__";a:8:{s:8:"acc_form";b:1;s:6:"nombre";b:1;s:10:"__cursos__";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;s:20:"__resultados-vacio__";b:1;}s:6:"cursos";a:3:{s:8:"curso_id";b:1;s:14:"curso_selected";b:1;s:12:"curso_nombre";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:6:{s:11:"__img-lis__";b:1;s:14:"__img-lis-na__";b:1;s:6:"titulo";b:1;s:9:"curso_lis";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:7:"img-lis";a:1:{s:11:"imagen_foto";b:1;}s:10:"img-lis-na";a:1:{s:10:"no_aviable";b:1;}s:8:"blq-edit";a:1:{s:9:"id_editar";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:3:"acc";b:1;}s:16:"resultados-vacio";a:1:{s:10:"esta_vacio";b:1;}}s:8:"children";a:10:{s:10:"__global__";a:5:{s:6:"cursos";b:1;s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;s:16:"resultados-vacio";b:1;}s:6:"cursos";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:4:{s:7:"img-lis";b:1;s:10:"img-lis-na";b:1;s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:7:"img-lis";a:0:{}s:10:"img-lis-na";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}s:9:"functions";a:10:{s:10:"__global__";a:0:{}s:6:"cursos";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}s:7:"img-lis";a:0:{}s:10:"img-lis-na";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}}

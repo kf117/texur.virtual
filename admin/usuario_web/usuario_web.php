@@ -5,9 +5,11 @@ $formulario->setVariable("acc",$_GET["acc"]);
 $formulario->setVariable("max_size",ini_get('upload_max_filesize'));
 
 if(isset($_GET["id"]) && is_numeric($_GET["id"])){
+    $formulario->setVariable("titulo_formulario","Editar Usuario");
     $formulario->setVariable("accion","usuario_web/editar.php");
     include_once(dirname(__FILE__)."/mostrar.php");
 }else{
+    $formulario->setVariable("titulo_formulario","Nuevo Usuario");
 	if(isset($_SESSION["campos"])){
             $formulario->setVariable("nombre",htmlspecialchars($_SESSION["campos"]["nombre"]));
             $formulario->setVariable("apellido",htmlspecialchars($_SESSION["campos"]["apellido"]));
@@ -60,6 +62,18 @@ if(isset($_GET["msg"]))
         break;
         case 5:
             $formulario->setVariable("mensaje_error","<b>Error:</b> El tama&ntilde;o de la imagen es demasiado grande.") ; 
+        break;
+        case 6:
+            $formulario->setVariable("mensaje_error","<b>Error:</b> El email ya se encuentra en uso.") ; 
+        break;
+        case 7:
+            $formulario->setVariable("mensaje_error","<b>Error:</b> El ID Scanycar ya se encuentra en uso.") ; 
+        break;
+        case 8:
+            $formulario->setVariable("mensaje_error","<b>Error:</b> Formato de email no v&aacute;lido.") ; 
+        break;
+        case 9:
+            $formulario->setVariable("mensaje_error","<b>Error:</b> Formato de password no v&aacute;lido.") ; 
         break;
     };
 }

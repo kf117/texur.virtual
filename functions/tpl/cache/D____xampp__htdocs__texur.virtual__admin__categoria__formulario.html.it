@@ -1,6 +1,6 @@
-a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:2538:"<div class="row">
+a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:2535:"<div class="row">
 <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
-<h1>Nueva Categor&iacute;a</h1>
+<h1>{titulo_formulario}</h1>
 <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
 </div>
 </div>
@@ -79,4 +79,4 @@ a:4:{s:6:"blocks";a:3:{s:10:"__global__";s:2538:"<div class="row">
 </div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
 {mensaje_exito}
-</div>";}s:9:"variables";a:3:{s:10:"__global__";a:10:{s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:12:"selected_p_1";b:1;s:12:"selected_p_0";b:1;s:11:"descripcion";b:1;s:14:"palabras_clave";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:2:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}}
+</div>";}s:9:"variables";a:3:{s:10:"__global__";a:11:{s:17:"titulo_formulario";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:12:"selected_p_1";b:1;s:12:"selected_p_0";b:1;s:11:"descripcion";b:1;s:14:"palabras_clave";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}}s:8:"children";a:3:{s:10:"__global__";a:2:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}s:9:"functions";a:3:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}}}

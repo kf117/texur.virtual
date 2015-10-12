@@ -11,29 +11,42 @@ $formatos_img = array('image/jpeg' ,'image/pjpeg' ,'image/png','image/jpg');
 
 $_SESSION["campos"]=$_POST;
 
-if(trim($_POST["nombre"])!=""){
-    
-	$db->rawData("INSERT INTO marca (marca_nombre,marca_eliminado) VALUES ('".addslashes($_POST["nombre"])."',0)");
-    $id_max=$db->consulta("SELECT * FROM marca WHERE marca_eliminado=0 ORDER BY marca_id DESC LIMIT 1");
-
-    if($_FILES["imagen"]["size"]>max_upload_file_size()){
-        header("Location:../index.php?acc=".$_POST["acc"]."&msg=5");
+if(trim($_POST["nombre"])!="" && trim($_POST["apellido"])!="" && $_POST["estado"]!=0 && trim($_POST["email"])!="" && trim($_POST["password"])!=""){
+    if(!validarMail($_POST["email"])){
+        header("Location:../index.php?acc=".$_POST["acc"]."&msg=8");
         die();
     }
-
-    if(($_FILES["imagen"]["name"])!="" && in_array($_FILES["imagen"]["type"], $formatos_img)){
-    	$ext=obtenerExtension($_FILES["imagen"]["name"]);
-    	move_uploaded_file($_FILES["imagen"]["tmp_name"], $conf->getRoot()."/img/marca/".$id_max[0]["marca_id"].".".$ext);
-        $db->rawData("UPDATE marca SET marca_foto='".$id_max[0]["marca_id"].".".$ext."' WHERE marca_id=".$id_max[0]["marca_id"]);
-    }else{
-        if(($_FILES["imagen"]["name"])!=""){
-        	header("Location:../index.php?acc=".$_POST["acc"]."&msg=2");
-        	die();
+    
+    if(!validarPass($_POST["password"])){
+        header("Location:../index.php?acc=".$_POST["acc"]."&msg=9");
+         die();
+    }
+    
+    $existe_mail=$db->consulta("SELECT * FROM usuario_sitio WHERE usw_eliminado=0 AND usw_email='".($_POST["email"])."'");
+    if(count($existe_mail)){
+        header("Location:../index.php?acc=".$_POST["acc"]."&msg=6");
+         die();
+    }
+    
+    if(trim($_POST["scanycar"])!=""){
+        $existe_scanycar=$db->consulta("SELECT * FROM usuario_sitio WHERE usw_eliminado=0 AND usw_scanycar='".trim(addslashes($_POST["scanycar"]))."'");
+        if(count($existe_scanycar)){
+            header("Location:../index.php?acc=".$_POST["acc"]."&msg=7");
+            die();
         }
     }
+    
+    $db->rawData("INSERT INTO usuario_sitio (usw_apellido,usw_nombre,estado_id,usw_email,usw_password,usw_scanycar,usw_fecha_alta,usw_eliminado) VALUES"
+                . " ('".addslashes($_POST["apellido"])."','".addslashes($_POST["nombre"])."',".($_POST["estado"]).",'".(($_POST["email"]))."','".md5($_POST["password"])."',"
+                . "'".trim(addslashes($_POST["scanycar"]))."','".  date("Y-m-d H:i:s")."',0)");
+    $id_max=$db->consulta("SELECT * FROM usuario_sitio WHERE usw_eliminado=0 ORDER BY usw_id DESC LIMIT 1");
 
+    $db->rawData("INSERT INTO direccion_envio (dire_direccion,dire_extra,pais_id,dire_provincia,dire_telefono,dire_movil,dire_ciudad,dire_cp,usw_id,dire_eliminado) VALUES"
+            . " ('".addslashes($_POST["direccion"])."','".addslashes($_POST["extra"])."',".($_POST["pais"]).",'".addslashes($_POST["provincia"])."','".addslashes($_POST["telefono"])."',"
+            . "'".addslashes($_POST["movil"])."','".addslashes($_POST["ciudad"])."','".addslashes($_POST["cp"])."',".$id_max[0]["usw_id"].",0)");
     unset($_SESSION["campos"]);
     header("Location:../index.php?acc=".$_POST["acc"]."&msg=3");
+     die();
 }else{
     header("Location:../index.php?acc=".$_POST["acc"]."&msg=1"); 
     die();

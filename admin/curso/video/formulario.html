@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">  
+        <h1>{titulo_formulario}</h1>
+        <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+    </div>
+</div>
+              
+                  
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+    <input type="hidden"  name="acc" id="acc" value="{acc}">
+    <input type="hidden"  name="id" id="id" value="{id}">
+    <input type="hidden"  name="elim_img" id="elim_img" value="0">
+    <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>     
+                  <!--  DATOS DEL CLIENTE -->
+              
+                    <div class="row">
+                          <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                       <h3>Datos</h3>
+                          </div>
+                    </div>
+                  <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                  
+                  
+                  <div class="row">
+                              <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    <label>Curso <span class="campo-oblg">*</span></label>
+                                    <select name="curso" id="curso" class="form-control">
+                                        <option value="">Seleccione un Curso</option>
+                                        <!-- BEGIN cursos -->
+                                        <option value="{curso_id}" {curso_selected}>{curso_nombre}</option>
+                                        <!-- END cursos -->
+                                    </select>
+                                  </div>
+                              </div> 
+                              
+                    </div>
+                  
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-7 col-md-offset-1 col-md-7">
+                                  <div class="form-group">
+                                    <label>T&iacute;tulo <span class="campo-oblg">*</span></label>
+                                    <input class="form-control" type="text"  name="nombre" id="nombre" value="{nombre}">
+                                  </div>
+                              </div> 
+                              
+                    </div>
+                  
+                  
+                    
+                    
+                    
+                  
+                    <div class="row">
+                                <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                      <label>C&oacute;digo del Video <span class="campo-oblg">*</span></label>
+                                    <textarea class="form-control" name="video" id="video">{video}</textarea>
+                                    <p class="help-block">C&oacute;digo para comprartir el video por ejemplo de Youtube.</p>
+                                  </div>
+                                </div>    
+                                <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                                  <div class="form-group">
+                                    
+                                   {video}
+                                    
+                                </div>
+                              </div>   
+                    </div>
+                    <div class="row">
+                              <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                                  <div class="form-group">
+                                      <label>Descripci&oacute;n </label>
+                                    <script type="text/javascript">
+                                        <!--
+                                        // Automatically calculates the editor base path based on the _samples directory.
+                                        // This is usefull only for these samples. A real application should use something like this:
+                                        // oFCKeditor.BasePath = '/fckeditor/' ;	// '/fckeditor/' is the default value.
+                                        //var sBasePath = document.location.href.substring(0,document.location.href.lastIndexOf('_samples')) ;
+                                        var sBasePath ='global/js/fckeditor/';
+                                        var oFCKeditor = new FCKeditor( 'descripcion' ) ;
+                                        oFCKeditor.BasePath	= sBasePath ;
+                                        oFCKeditor.Height	= 250 ;
+                                        oFCKeditor.Value	= '{descripcion}' ;
+                                        oFCKeditor.Create() ;
+                                        //-->
+                                    </script>
+                                    
+                                  </div>
+                              </div> 
+                              
+                    </div>
+
+                  
+                        <div class="row" >
+                            <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+                                 <hr>
+                            </div>        
+                        </div>
+                        <div class="row" >
+                            
+                            <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                <input type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>        
+                        </div>
+                  <!-- FIN DATOS DEL CLIENTE -->
+                </form>
+                 
+            
+        
+

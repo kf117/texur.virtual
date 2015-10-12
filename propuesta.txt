@@ -2,7 +2,7 @@ Según lo conversado durante nuestras visitas armamos un presupuesto para el soft
 
 Gestor de contenidos: (en 3 idiomas)
 
--Administrador de usuarios del Sitio /Activar/Crear/Eliminar/Modificar
+-Administrador de usuarios del Sitio /Activar/Crear/Eliminar/Modificar---------------------------------LISTO
 -Administrador de Marcas: ABM (alta,baja,modificación) ---------------------------------LISTO
 -Administrador de Modelos: ABM----------------------------------------------------------LISTO
 -Administrador de "Que desea hacer?": ABM

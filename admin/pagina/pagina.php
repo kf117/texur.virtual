@@ -6,8 +6,10 @@ $formulario->setVariable("max_size",ini_get('upload_max_filesize'));
 
 if(isset($_GET["id"]) && is_numeric($_GET["id"])){
     $formulario->setVariable("accion","pagina/editar.php");
+    $formulario->setVariable("titulo_formulario","Editar P&aacute;gina");
     include_once(dirname(__FILE__)."/mostrar.php");
 }else{
+    $formulario->setVariable("titulo_formulario","Nueva P&aacute;gina");
 	if(isset($_SESSION["campos"])){
 		$formulario->setVariable("nombre",htmlspecialchars($_SESSION["campos"]["nombre"]));
                 $formulario->setVariable("selected_".$_SESSION["campos"]["destacada"],"selected");

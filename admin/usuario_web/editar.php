@@ -10,32 +10,50 @@ $db->rawData("SET NAMES 'utf8'");
 $formatos_img = array('image/jpeg' ,'image/pjpeg' ,'image/png','image/jpg');
 
 
-if(trim($_POST["nombre"])!=""){
+if(trim($_POST["nombre"])!="" && trim($_POST["apellido"])!="" && $_POST["estado"]!=0 && trim($_POST["email"])!=""){
 
-    $img_del="";
-    if($_POST["elim_img"]==1){
-        $img_del=",marca_foto='' ";
-        $rs=$db->consulta("SELECT * FROM marca WHERE marca_id=".$_POST["id"]);
-        if(file_exists(dirname(dirname(dirname(__FILE__)))."/img/marca/".$rs[0]["marca_foto"]))
-	unlink(dirname(dirname(dirname(__FILE__)))."/img/marca/".$rs[0]["marca_foto"]);
-    }
-	$db->rawData("UPDATE marca SET marca_nombre='".addslashes($_POST["nombre"])."' ".$img_del." WHERE marca_id=".$_POST["id"]);
-    
-    if($_FILES["imagen"]["size"]>max_upload_file_size()){
-        header("Location:../index.php?acc=".$_POST["acc"]."&msg=5");
+    if(!validarMail($_POST["email"])){
+        header("Location:../index.php?acc=".$_POST["acc"]."&msg=8&id=".$_POST["id"]);
         die();
     }
-
-    if(($_FILES["imagen"]["name"])!="" && in_array($_FILES["imagen"]["type"], $formatos_img)){
-    	$ext=obtenerExtension($_FILES["imagen"]["name"]);
-    	move_uploaded_file($_FILES["imagen"]["tmp_name"], $conf->getRoot()."/img/marca/".$_POST["id"].".".$ext);
-        $db->rawData("UPDATE marca SET marca_foto='".$_POST["id"].".".$ext."' WHERE marca_id=".$_POST["id"]);
-    }else{
-        if(($_FILES["imagen"]["name"])!=""){
-        	header("Location:../index.php?acc=".$_POST["acc"]."&msg=2&id=".$_POST["id"]);
-        	die();
+    
+    if(!validarPass($_POST["password"]) && $_POST["password"]!=""){
+        header("Location:../index.php?acc=".$_POST["acc"]."&msg=9&id=".$_POST["id"]);
+         die();
+    }
+    
+    $existe_mail=$db->consulta("SELECT * FROM usuario_sitio WHERE usw_eliminado=0 AND usw_id!=".$_POST["id"]." AND usw_email='".($_POST["email"])."'");
+    if(count($existe_mail)){
+        header("Location:../index.php?acc=".$_POST["acc"]."&msg=6&id=".$_POST["id"]);
+         die();
+    }
+    
+    if(trim($_POST["scanycar"])!=""){
+        $existe_scanycar=$db->consulta("SELECT * FROM usuario_sitio WHERE usw_eliminado=0 AND usw_id!=".$_POST["id"]." AND usw_scanycar='".trim(addslashes($_POST["scanycar"]))."'");
+        if(count($existe_scanycar)){
+            header("Location:../index.php?acc=".$_POST["acc"]."&msg=7&id=".$_POST["id"]);
+            die();
         }
     }
+    $password_upd="";
+    if($_POST["password"]!="")
+        $password_upd=",usw_password='".  md5($_POST["password"])."'";
+    
+    $valido_upd="";
+    if($_POST["estado"]==3)
+        $valido_upd=",usw_fecha_valido='".date("Y-m-d H:i:s")."'";
+    else
+        $valido_upd=",usw_fecha_valido='0000-00-00 00:00:00'";
+    
+    $db->rawData("UPDATE usuario_sitio SET usw_apellido='".addslashes($_POST["apellido"])."',usw_nombre='".addslashes($_POST["nombre"])."',"
+    . "estado_id=".$_POST["estado"].",usw_email='".$_POST["email"]."' $password_upd $valido_upd ,usw_scanycar='".addslashes($_POST["scanycar"])."'"
+    . " WHERE usw_eliminado=0 AND usw_id=".$_POST["id"]);
+    
+    $db->rawData("UPDATE direccion_envio SET dire_direccion='".addslashes($_POST["direccion"])."',dire_extra='".addslashes($_POST["extra"])."'"
+            . ",pais_id=".($_POST["pais"]).",dire_provincia='".addslashes($_POST["provincia"])."',"
+            . "dire_telefono='".addslashes($_POST["telefono"])."',dire_movil='".addslashes($_POST["movil"])."',"
+            . "dire_ciudad='".addslashes($_POST["ciudad"])."',dire_cp='".addslashes($_POST["cp"])."' "
+            . "WHERE usw_id=".$_POST["id"]);
 
     header("Location:../index.php?acc=".$_POST["acc"]."&msg=4&id=".$_POST["id"]);
 }else{

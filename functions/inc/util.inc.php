@@ -618,7 +618,14 @@ function max_upload_file_size(){
 function validarMail($email){
     $exp_email = '[_a-z0-9\-]+(\.[_a-z0-9\-]+)*\@[_a-z0-9\-]+(\.[a-z]{1,4})+';
 
+    if(strpos($email," ")!==false)
+            return false;
     return preg_match("/$exp_email/i", $email);
 }
-        
+
+function validarPass($pass){//solo letras y numeros
+    $exp_pass = '/^[0-9a-zA-Z]+$/';
+
+    return preg_match("$exp_pass", $pass);
+}
 ?>

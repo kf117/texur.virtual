@@ -1,6 +1,6 @@
-a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:5199:"<div class="row">
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:5275:"<div class="row">
 <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
-<h1>Nuevo Usuario</h1>
+<h1>{titulo_formulario}</h1>
 <p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
 </div>
 </div>
@@ -69,6 +69,7 @@ a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:5199:"<div class="row">
 <div class="form-group">
 <label>Password <span class="campo-oblg">*</span></label>
 <input class="form-control" type="password"  name="password" id="password" value="{password}">
+<p class="help-block">Solo letras y numeros {edit_pass}</p>
 </div>
 </div>
 </div>
@@ -101,7 +102,7 @@ a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:5199:"<div class="row">
 <div class="form-group">
 <label>Pa&iacute;s </label>
 <select class="form-control" name="pais" id="pais">
-<option>Seleccione un Pa&iacute;s</option>
+<option value="0">Seleccione un Pa&iacute;s</option>
 {__paises__}
 </select>
 </div>
@@ -162,4 +163,4 @@ a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:5199:"<div class="row">
 </div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
 {mensaje_exito}
-</div>";s:7:"estados";s:71:"<option value="{estado_id}" {selected_estado} >{estado_nombre}</option>";s:6:"paises";s:64:"<option value="{pais_id}" {selected_pais}>{pais_nombre}</option>";}s:9:"variables";a:5:{s:10:"__global__";a:19:{s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:8:"apellido";b:1;s:11:"__estados__";b:1;s:8:"scanycar";b:1;s:5:"email";b:1;s:8:"password";b:1;s:9:"direccion";b:1;s:5:"extra";b:1;s:10:"__paises__";b:1;s:9:"provincia";b:1;s:6:"ciudad";b:1;s:2:"cp";b:1;s:8:"telefono";b:1;s:5:"movil";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:7:"estados";a:3:{s:9:"estado_id";b:1;s:15:"selected_estado";b:1;s:13:"estado_nombre";b:1;}s:6:"paises";a:3:{s:7:"pais_id";b:1;s:13:"selected_pais";b:1;s:11:"pais_nombre";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:7:"estados";b:1;s:6:"paises";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"estados";a:0:{}s:6:"paises";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"estados";a:0:{}s:6:"paises";a:0:{}}}
+</div>";s:7:"estados";s:71:"<option value="{estado_id}" {selected_estado} >{estado_nombre}</option>";s:6:"paises";s:64:"<option value="{pais_id}" {selected_pais}>{pais_nombre}</option>";}s:9:"variables";a:5:{s:10:"__global__";a:21:{s:17:"titulo_formulario";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:8:"apellido";b:1;s:11:"__estados__";b:1;s:8:"scanycar";b:1;s:5:"email";b:1;s:8:"password";b:1;s:9:"edit_pass";b:1;s:9:"direccion";b:1;s:5:"extra";b:1;s:10:"__paises__";b:1;s:9:"provincia";b:1;s:6:"ciudad";b:1;s:2:"cp";b:1;s:8:"telefono";b:1;s:5:"movil";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:7:"estados";a:3:{s:9:"estado_id";b:1;s:15:"selected_estado";b:1;s:13:"estado_nombre";b:1;}s:6:"paises";a:3:{s:7:"pais_id";b:1;s:13:"selected_pais";b:1;s:11:"pais_nombre";b:1;}}s:8:"children";a:5:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:7:"estados";b:1;s:6:"paises";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"estados";a:0:{}s:6:"paises";a:0:{}}s:9:"functions";a:5:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:7:"estados";a:0:{}s:6:"paises";a:0:{}}}

@@ -1,0 +1,184 @@
+<form id="listInscripto" action="index.php?acc={acc_form}" method="POST">
+    <input type="hidden"  name="acc" id="acc" value="{acc_form}">
+
+                 
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+        <h1>Lista de Inscriptos</h1>
+        <p class="help-block">Se mostraran todos los inscriptos a Cursos de todos los idiomas</p>
+    </div>
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+        <h3>Datos para busqueda</h3>
+    </div>
+</div>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" type="text" name="email" id="email"  value="{email}">
+            </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" type="text" name="nombre" id="nombre"  value="{nombre}">
+            </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+            <div class="form-group">
+                <label>Apellido</label>
+                <input class="form-control" type="text" name="apellido" id="apellido"  value="{apellido}">
+            </div>
+        </div>
+</div>
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                  <div class="form-group">
+                                    <label>Curso </label>
+                                    <select name="curso" id="curso" class="form-control">
+                                        <option value="">Seleccione un Curso</option>
+                                        <!-- BEGIN cursos -->
+                                        <option value="{curso_id}" {curso_selected}>{curso_nombre}</option>
+                                        <!-- END cursos -->
+                                    </select>
+                                  </div>
+        </div>   
+        <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+                                  <div class="form-group">
+                                    <label>Estado </label>
+                                    <select name="estado" id="estado" class="form-control">
+                                        <option value="">Seleccione un Estado</option>
+                                        <option value="1" {validado_1}>Validado</option>
+                                        <option value="0" {validado_0}>No Validado</option>
+                                    </select>
+                                  </div>
+        </div>  
+</div>    
+
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+
+
+<div class="row">
+        <div class="col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-1">
+            <button  type="submit" class="btn btn-primary " ><i class="fa fa-search"></i> Buscar</button>
+        </div>   
+        <div class="col-lg-3 col-md-3">
+            <a class="btn btn-success" href="javascript:void(0)" onclick="limpiarBusquedaInscripto('listInscripto');"><i class="fa fa-refresh"></i> Nueva Busqueda</a>
+        </div>  
+</div>
+<script type="text/javascript">
+    function limpiarBusquedaInscripto(form){
+      $("#nombre").val("");
+      $("#email").val("");
+      $("#apellido").val("");
+      $("#curso").val("");
+      $("#estado").val("");
+      $("#"+form).submit();
+    }
+</script>
+ </form>
+<div class="row" >
+    <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">     
+        <hr>
+    </div>        
+</div>
+ <div class="row"> 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    <!-- BEGIN error_msg -->
+                       <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_error}
+                      </div>
+                  <!-- END error_msg -->
+                  <!-- BEGIN exito_msg -->
+                       <div class="alert alert-success alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+                        {mensaje_exito}
+                      </div>
+                  <!-- END exito_msg -->     
+        </div> 
+    </div>
+<div class="row" > 
+        <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11" id="mensajeCB" name="mensajeCB">
+                    
+        </div> 
+    </div>
+<div class="row">{paginado}
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<table class="table ">
+    
+              <thead>
+                <tr>
+                  <th>Fecha Inscripci&oacute;n</th>
+                  <th>Nombre y Apellido</th>
+                  <th>Email</th>
+                  <th>Curso</th>
+                  <th>Estado</th>
+                  
+                  <th>&nbsp;</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- BEGIN resultados --> 
+                <tr class="alert {alerta_color}" id="{id_inscripto}_row">
+                  <td>{fecha_lis}</td>  
+                  <td>{nombre_lis}</td>
+                  <td><a href="mailto:{email_lis}">{email_lis}</a></td>
+                  <td>{curso_lis}</td>
+                  <td>
+                  
+                        <select class="form-control" name="estado_{id_inscripto}" id="estado_{id_inscripto}" onchange="cambiarEstadoInscripto('{id_inscripto}');">
+                                
+                                <option value="1" {validado_lis_1}>Validado</option>
+                                <option value="0" {validado_lis_0}>No Validado</option>
+                       </select>
+                      <script>
+                          function cambiarEstadoInscripto(id){
+                               $("#mensajeCB").html('<i class="fa fa-loading fa-spin"></i>');
+                              $("#mensajeCB").load("ajax.php?func=cambiarEstadoInscripto&ins="+id+"&val="+$("#estado_"+id).val());
+                              if($("#estado_"+id).val()==1){
+                                    $("#"+id+"_row").removeClass("alert-danger");
+                                    $("#"+id+"_row").addClass("alert-success");
+                              }else{
+                                  $("#"+id+"_row").addClass("alert-danger");
+                                    $("#"+id+"_row").removeClass("alert-success");
+                              }
+                              
+                          }
+                      </script>
+                  
+                  </td>
+                  
+                  
+                  <td>
+                      
+                      
+                  <!-- BEGIN blq-elim -->
+                 <a class="btn btn-danger" href="curso/eliminar_inscripto.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+                     <i class="fa fa-trash-o"></i></a>
+                  <!-- END blq-elim -->
+                  </td>
+                </tr>
+                <!-- END resultados -->
+                <!-- BEGIN resultados-vacio --> 
+                <tr>
+                    <td colspan="6">
+                    {esta_vacio}
+                    </td>
+                </tr>
+                <!-- END resultados-vacio --> 
+              </tbody>
+</table>
+    </div>
+{paginado}</div>
