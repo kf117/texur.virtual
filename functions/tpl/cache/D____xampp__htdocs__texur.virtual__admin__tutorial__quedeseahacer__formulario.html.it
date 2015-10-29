@@ -1,0 +1,85 @@
+a:4:{s:6:"blocks";a:7:{s:10:"__global__";s:1793:"<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h1>{titulo_formulario}</h1>
+<p class="help-block">Campos requeridos <span class="campo-oblg">*</span></p>
+</div>
+</div>
+<form class=" " action="{accion}" method="POST" enctype="multipart/form-data">
+<input type="hidden"  name="acc" id="acc" value="{acc}">
+<input type="hidden"  name="id" id="id" value="{id}">
+<input type="hidden"  name="elim_img" id="elim_img" value="0">
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+{__error_msg__}
+{__exito_msg__}
+</div>
+</div>
+<!--  DATOS DEL CLIENTE -->
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<h3>Datos</h3>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+<div class="form-group">
+<label>T&iacute;tulo <span class="campo-oblg">*</span></label>
+<input class="form-control" type="text"  name="nombre" id="nombre" value="{nombre}">
+</div>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<input type="submit" class="btn btn-primary" value="Guardar" />
+</div>
+</div>
+<!-- FIN DATOS DEL CLIENTE -->
+</form>
+<div class="row" >
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<hr>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>T&iacute;tulo</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+{__resultados__}
+{__resultados-vacio__}
+</tbody>
+</table>
+</div>
+{paginado}</div>";s:9:"error_msg";s:213:"<div class="alert alert-danger alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_error}
+</div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+{mensaje_exito}
+</div>";s:10:"resultados";s:69:"<tr>
+<td>{titulo}</td>
+<td>
+{__blq-edit__}
+{__blq-elim__}
+</td>
+</tr>";s:8:"blq-edit";s:115:"<a class="btn btn-primary" href="index.php?id={id_editar}&acc={acc_edit}"><i class="fa fa-pencil-square-o"></i></a>";s:8:"blq-elim";s:175:"<a class="btn btn-danger" href="tutorial/quedeseahacer/eliminar.php?id={id_eliminar}&acc={acc_elim}" onclick="return confirmDelCategoria();">
+<i class="fa fa-trash-o"></i></a>";s:16:"resultados-vacio";s:46:"<tr>
+<td colspan="2">
+{esta_vacio}
+</td>
+</tr>";}s:9:"variables";a:7:{s:10:"__global__";a:10:{s:17:"titulo_formulario";b:1;s:6:"accion";b:1;s:3:"acc";b:1;s:2:"id";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:6:"nombre";b:1;s:14:"__resultados__";b:1;s:20:"__resultados-vacio__";b:1;s:8:"paginado";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:3:{s:6:"titulo";b:1;s:12:"__blq-edit__";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-edit";a:2:{s:9:"id_editar";b:1;s:8:"acc_edit";b:1;}s:8:"blq-elim";a:2:{s:11:"id_eliminar";b:1;s:8:"acc_elim";b:1;}s:16:"resultados-vacio";a:1:{s:10:"esta_vacio";b:1;}}s:8:"children";a:7:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;s:16:"resultados-vacio";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:2:{s:8:"blq-edit";b:1;s:8:"blq-elim";b:1;}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}s:9:"functions";a:7:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-edit";a:0:{}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}}

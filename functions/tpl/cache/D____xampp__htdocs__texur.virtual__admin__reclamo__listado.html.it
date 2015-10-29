@@ -1,8 +1,8 @@
-a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:4569:"<form id="listPedido" action="index.php?acc={acc_form}" method="POST">
+a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:4847:"<form id="listReclamo" action="index.php?acc={acc_form}" method="POST">
 <input type="hidden"  name="acc" id="acc" value="{acc_form}">
 <div class="row">
 <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
-<h1>Lista de Pedidos</h1>
+<h1>Lista de Reclamos</h1>
 </div>
 <div class="col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
 <h3>Datos para busqueda</h3>
@@ -14,6 +14,12 @@ a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:4569:"<form id="listPedido" action="i
 </div>
 </div>
 <div class="row">
+<div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
+<div class="form-group">
+<label>Nro Reclamo</label>
+<input class="form-control number" type="text" name="nro_rec" id="nro_rec"  value="{nro_rec}">
+</div>
+</div>
 <div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-3">
 <div class="form-group">
 <label>Nro Pedido</label>
@@ -85,11 +91,11 @@ a:4:{s:6:"blocks";a:6:{s:10:"__global__";s:4569:"<form id="listPedido" action="i
 <button  type="submit" class="btn btn-primary " ><i class="fa fa-search"></i> Buscar</button>
 </div>
 <div class="col-lg-3 col-md-3">
-<a class="btn btn-success" href="javascript:void(0)" onclick="limpiarBusquedaPedido('listPedido');"><i class="fa fa-refresh"></i> Nueva Busqueda</a>
+<a class="btn btn-success" href="javascript:void(0)" onclick="limpiarBusquedaReclamo('listReclamo');"><i class="fa fa-refresh"></i> Nueva Busqueda</a>
 </div>
 </div>
 <script type="text/javascript">
-function limpiarBusquedaPedido(form){
+function limpiarBusquedaReclamo(form){
 $("#nombre").val("");
 $("#email").val("");
 $("#apellido").val("");
@@ -97,6 +103,7 @@ $("#desde").val("");
 $("#hasta").val("");
 $("#estado").val("");
 $("#nro").val("");
+$("#nro_rec").val("");
 $("#"+form).submit();
 }
 </script>
@@ -121,11 +128,12 @@ $("#"+form).submit();
 <table class="table ">
 <thead>
 <tr>
-<th>Nro #</th>
+<th>Nro Reclamo</th>
+<th>Nro Pedido</th>
+<th>Fecha Reclamo</th>
 <th>Fecha Pedido</th>
 <th>Nombre y Apellido</th>
 <th>Email</th>
-<th>Direcci&oacute;n</th>
 <th>Estado</th>
 <th>&nbsp;</th>
 </tr>
@@ -138,12 +146,12 @@ $("#"+form).submit();
 </div>
 {paginado}</div>
 <!-- Modal -->
-<div class="modal fade" id="detallePedido" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="detalleReclamo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-<h4 class="modal-title" id="myModalLabel">Detalles del Pedido</h4>
+<h4 class="modal-title" id="myModalLabel">Detalles del Reclamo</h4>
 </div>
 <div class="modal-body">
 ...
@@ -159,21 +167,22 @@ $("#"+form).submit();
 </div>";s:9:"exito_msg";s:214:"<div class="alert alert-success alert-dismissible fade in" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
 {mensaje_exito}
-</div>";s:10:"resultados";s:1033:"<tr class="alert {alerta_color}" id="{id_pedido}_row">
+</div>";s:10:"resultados";s:1066:"<tr class="alert {alerta_color}" id="{id_reclamo}_row">
+<td>{nro_rec_lis}</td>
 <td>{nro_lis}</td>
+<td>{fecha_rec_lis}</td>
 <td>{fecha_lis}</td>
 <td>{nombre_lis}</td>
 <td><a href="mailto:{email_lis}">{email_lis}</a></td>
-<td>{direccion_lis}</td>
 <td>
-<select class="form-control" name="estado_{id_pedido}" id="estado_{id_pedido}" onchange="cambiarEstadoPedido('{id_pedido}');">
+<select class="form-control" name="estado_{id_reclamo}" id="estado_{id_reclamo}" onchange="cambiarEstadoReclamo('{id_reclamo}');">
 <option value="1" {procesado_lis_1}>Procesado</option>
 <option value="0" {procesado_lis_0}>No Procesado</option>
 </select>
 <script>
-function cambiarEstadoPedido(id){
+function cambiarEstadoReclamo(id){
 $("#mensajeCB").html('<i class="fa fa-loading fa-spin"></i>');
-$("#mensajeCB").load("ajax.php?func=cambiarEstadoPedido&ped="+id+"&val="+$("#estado_"+id).val());
+$("#mensajeCB").load("ajax.php?func=cambiarEstadoReclamo&rec="+id+"&val="+$("#estado_"+id).val());
 if($("#estado_"+id).val()==1){
 $("#"+id+"_row").removeClass("alert-danger");
 $("#"+id+"_row").addClass("alert-success");
@@ -182,20 +191,20 @@ $("#"+id+"_row").addClass("alert-danger");
 $("#"+id+"_row").removeClass("alert-success");
 }
 }
-function detallesPedido(id){
-$("#detallePedido  .modal-body").load("ajax.php?func=detallePedido&ped="+id);
+function detallesReclamo(id){
+$("#detalleReclamo  .modal-body").load("ajax.php?func=detalleReclamo&rec="+id);
 }
 </script>
 </td>
 <td>
 {__blq-elim__}
 </td>
-</tr>";s:8:"blq-elim";s:317:"<a class="btn btn-info" data-toggle="modal" data-target="#detallePedido" onclick="detallesPedido('{id_editar}');">Detalle</a>
+</tr>";s:8:"blq-elim";s:320:"<a class="btn btn-info" data-toggle="modal" data-target="#detalleReclamo" onclick="detallesReclamo('{id_editar}');">Detalle</a>
 <!-- END blq-elim -->
 <!-- BEGIN blq-elim -->
-<a class="btn btn-danger" href="pedido/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
+<a class="btn btn-danger" href="reclamo/eliminar.php?id={id_eliminar}&acc={acc}" onclick="return confirmDel();">
 <i class="fa fa-trash-o"></i></a>";s:16:"resultados-vacio";s:46:"<tr>
 <td colspan="6">
 {esta_vacio}
 </td>
-</tr>";}s:9:"variables";a:6:{s:10:"__global__";a:14:{s:8:"acc_form";b:1;s:3:"nro";b:1;s:5:"email";b:1;s:6:"nombre";b:1;s:8:"apellido";b:1;s:11:"procesado_1";b:1;s:11:"procesado_0";b:1;s:5:"desde";b:1;s:5:"hasta";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;s:20:"__resultados-vacio__";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:10:{s:12:"alerta_color";b:1;s:9:"id_pedido";b:1;s:7:"nro_lis";b:1;s:9:"fecha_lis";b:1;s:10:"nombre_lis";b:1;s:9:"email_lis";b:1;s:13:"direccion_lis";b:1;s:15:"procesado_lis_1";b:1;s:15:"procesado_lis_0";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-elim";a:3:{s:9:"id_editar";b:1;s:11:"id_eliminar";b:1;s:3:"acc";b:1;}s:16:"resultados-vacio";a:1:{s:10:"esta_vacio";b:1;}}s:8:"children";a:6:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;s:16:"resultados-vacio";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:1:{s:8:"blq-elim";b:1;}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}s:9:"functions";a:6:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}}
+</tr>";}s:9:"variables";a:6:{s:10:"__global__";a:15:{s:8:"acc_form";b:1;s:7:"nro_rec";b:1;s:3:"nro";b:1;s:5:"email";b:1;s:6:"nombre";b:1;s:8:"apellido";b:1;s:11:"procesado_1";b:1;s:11:"procesado_0";b:1;s:5:"desde";b:1;s:5:"hasta";b:1;s:13:"__error_msg__";b:1;s:13:"__exito_msg__";b:1;s:8:"paginado";b:1;s:14:"__resultados__";b:1;s:20:"__resultados-vacio__";b:1;}s:9:"error_msg";a:1:{s:13:"mensaje_error";b:1;}s:9:"exito_msg";a:1:{s:13:"mensaje_exito";b:1;}s:10:"resultados";a:11:{s:12:"alerta_color";b:1;s:10:"id_reclamo";b:1;s:11:"nro_rec_lis";b:1;s:7:"nro_lis";b:1;s:13:"fecha_rec_lis";b:1;s:9:"fecha_lis";b:1;s:10:"nombre_lis";b:1;s:9:"email_lis";b:1;s:15:"procesado_lis_1";b:1;s:15:"procesado_lis_0";b:1;s:12:"__blq-elim__";b:1;}s:8:"blq-elim";a:3:{s:9:"id_editar";b:1;s:11:"id_eliminar";b:1;s:3:"acc";b:1;}s:16:"resultados-vacio";a:1:{s:10:"esta_vacio";b:1;}}s:8:"children";a:6:{s:10:"__global__";a:4:{s:9:"error_msg";b:1;s:9:"exito_msg";b:1;s:10:"resultados";b:1;s:16:"resultados-vacio";b:1;}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:1:{s:8:"blq-elim";b:1;}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}s:9:"functions";a:6:{s:10:"__global__";a:0:{}s:9:"error_msg";a:0:{}s:9:"exito_msg";a:0:{}s:10:"resultados";a:0:{}s:8:"blq-elim";a:0:{}s:16:"resultados-vacio";a:0:{}}}

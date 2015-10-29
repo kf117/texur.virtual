@@ -1,3 +1,4 @@
 -Cuando se valida la inscripcion de un Usuario a un Curso se debería enviar un email a dicho usuario avisandole de su validacíon.
 -Enviar un email cuando se procesa un pedido.
--
+-Enviar Mail para los reclamos.
+-Evaluar agregar nuevos estados a pedidos para mas adelante (enviado, completo, procesando, etc)

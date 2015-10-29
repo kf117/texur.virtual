@@ -1,4 +1,4 @@
-a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:4112:"<!DOCTYPE html>
+a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:4368:"<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -97,6 +97,14 @@ a:4:{s:6:"blocks";a:5:{s:10:"__global__";s:4112:"<!DOCTYPE html>
 </div>
 <!-- /#wrapper -->
 </body>
+<script>
+$('.number').keypress(function (event) {
+var keycode = event.which;
+if (!(event.shiftKey == false && (keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode >= 48 && keycode <= 57)))) {
+event.preventDefault();
+}
+});
+</script>
 </html>";s:17:"bloque_javascript";s:36:"<script src="{javascript}"></script>";s:12:"idiomas_sets";s:112:"<li>
 <a href="cambiar_idioma.php?id={idioma_id}"><img src="global/img/{idioma_img}" /> {idioma_nombre}</a>
 </li>";s:8:"acciones";s:377:"<li>
