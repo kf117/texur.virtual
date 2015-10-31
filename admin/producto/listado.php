@@ -25,11 +25,11 @@ $categorias=$db->consulta("SELECT * FROM categoria_producto "
             }
 
 
-if(isset($post_categoria))
+if(isset($post_categoria) && ($post_categoria)!=0)
     $criterio_busqueda.=" AND p.catp_id=".($post_categoria)." ";
 
 if(isset($post_nombre) && trim($post_nombre)!=''){
-    $criterio_busqueda.=" AND prod_nombre LIKE '%".addslashes($post_nombre)."%' ";
+    $criterio_busqueda.=" AND p.prod_nombre LIKE '%".addslashes($post_nombre)."%' ";
 	$listado->setVariable("nombre",  htmlspecialchars($post_nombre));
 }
 
@@ -37,7 +37,9 @@ if(isset($post_nombre) && trim($post_nombre)!=''){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $qry="SELECT * FROM producto p LEFT JOIN categoria_producto cp ON (p.catp_id=cp.catp_id)  "
         . "WHERE prod_eliminado=0 AND p.idioma_id=".$_SESSION["idioma_gestor"]." $criterio_busqueda"
-        . " ORDER BY prod_nombre ";
+        . " ORDER BY p.prod_nombre ";
+
+//die($qry);
 ////
 include_once (dirname(dirname(dirname(__FILE__)))).'/functions/inc/paginator.class.php';
 $pages = new Paginator;  
